@@ -1,5 +1,8 @@
 #include "Event.h"
 
+void Event::scheduleEvent(DateTime) {
+
+}
 
 void Event::assignRoom(Room&) {
 

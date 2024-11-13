@@ -1,6 +1,7 @@
 #pragma once
 
 #include "DateTime.h"
+#include "Schedule.h"
 #include <list>
 
 class Activity;
@@ -21,4 +22,5 @@ private:
     std::list<Manager> managers_;
     std::list<Activity> activities_;
     DateTime eventDateTime_;
+    Schedule eventSchedule;
 };
