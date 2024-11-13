@@ -1,0 +1,95 @@
+\doxysection{Room Class Reference}
+\hypertarget{class_room}{}\label{class_room}\index{Room@{Room}}
+
+
+Represents a room that can be reserved for activities and checks availability.  
+
+
+
+
+{\ttfamily \#include $<$Room.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_room_a457a871fc18bc719b0339696085ff041}{reserve\+Room}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
+\begin{DoxyCompactList}\small\item\em Reserves the room for a specified activity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_aa8658b2658fd93f33f18a8cb68cd4c98}{check\+Availability}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} date\+Time)
+\begin{DoxyCompactList}\small\item\em Checks if the room is available at the specified date and time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_room_ae40b2b07c54a60c238199ef24aa38877}{capacity\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_resource}{Resource}} $>$ \mbox{\hyperlink{class_room_a11ae81cdb99dab3301c22dd6dd4c6727}{available\+Resources\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_room_a178f18521c5c1bb774f49f777df0b75e}{activities\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a room that can be reserved for activities and checks availability. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_room_aa8658b2658fd93f33f18a8cb68cd4c98}\index{Room@{Room}!checkAvailability@{checkAvailability}}
+\index{checkAvailability@{checkAvailability}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{checkAvailability()}{checkAvailability()}}
+{\footnotesize\ttfamily \label{class_room_aa8658b2658fd93f33f18a8cb68cd4c98} 
+bool Room\+::check\+Availability (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date_time}{Date\+Time}}}]{date\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the room is available at the specified date and time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The date and time to check for availability. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the room is available, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a457a871fc18bc719b0339696085ff041}\index{Room@{Room}!reserveRoom@{reserveRoom}}
+\index{reserveRoom@{reserveRoom}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{reserveRoom()}{reserveRoom()}}
+{\footnotesize\ttfamily \label{class_room_a457a871fc18bc719b0339696085ff041} 
+void Room\+::reserve\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+Reserves the room for a specified activity. 
+
+Reserves the room for the given activity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity to reserve the room for. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_room_a178f18521c5c1bb774f49f777df0b75e}\index{Room@{Room}!activities\_@{activities\_}}
+\index{activities\_@{activities\_}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{activities\_}{activities\_}}
+{\footnotesize\ttfamily \label{class_room_a178f18521c5c1bb774f49f777df0b75e} 
+std\+::list$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Room\+::activities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Activities scheduled in the room \Hypertarget{class_room_a11ae81cdb99dab3301c22dd6dd4c6727}\index{Room@{Room}!availableResources\_@{availableResources\_}}
+\index{availableResources\_@{availableResources\_}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{availableResources\_}{availableResources\_}}
+{\footnotesize\ttfamily \label{class_room_a11ae81cdb99dab3301c22dd6dd4c6727} 
+std\+::list$<$\mbox{\hyperlink{class_resource}{Resource}}$>$ Room\+::available\+Resources\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Resources available in the room \Hypertarget{class_room_ae40b2b07c54a60c238199ef24aa38877}\index{Room@{Room}!capacity\_@{capacity\_}}
+\index{capacity\_@{capacity\_}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
+{\footnotesize\ttfamily \label{class_room_ae40b2b07c54a60c238199ef24aa38877} 
+int Room\+::capacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Capacity of the room 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_room_8h}{Room.\+h}}\item 
+src/\mbox{\hyperlink{_room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

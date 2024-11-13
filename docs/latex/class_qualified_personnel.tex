@@ -1,0 +1,84 @@
+\doxysection{Qualified\+Personnel Class Reference}
+\hypertarget{class_qualified_personnel}{}\label{class_qualified_personnel}\index{QualifiedPersonnel@{QualifiedPersonnel}}
+
+
+Represents qualified personnel who can be assigned to activities and report issues.  
+
+
+
+
+{\ttfamily \#include $<$Qualified\+Personnel.\+h$>$}
+
+Inheritance diagram for Qualified\+Personnel\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_qualified_personnel}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_qualified_personnel_a11224e2a6a323f6ad6c96951d051d68b}{report\+Issue}} (\mbox{\hyperlink{class_problem_report}{Problem\+Report}} report)
+\begin{DoxyCompactList}\small\item\em Reports an issue by creating a problem report. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_qualified_personnel_a5fa1a43cbbe4e66ff6f8041fbd80a6bb}{assign\+Activity}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
+\begin{DoxyCompactList}\small\item\em Assigns the personnel to a specified activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_staff_member}{Staff\+Member}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_staff_member_af80de5badfe0327058230ede47aca26d}{is\+Conflict}} ()
+\begin{DoxyCompactList}\small\item\em Checks if there are any scheduling conflicts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_qualified_personnel_a8861b9b8bf36cb4ca2d7b9a77911afa1}{assigned\+Activity\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents qualified personnel who can be assigned to activities and report issues. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_qualified_personnel_a5fa1a43cbbe4e66ff6f8041fbd80a6bb}\index{QualifiedPersonnel@{QualifiedPersonnel}!assignActivity@{assignActivity}}
+\index{assignActivity@{assignActivity}!QualifiedPersonnel@{QualifiedPersonnel}}
+\doxysubsubsection{\texorpdfstring{assignActivity()}{assignActivity()}}
+{\footnotesize\ttfamily \label{class_qualified_personnel_a5fa1a43cbbe4e66ff6f8041fbd80a6bb} 
+void Qualified\+Personnel\+::assign\+Activity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+Assigns the personnel to a specified activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity to assign the personnel to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_qualified_personnel_a11224e2a6a323f6ad6c96951d051d68b}\index{QualifiedPersonnel@{QualifiedPersonnel}!reportIssue@{reportIssue}}
+\index{reportIssue@{reportIssue}!QualifiedPersonnel@{QualifiedPersonnel}}
+\doxysubsubsection{\texorpdfstring{reportIssue()}{reportIssue()}}
+{\footnotesize\ttfamily \label{class_qualified_personnel_a11224e2a6a323f6ad6c96951d051d68b} 
+void Qualified\+Personnel\+::report\+Issue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_problem_report}{Problem\+Report}}}]{report}{}\end{DoxyParamCaption})}
+
+
+
+Reports an issue by creating a problem report. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em report} & The problem report to create. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_qualified_personnel_a8861b9b8bf36cb4ca2d7b9a77911afa1}\index{QualifiedPersonnel@{QualifiedPersonnel}!assignedActivity\_@{assignedActivity\_}}
+\index{assignedActivity\_@{assignedActivity\_}!QualifiedPersonnel@{QualifiedPersonnel}}
+\doxysubsubsection{\texorpdfstring{assignedActivity\_}{assignedActivity\_}}
+{\footnotesize\ttfamily \label{class_qualified_personnel_a8861b9b8bf36cb4ca2d7b9a77911afa1} 
+std\+::list$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Qualified\+Personnel\+::assigned\+Activity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of activities assigned to the personnel 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_qualified_personnel_8h}{Qualified\+Personnel.\+h}}\end{DoxyCompactItemize}

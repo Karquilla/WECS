@@ -1,0 +1,89 @@
+\doxysection{Resource Class Reference}
+\hypertarget{class_resource}{}\label{class_resource}\index{Resource@{Resource}}
+
+
+Represents a resource that can be allocated to activities.  
+
+
+
+
+{\ttfamily \#include $<$Resource.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_resource_a1618e2d5319c3b346533439e5b0e6a77}{allocate\+To\+Activity}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
+\begin{DoxyCompactList}\small\item\em Allocates the resource to an activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_resource_aef05a1cb0f22d57e8f8d5649a20f8cfd}{track\+Usage}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
+\begin{DoxyCompactList}\small\item\em Tracks the usage of the resource for a specified activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_resource_aa6fc4ab005d6a27f6fcd10cec25ec555}{availability\+Status}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_room}{Room}} $>$ \mbox{\hyperlink{class_resource_aa15fc3eb6e40489ec286155a48637bb3}{associated\+Rooms}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_resource_af91211e55a2c6e51037674f365fe1fdc}{associated\+Activities}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a resource that can be allocated to activities. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_resource_a1618e2d5319c3b346533439e5b0e6a77}\index{Resource@{Resource}!allocateToActivity@{allocateToActivity}}
+\index{allocateToActivity@{allocateToActivity}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{allocateToActivity()}{allocateToActivity()}}
+{\footnotesize\ttfamily \label{class_resource_a1618e2d5319c3b346533439e5b0e6a77} 
+void Resource\+::allocate\+To\+Activity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+Allocates the resource to an activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity to allocate the resource to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_resource_aef05a1cb0f22d57e8f8d5649a20f8cfd}\index{Resource@{Resource}!trackUsage@{trackUsage}}
+\index{trackUsage@{trackUsage}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{trackUsage()}{trackUsage()}}
+{\footnotesize\ttfamily \label{class_resource_aef05a1cb0f22d57e8f8d5649a20f8cfd} 
+void Resource\+::track\+Usage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+Tracks the usage of the resource for a specified activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity to track usage for. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_resource_af91211e55a2c6e51037674f365fe1fdc}\index{Resource@{Resource}!associatedActivities@{associatedActivities}}
+\index{associatedActivities@{associatedActivities}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{associatedActivities}{associatedActivities}}
+{\footnotesize\ttfamily \label{class_resource_af91211e55a2c6e51037674f365fe1fdc} 
+std\+::list$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Resource\+::associated\+Activities\hspace{0.3cm}{\ttfamily [private]}}
+
+Activities associated with the resource \Hypertarget{class_resource_aa15fc3eb6e40489ec286155a48637bb3}\index{Resource@{Resource}!associatedRooms@{associatedRooms}}
+\index{associatedRooms@{associatedRooms}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{associatedRooms}{associatedRooms}}
+{\footnotesize\ttfamily \label{class_resource_aa15fc3eb6e40489ec286155a48637bb3} 
+std\+::list$<$\mbox{\hyperlink{class_room}{Room}}$>$ Resource\+::associated\+Rooms\hspace{0.3cm}{\ttfamily [private]}}
+
+Rooms associated with the resource \Hypertarget{class_resource_aa6fc4ab005d6a27f6fcd10cec25ec555}\index{Resource@{Resource}!availabilityStatus@{availabilityStatus}}
+\index{availabilityStatus@{availabilityStatus}!Resource@{Resource}}
+\doxysubsubsection{\texorpdfstring{availabilityStatus}{availabilityStatus}}
+{\footnotesize\ttfamily \label{class_resource_aa6fc4ab005d6a27f6fcd10cec25ec555} 
+bool Resource\+::availability\+Status\hspace{0.3cm}{\ttfamily [private]}}
+
+Availability status of the resource 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_resource_8h}{Resource.\+h}}\end{DoxyCompactItemize}

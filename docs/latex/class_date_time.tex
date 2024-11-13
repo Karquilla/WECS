@@ -1,0 +1,114 @@
+\doxysection{Date\+Time Class Reference}
+\hypertarget{class_date_time}{}\label{class_date_time}\index{DateTime@{DateTime}}
+
+
+Singleton class for handling date and time functionalities.  
+
+
+
+
+{\ttfamily \#include $<$Date\+Time.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_date_time_a271b7ae9e4f963b09bf2ddf1986176ef}{get\+Time\+Curr}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current time as a formatted string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_date_time_a62c3b46a82ff62159f22a6e88ac0bd3b}{get\+Date\+Curr}} ()
+\begin{DoxyCompactList}\small\item\em Returns the current date as a formatted string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_date_time}{Date\+Time}} \& \mbox{\hyperlink{class_date_time_ade22c2166cbdb4c1ce376ab56bce08df}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of \doxylink{class_date_time}{Date\+Time}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_date_time_a322698188148c21637177bd71d07320d}{Date\+Time}} (const \mbox{\hyperlink{class_date_time}{Date\+Time}} \&)=delete
+\item 
+\mbox{\hyperlink{class_date_time}{Date\+Time}} \& \mbox{\hyperlink{class_date_time_a823fa3cedbffdeebb7de80d4c8eb52d7}{operator=}} (const \mbox{\hyperlink{class_date_time}{Date\+Time}} \&)=delete
+\item 
+\mbox{\hyperlink{class_date_time_afa7d2eb61840fe713cb4f98795c23a53}{Date\+Time}} ()=default
+\item 
+\mbox{\hyperlink{class_date_time_ab52dd76bf1b1d41ffbe74bf977fc513c}{\texorpdfstring{$\sim$}{\string~}\+Date\+Time}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class for handling date and time functionalities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_date_time_a322698188148c21637177bd71d07320d}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_date_time_a322698188148c21637177bd71d07320d} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date_time}{Date\+Time}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+Deleted copy constructor \Hypertarget{class_date_time_afa7d2eb61840fe713cb4f98795c23a53}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_date_time_afa7d2eb61840fe713cb4f98795c23a53} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+Private constructor \Hypertarget{class_date_time_ab52dd76bf1b1d41ffbe74bf977fc513c}\index{DateTime@{DateTime}!````~DateTime@{\texorpdfstring{$\sim$}{\string~}DateTime}}
+\index{````~DateTime@{\texorpdfstring{$\sim$}{\string~}DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DateTime()}{\string~DateTime()}}
+{\footnotesize\ttfamily \label{class_date_time_ab52dd76bf1b1d41ffbe74bf977fc513c} 
+Date\+Time\+::\texorpdfstring{$\sim$}{\string~}\+Date\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+Private destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_date_time_a62c3b46a82ff62159f22a6e88ac0bd3b}\index{DateTime@{DateTime}!getDateCurr@{getDateCurr}}
+\index{getDateCurr@{getDateCurr}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{getDateCurr()}{getDateCurr()}}
+{\footnotesize\ttfamily \label{class_date_time_a62c3b46a82ff62159f22a6e88ac0bd3b} 
+std\+::string Date\+Time\+::get\+Date\+Curr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current date as a formatted string. 
+
+\begin{DoxyReturn}{Returns}
+Current date as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_ade22c2166cbdb4c1ce376ab56bce08df}\index{DateTime@{DateTime}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{class_date_time_ade22c2166cbdb4c1ce376ab56bce08df} 
+\mbox{\hyperlink{class_date_time}{Date\+Time}} \& Date\+Time\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of \doxylink{class_date_time}{Date\+Time}. 
+
+Returns the singleton instance of \doxylink{class_date_time}{Date\+Time}.
+
+\begin{DoxyReturn}{Returns}
+The singleton instance. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a271b7ae9e4f963b09bf2ddf1986176ef}\index{DateTime@{DateTime}!getTimeCurr@{getTimeCurr}}
+\index{getTimeCurr@{getTimeCurr}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{getTimeCurr()}{getTimeCurr()}}
+{\footnotesize\ttfamily \label{class_date_time_a271b7ae9e4f963b09bf2ddf1986176ef} 
+std\+::string Date\+Time\+::get\+Time\+Curr (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Returns the current time as a formatted string. 
+
+\begin{DoxyReturn}{Returns}
+Current time as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a823fa3cedbffdeebb7de80d4c8eb52d7}\index{DateTime@{DateTime}!operator=@{operator=}}
+\index{operator=@{operator=}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_date_time_a823fa3cedbffdeebb7de80d4c8eb52d7} 
+\mbox{\hyperlink{class_date_time}{Date\+Time}} \& Date\+Time\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date_time}{Date\+Time}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [delete]}}
+
+Deleted assignment operator 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_date_time_8h}{Date\+Time.\+h}}\item 
+src/\mbox{\hyperlink{_date_time_8cpp}{Date\+Time.\+cpp}}\end{DoxyCompactItemize}

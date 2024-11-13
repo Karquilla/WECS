@@ -1,0 +1,28 @@
+\doxysection{Activity.\+h}
+\hypertarget{_activity_8h_source}{}\label{_activity_8h_source}\index{include/Activity.h@{include/Activity.h}}
+\mbox{\hyperlink{_activity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_qualified_personnel_8h}{QualifiedPersonnel.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_8h}{Resource.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_schedule_8h}{Schedule.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82}{scheduleActivity}}(std::chrono::system\_clock::time\_point\ startTime,\ std::chrono::system\_clock::time\_point\ endTime);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab}{assignPersonnel}}(\mbox{\hyperlink{class_qualified_personnel}{QualifiedPersonnel}}\ personnel);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a9a73eb5b4b0ebdf53e40c9b1f50876ce}{assignResource}}(\mbox{\hyperlink{class_resource}{Resource}}\ resource);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}{activityType\_}};\ }
+\DoxyCodeLine{00038\ \ \ \ \ std::chrono::system\_clock::time\_point\ \mbox{\hyperlink{class_activity_a3901f0309777656b0347565f64919757}{startTime\_}};\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::chrono::system\_clock::time\_point\ \mbox{\hyperlink{class_activity_ad3d5e07b20524b28739f8772b05b6674}{endTime\_}};\ }
+\DoxyCodeLine{00040\ \ \ \ \ std::list<QualifiedPersonnel>\ \mbox{\hyperlink{class_activity_a2569731cc41cc6715b71e5cbe0d25767}{qualifiedPersonnel}};\ }
+\DoxyCodeLine{00041\ \ \ \ \ std::list<Resource>\ \mbox{\hyperlink{class_activity_a48a3aceef55eb2b4c2641fb5cf32c2ee}{resources}};\ }
+\DoxyCodeLine{00042\ \};}
+
+\end{DoxyCode}

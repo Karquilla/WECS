@@ -1,0 +1,95 @@
+\doxysection{Guest Class Reference}
+\hypertarget{class_guest}{}\label{class_guest}\index{Guest@{Guest}}
+
+
+Represents a guest participating in an event and its activities.  
+
+
+
+
+{\ttfamily \#include $<$Guest.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f}{register\+For\+Activity}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
+\begin{DoxyCompactList}\small\item\em Registers the guest for a specific activity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_guest_a5f23bf4666670d94624b077e763ade6f}{check\+Conflicts}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
+\begin{DoxyCompactList}\small\item\em Checks if there are scheduling conflicts with the specified activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64}{unique\+ID\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}{registered\+Activities\+\_\+}}
+\item 
+\mbox{\hyperlink{class_event}{Event}} \mbox{\hyperlink{class_guest_a9a09952405c7f0eb9a546a53146f1d88}{associated\+Event\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a guest participating in an event and its activities. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_guest_a5f23bf4666670d94624b077e763ade6f}\index{Guest@{Guest}!checkConflicts@{checkConflicts}}
+\index{checkConflicts@{checkConflicts}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{checkConflicts()}{checkConflicts()}}
+{\footnotesize\ttfamily \label{class_guest_a5f23bf4666670d94624b077e763ade6f} 
+bool Guest\+::check\+Conflicts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+Checks if there are scheduling conflicts with the specified activity. 
+
+Checks if the guest has a scheduling conflict with the specified activity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity to check against. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if there is a conflict, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f}\index{Guest@{Guest}!registerForActivity@{registerForActivity}}
+\index{registerForActivity@{registerForActivity}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{registerForActivity()}{registerForActivity()}}
+{\footnotesize\ttfamily \label{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f} 
+void Guest\+::register\+For\+Activity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+Registers the guest for a specific activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity to register for. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_guest_a9a09952405c7f0eb9a546a53146f1d88}\index{Guest@{Guest}!associatedEvent\_@{associatedEvent\_}}
+\index{associatedEvent\_@{associatedEvent\_}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{associatedEvent\_}{associatedEvent\_}}
+{\footnotesize\ttfamily \label{class_guest_a9a09952405c7f0eb9a546a53146f1d88} 
+\mbox{\hyperlink{class_event}{Event}} Guest\+::associated\+Event\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxylink{class_event}{Event} the guest is associated with \Hypertarget{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}\index{Guest@{Guest}!registeredActivities\_@{registeredActivities\_}}
+\index{registeredActivities\_@{registeredActivities\_}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{registeredActivities\_}{registeredActivities\_}}
+{\footnotesize\ttfamily \label{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23} 
+std\+::list$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Guest\+::registered\+Activities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Activities the guest has registered for \Hypertarget{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64}\index{Guest@{Guest}!uniqueID\_@{uniqueID\_}}
+\index{uniqueID\_@{uniqueID\_}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{uniqueID\_}{uniqueID\_}}
+{\footnotesize\ttfamily \label{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64} 
+std\+::string Guest\+::unique\+ID\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Unique ID for the guest 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_guest_8h}{Guest.\+h}}\item 
+src/\mbox{\hyperlink{_guest_8cpp}{Guest.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,114 @@
+\doxysection{Problem\+Report Class Reference}
+\hypertarget{class_problem_report}{}\label{class_problem_report}\index{ProblemReport@{ProblemReport}}
+
+
+Represents a problem report related to activities and resources.  
+
+
+
+
+{\ttfamily \#include $<$Problem\+Report.\+h$>$}
+
+Inheritance diagram for Problem\+Report\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_problem_report}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_problem_report_a00f146f12f46bbc400c9f0d8972023d4}{create\+Report}} (\mbox{\hyperlink{class_activity}{Activity}} activity, \mbox{\hyperlink{class_resource}{Resource}} resource)
+\begin{DoxyCompactList}\small\item\em Creates a problem report for a specific activity and resource. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_report}{Report}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_report_a91c8950411f2166bfcaf5602458a807b}{generate\+Report}} ()
+\begin{DoxyCompactList}\small\item\em Generates the report with specified details. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_report_ad67e1e5f7f9926f82bda9d40c69f334e}{get\+Time\+Stamp}} ()
+\begin{DoxyCompactList}\small\item\em Gets the timestamp of the report. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_report_a2663394fa66e32a674907e3361a90013}{update\+Status}} (\mbox{\hyperlink{_report_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} status)
+\begin{DoxyCompactList}\small\item\em Updates the status of the report. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_activity}{Activity}} \mbox{\hyperlink{class_problem_report_ad885eb6bba7a619cbf4e62f30cdfa8f8}{activity\+\_\+}}
+\item 
+\mbox{\hyperlink{class_resource}{Resource}} \mbox{\hyperlink{class_problem_report_abffbb63f9516a99c8c3da942c3b3a81e}{resource\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_problem_report_adca78e761255953d5f9bd6cdb8701e6e}{time\+Stamp\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_problem_report_a13f362fde362c856cd766f7728976423}{severity\+\_\+}}
+\item 
+\mbox{\hyperlink{class_manager}{Manager}} \mbox{\hyperlink{class_problem_report_abd1c5c495df8704e6c22b1df6c6bd5a2}{assigned\+Manager\+\_\+}}
+\item 
+\mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}} \mbox{\hyperlink{class_problem_report_aeff64e6b9905a3e838d07f60b7c9b93f}{reported\+By\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a problem report related to activities and resources. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_problem_report_a00f146f12f46bbc400c9f0d8972023d4}\index{ProblemReport@{ProblemReport}!createReport@{createReport}}
+\index{createReport@{createReport}!ProblemReport@{ProblemReport}}
+\doxysubsubsection{\texorpdfstring{createReport()}{createReport()}}
+{\footnotesize\ttfamily \label{class_problem_report_a00f146f12f46bbc400c9f0d8972023d4} 
+void Problem\+Report\+::create\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{, }\item[{\mbox{\hyperlink{class_resource}{Resource}}}]{resource}{}\end{DoxyParamCaption})}
+
+
+
+Creates a problem report for a specific activity and resource. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity associated with the problem. \\
+\hline
+{\em resource} & The resource associated with the problem. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_problem_report_ad885eb6bba7a619cbf4e62f30cdfa8f8}\index{ProblemReport@{ProblemReport}!activity\_@{activity\_}}
+\index{activity\_@{activity\_}!ProblemReport@{ProblemReport}}
+\doxysubsubsection{\texorpdfstring{activity\_}{activity\_}}
+{\footnotesize\ttfamily \label{class_problem_report_ad885eb6bba7a619cbf4e62f30cdfa8f8} 
+\mbox{\hyperlink{class_activity}{Activity}} Problem\+Report\+::activity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxylink{class_activity}{Activity} associated with the report \Hypertarget{class_problem_report_abd1c5c495df8704e6c22b1df6c6bd5a2}\index{ProblemReport@{ProblemReport}!assignedManager\_@{assignedManager\_}}
+\index{assignedManager\_@{assignedManager\_}!ProblemReport@{ProblemReport}}
+\doxysubsubsection{\texorpdfstring{assignedManager\_}{assignedManager\_}}
+{\footnotesize\ttfamily \label{class_problem_report_abd1c5c495df8704e6c22b1df6c6bd5a2} 
+\mbox{\hyperlink{class_manager}{Manager}} Problem\+Report\+::assigned\+Manager\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxylink{class_manager}{Manager} assigned to handle the problem \Hypertarget{class_problem_report_aeff64e6b9905a3e838d07f60b7c9b93f}\index{ProblemReport@{ProblemReport}!reportedBy\_@{reportedBy\_}}
+\index{reportedBy\_@{reportedBy\_}!ProblemReport@{ProblemReport}}
+\doxysubsubsection{\texorpdfstring{reportedBy\_}{reportedBy\_}}
+{\footnotesize\ttfamily \label{class_problem_report_aeff64e6b9905a3e838d07f60b7c9b93f} 
+\mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}} Problem\+Report\+::reported\+By\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Personnel who reported the problem \Hypertarget{class_problem_report_abffbb63f9516a99c8c3da942c3b3a81e}\index{ProblemReport@{ProblemReport}!resource\_@{resource\_}}
+\index{resource\_@{resource\_}!ProblemReport@{ProblemReport}}
+\doxysubsubsection{\texorpdfstring{resource\_}{resource\_}}
+{\footnotesize\ttfamily \label{class_problem_report_abffbb63f9516a99c8c3da942c3b3a81e} 
+\mbox{\hyperlink{class_resource}{Resource}} Problem\+Report\+::resource\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxylink{class_resource}{Resource} associated with the report \Hypertarget{class_problem_report_a13f362fde362c856cd766f7728976423}\index{ProblemReport@{ProblemReport}!severity\_@{severity\_}}
+\index{severity\_@{severity\_}!ProblemReport@{ProblemReport}}
+\doxysubsubsection{\texorpdfstring{severity\_}{severity\_}}
+{\footnotesize\ttfamily \label{class_problem_report_a13f362fde362c856cd766f7728976423} 
+std\+::string Problem\+Report\+::severity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Severity level of the problem \Hypertarget{class_problem_report_adca78e761255953d5f9bd6cdb8701e6e}\index{ProblemReport@{ProblemReport}!timeStamp\_@{timeStamp\_}}
+\index{timeStamp\_@{timeStamp\_}!ProblemReport@{ProblemReport}}
+\doxysubsubsection{\texorpdfstring{timeStamp\_}{timeStamp\_}}
+{\footnotesize\ttfamily \label{class_problem_report_adca78e761255953d5f9bd6cdb8701e6e} 
+std\+::string Problem\+Report\+::time\+Stamp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Timestamp of the report creation 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_problem_report_8h}{Problem\+Report.\+h}}\item 
+src/\mbox{\hyperlink{_problem_report_8cpp}{Problem\+Report.\+cpp}}\end{DoxyCompactItemize}

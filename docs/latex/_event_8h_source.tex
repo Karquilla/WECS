@@ -1,0 +1,32 @@
+\doxysection{Event.\+h}
+\hypertarget{_event_8h_source}{}\label{_event_8h_source}\index{include/Event.h@{include/Event.h}}
+\mbox{\hyperlink{_event_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_date_time_8h}{DateTime.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_schedule_8h}{Schedule.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_manager}{Manager}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a71a7f5754870c83d663caf072979133e}{scheduleEvent}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dateTime);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_ab2a7493a2665580e02e2739b34965fb2}{assignRoom}}(\mbox{\hyperlink{class_room}{Room}}\&\ room);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a62cecb065c283cae8d5bdc85eff5e70d}{assignQualifiedPersonnel}}(\mbox{\hyperlink{class_manager}{Manager}}\&\ manager);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_adf58833ce0f9079f331664c55c0ae2ca}{addActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\&\ activity);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ std::list<Room>\ \mbox{\hyperlink{class_event_a0227ff67bcd78f55338c64dd2f70a500}{rooms\_}};\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::list<Manager>\ \mbox{\hyperlink{class_event_aa84934b5a64b018a8f59d981b816bda0}{managers\_}};\ }
+\DoxyCodeLine{00048\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9}{activities\_}};\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_date_time}{DateTime}}\ \mbox{\hyperlink{class_event_a82f6e4bb9f023428e75d2683bd4892ee}{eventDateTime\_}};\ }
+\DoxyCodeLine{00050\ \};}
+
+\end{DoxyCode}

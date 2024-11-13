@@ -1,0 +1,24 @@
+\doxysection{Guest.\+h}
+\hypertarget{_guest_8h_source}{}\label{_guest_8h_source}\index{include/Guest.h@{include/Guest.h}}
+\mbox{\hyperlink{_guest_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_event_8h}{Event.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_guest}{Guest}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f}{registerForActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_guest_a5f23bf4666670d94624b077e763ade6f}{checkConflicts}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ std::string\ \mbox{\hyperlink{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64}{uniqueID\_}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}{registeredActivities\_}};\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_event}{Event}}\ \mbox{\hyperlink{class_guest_a9a09952405c7f0eb9a546a53146f1d88}{associatedEvent\_}};\ }
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,127 @@
+\doxysection{Activity Class Reference}
+\hypertarget{class_activity}{}\label{class_activity}\index{Activity@{Activity}}
+
+
+Represents an activity with scheduling, personnel, and resource assignment.  
+
+
+
+
+{\ttfamily \#include $<$Activity.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82}{schedule\+Activity}} (std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point start\+Time, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point end\+Time)
+\begin{DoxyCompactList}\small\item\em Schedules the activity with a start and end time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab}{assign\+Personnel}} (\mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}} personnel)
+\begin{DoxyCompactList}\small\item\em Assigns qualified personnel to the activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_activity_a9a73eb5b4b0ebdf53e40c9b1f50876ce}{assign\+Resource}} (\mbox{\hyperlink{class_resource}{Resource}} resource)
+\begin{DoxyCompactList}\small\item\em Assigns a resource to the activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}{activity\+Type\+\_\+}}
+\item 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_activity_a3901f0309777656b0347565f64919757}{start\+Time\+\_\+}}
+\item 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_activity_ad3d5e07b20524b28739f8772b05b6674}{end\+Time\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}} $>$ \mbox{\hyperlink{class_activity_a2569731cc41cc6715b71e5cbe0d25767}{qualified\+Personnel}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_resource}{Resource}} $>$ \mbox{\hyperlink{class_activity_a48a3aceef55eb2b4c2641fb5cf32c2ee}{resources}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an activity with scheduling, personnel, and resource assignment. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab}\index{Activity@{Activity}!assignPersonnel@{assignPersonnel}}
+\index{assignPersonnel@{assignPersonnel}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{assignPersonnel()}{assignPersonnel()}}
+{\footnotesize\ttfamily \label{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab} 
+void Activity\+::assign\+Personnel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}}}]{personnel}{}\end{DoxyParamCaption})}
+
+
+
+Assigns qualified personnel to the activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em personnel} & The \doxylink{class_qualified_personnel}{Qualified\+Personnel} to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_activity_a9a73eb5b4b0ebdf53e40c9b1f50876ce}\index{Activity@{Activity}!assignResource@{assignResource}}
+\index{assignResource@{assignResource}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{assignResource()}{assignResource()}}
+{\footnotesize\ttfamily \label{class_activity_a9a73eb5b4b0ebdf53e40c9b1f50876ce} 
+void Activity\+::assign\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_resource}{Resource}}}]{resource}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a resource to the activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resource} & The \doxylink{class_resource}{Resource} to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82}\index{Activity@{Activity}!scheduleActivity@{scheduleActivity}}
+\index{scheduleActivity@{scheduleActivity}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{scheduleActivity()}{scheduleActivity()}}
+{\footnotesize\ttfamily \label{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82} 
+void Activity\+::schedule\+Activity (\begin{DoxyParamCaption}\item[{std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point}]{start\+Time}{, }\item[{std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point}]{end\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Schedules the activity with a start and end time. 
+
+Schedules the activity with specified start and end times.
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & The start time of the activity. \\
+\hline
+{\em end\+Time} & The end time of the activity. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}\index{Activity@{Activity}!activityType\_@{activityType\_}}
+\index{activityType\_@{activityType\_}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{activityType\_}{activityType\_}}
+{\footnotesize\ttfamily \label{class_activity_a002d26258a68dc5d9bef4e7718e2d67d} 
+std\+::string Activity\+::activity\+Type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Type of activity \Hypertarget{class_activity_ad3d5e07b20524b28739f8772b05b6674}\index{Activity@{Activity}!endTime\_@{endTime\_}}
+\index{endTime\_@{endTime\_}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{endTime\_}{endTime\_}}
+{\footnotesize\ttfamily \label{class_activity_ad3d5e07b20524b28739f8772b05b6674} 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point Activity\+::end\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+End time of the activity \Hypertarget{class_activity_a2569731cc41cc6715b71e5cbe0d25767}\index{Activity@{Activity}!qualifiedPersonnel@{qualifiedPersonnel}}
+\index{qualifiedPersonnel@{qualifiedPersonnel}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{qualifiedPersonnel}{qualifiedPersonnel}}
+{\footnotesize\ttfamily \label{class_activity_a2569731cc41cc6715b71e5cbe0d25767} 
+std\+::list$<$\mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}}$>$ Activity\+::qualified\+Personnel\hspace{0.3cm}{\ttfamily [private]}}
+
+List of assigned personnel \Hypertarget{class_activity_a48a3aceef55eb2b4c2641fb5cf32c2ee}\index{Activity@{Activity}!resources@{resources}}
+\index{resources@{resources}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{resources}{resources}}
+{\footnotesize\ttfamily \label{class_activity_a48a3aceef55eb2b4c2641fb5cf32c2ee} 
+std\+::list$<$\mbox{\hyperlink{class_resource}{Resource}}$>$ Activity\+::resources\hspace{0.3cm}{\ttfamily [private]}}
+
+List of assigned resources \Hypertarget{class_activity_a3901f0309777656b0347565f64919757}\index{Activity@{Activity}!startTime\_@{startTime\_}}
+\index{startTime\_@{startTime\_}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{startTime\_}{startTime\_}}
+{\footnotesize\ttfamily \label{class_activity_a3901f0309777656b0347565f64919757} 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point Activity\+::start\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Start time of the activity 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_activity_8h}{Activity.\+h}}\item 
+src/\mbox{\hyperlink{_activity_8cpp}{Activity.\+cpp}}\end{DoxyCompactItemize}

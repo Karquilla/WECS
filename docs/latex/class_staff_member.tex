@@ -1,0 +1,76 @@
+\doxysection{Staff\+Member Class Reference}
+\hypertarget{class_staff_member}{}\label{class_staff_member}\index{StaffMember@{StaffMember}}
+
+
+Represents a staff member with scheduling and authorization level.  
+
+
+
+
+{\ttfamily \#include $<$Staff\+Member.\+h$>$}
+
+Inheritance diagram for Staff\+Member\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_staff_member}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_staff_member_af80de5badfe0327058230ede47aca26d}{is\+Conflict}} ()
+\begin{DoxyCompactList}\small\item\em Checks if there are any scheduling conflicts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_staff_member_a7c95307dae88312415ae10b75da64931}{authorization\+Level\+\_\+}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{class_activity}{Activity}}, std\+::pair$<$ \mbox{\hyperlink{class_date_time}{Date\+Time}}, int $>$ $>$ \mbox{\hyperlink{class_staff_member_a701f1d62ce93b43e35190cd166a3c081}{activity\+\_\+schedule}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{class_event}{Event}}, std\+::pair$<$ \mbox{\hyperlink{class_date_time}{Date\+Time}}, int $>$ $>$ \mbox{\hyperlink{class_staff_member_adf3a03040a15fa34f19a89b7d5eca4ed}{event\+\_\+schedule}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a staff member with scheduling and authorization level. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_staff_member_af80de5badfe0327058230ede47aca26d}\index{StaffMember@{StaffMember}!isConflict@{isConflict}}
+\index{isConflict@{isConflict}!StaffMember@{StaffMember}}
+\doxysubsubsection{\texorpdfstring{isConflict()}{isConflict()}}
+{\footnotesize\ttfamily \label{class_staff_member_af80de5badfe0327058230ede47aca26d} 
+bool Staff\+Member\+::is\+Conflict (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if there are any scheduling conflicts. 
+
+\begin{DoxyReturn}{Returns}
+true if there is a conflict, false otherwise. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_staff_member_a701f1d62ce93b43e35190cd166a3c081}\index{StaffMember@{StaffMember}!activity\_schedule@{activity\_schedule}}
+\index{activity\_schedule@{activity\_schedule}!StaffMember@{StaffMember}}
+\doxysubsubsection{\texorpdfstring{activity\_schedule}{activity\_schedule}}
+{\footnotesize\ttfamily \label{class_staff_member_a701f1d62ce93b43e35190cd166a3c081} 
+std\+::map$<$\mbox{\hyperlink{class_activity}{Activity}}, std\+::pair$<$\mbox{\hyperlink{class_date_time}{Date\+Time}}, int$>$ $>$ Staff\+Member\+::activity\+\_\+schedule\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxylink{class_schedule}{Schedule} of activities \Hypertarget{class_staff_member_a7c95307dae88312415ae10b75da64931}\index{StaffMember@{StaffMember}!authorizationLevel\_@{authorizationLevel\_}}
+\index{authorizationLevel\_@{authorizationLevel\_}!StaffMember@{StaffMember}}
+\doxysubsubsection{\texorpdfstring{authorizationLevel\_}{authorizationLevel\_}}
+{\footnotesize\ttfamily \label{class_staff_member_a7c95307dae88312415ae10b75da64931} 
+std\+::string Staff\+Member\+::authorization\+Level\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Authorization level of the staff member \Hypertarget{class_staff_member_adf3a03040a15fa34f19a89b7d5eca4ed}\index{StaffMember@{StaffMember}!event\_schedule@{event\_schedule}}
+\index{event\_schedule@{event\_schedule}!StaffMember@{StaffMember}}
+\doxysubsubsection{\texorpdfstring{event\_schedule}{event\_schedule}}
+{\footnotesize\ttfamily \label{class_staff_member_adf3a03040a15fa34f19a89b7d5eca4ed} 
+std\+::map$<$\mbox{\hyperlink{class_event}{Event}}, std\+::pair$<$\mbox{\hyperlink{class_date_time}{Date\+Time}}, int$>$ $>$ Staff\+Member\+::event\+\_\+schedule\hspace{0.3cm}{\ttfamily [private]}}
+
+\doxylink{class_schedule}{Schedule} of events 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_staff_member_8h}{Staff\+Member.\+h}}\end{DoxyCompactItemize}

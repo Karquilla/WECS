@@ -1,0 +1,24 @@
+\doxysection{Room.\+h}
+\hypertarget{_room_8h_source}{}\label{_room_8h_source}\index{include/Room.h@{include/Room.h}}
+\mbox{\hyperlink{_room_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_date_time_8h}{DateTime.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a457a871fc18bc719b0339696085ff041}{reserveRoom}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_room_aa8658b2658fd93f33f18a8cb68cd4c98}{checkAvailability}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dateTime);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_ae40b2b07c54a60c238199ef24aa38877}{capacity\_}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::list<Resource>\ \mbox{\hyperlink{class_room_a11ae81cdb99dab3301c22dd6dd4c6727}{availableResources\_}};\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_room_a178f18521c5c1bb774f49f777df0b75e}{activities\_}};\ }
+\DoxyCodeLine{00033\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,27 @@
+\doxysection{Schedule.\+h}
+\hypertarget{_schedule_8h_source}{}\label{_schedule_8h_source}\index{include/Schedule.h@{include/Schedule.h}}
+\mbox{\hyperlink{_schedule_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_schedule}{Schedule}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_schedule_aca8e75c63e5afa89dfd3b3f794cb4eb0}{scheduleEvent}}(\mbox{\hyperlink{class_event}{Event}}*\ event,\ std::tm\&\ eventDateTime);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_schedule_a52f9a96189a243e7de6cb23bc470923e}{scheduleActivity}}(\mbox{\hyperlink{class_activity}{Activity}}*\ activity,\ std::tm\&\ startTime,\ std::tm\&\ endTime);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_schedule_aa3370bb7e5b3f44e8de6a56a2187cbb1}{checkConflict}}(std::tm\&\ dateTime);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<Event*>\ \mbox{\hyperlink{class_schedule_a29bd1707577a3653196940d8e6bb7507}{events}};\ }
+\DoxyCodeLine{00043\ \ \ \ \ std::vector<Activity*>\ \mbox{\hyperlink{class_schedule_ae50c63b05cda95ae2ec332db0f56d659}{activities}};\ }
+\DoxyCodeLine{00044\ \};}
+
+\end{DoxyCode}

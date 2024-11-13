@@ -1,0 +1,132 @@
+\doxysection{Event Class Reference}
+\hypertarget{class_event}{}\label{class_event}\index{Event@{Event}}
+
+
+Represents an event with activities, rooms, and managers.  
+
+
+
+
+{\ttfamily \#include $<$Event.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_event_a71a7f5754870c83d663caf072979133e}{schedule\+Event}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} date\+Time)
+\begin{DoxyCompactList}\small\item\em Schedules the event at a specified date and time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_ab2a7493a2665580e02e2739b34965fb2}{assign\+Room}} (\mbox{\hyperlink{class_room}{Room}} \&room)
+\begin{DoxyCompactList}\small\item\em Assigns a room to the event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a62cecb065c283cae8d5bdc85eff5e70d}{assign\+Qualified\+Personnel}} (\mbox{\hyperlink{class_manager}{Manager}} \&manager)
+\begin{DoxyCompactList}\small\item\em Assigns a manager as qualified personnel to the event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_adf58833ce0f9079f331664c55c0ae2ca}{add\+Activity}} (\mbox{\hyperlink{class_activity}{Activity}} \&activity)
+\begin{DoxyCompactList}\small\item\em Adds an activity to the event\textquotesingle{}s list of activities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_room}{Room}} $>$ \mbox{\hyperlink{class_event_a0227ff67bcd78f55338c64dd2f70a500}{rooms\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_manager}{Manager}} $>$ \mbox{\hyperlink{class_event_aa84934b5a64b018a8f59d981b816bda0}{managers\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9}{activities\+\_\+}}
+\item 
+\mbox{\hyperlink{class_date_time}{Date\+Time}} \mbox{\hyperlink{class_event_a82f6e4bb9f023428e75d2683bd4892ee}{event\+Date\+Time\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an event with activities, rooms, and managers. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_adf58833ce0f9079f331664c55c0ae2ca}\index{Event@{Event}!addActivity@{addActivity}}
+\index{addActivity@{addActivity}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{addActivity()}{addActivity()}}
+{\footnotesize\ttfamily \label{class_event_adf58833ce0f9079f331664c55c0ae2ca} 
+void Event\+::add\+Activity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}} \&}]{activity}{}\end{DoxyParamCaption})}
+
+
+
+Adds an activity to the event\textquotesingle{}s list of activities. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & Reference to the activity to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_a62cecb065c283cae8d5bdc85eff5e70d}\index{Event@{Event}!assignQualifiedPersonnel@{assignQualifiedPersonnel}}
+\index{assignQualifiedPersonnel@{assignQualifiedPersonnel}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{assignQualifiedPersonnel()}{assignQualifiedPersonnel()}}
+{\footnotesize\ttfamily \label{class_event_a62cecb065c283cae8d5bdc85eff5e70d} 
+void Event\+::assign\+Qualified\+Personnel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_manager}{Manager}} \&}]{manager}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a manager as qualified personnel to the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em manager} & Reference to the manager to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_ab2a7493a2665580e02e2739b34965fb2}\index{Event@{Event}!assignRoom@{assignRoom}}
+\index{assignRoom@{assignRoom}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{assignRoom()}{assignRoom()}}
+{\footnotesize\ttfamily \label{class_event_ab2a7493a2665580e02e2739b34965fb2} 
+void Event\+::assign\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}} \&}]{room}{}\end{DoxyParamCaption})}
+
+
+
+Assigns a room to the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em room} & Reference to the room to assign. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_a71a7f5754870c83d663caf072979133e}\index{Event@{Event}!scheduleEvent@{scheduleEvent}}
+\index{scheduleEvent@{scheduleEvent}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{scheduleEvent()}{scheduleEvent()}}
+{\footnotesize\ttfamily \label{class_event_a71a7f5754870c83d663caf072979133e} 
+void Event\+::schedule\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date_time}{Date\+Time}}}]{date\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Schedules the event at a specified date and time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The date and time for the event. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9}\index{Event@{Event}!activities\_@{activities\_}}
+\index{activities\_@{activities\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{activities\_}{activities\_}}
+{\footnotesize\ttfamily \label{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9} 
+std\+::list$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Event\+::activities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of activities in the event \Hypertarget{class_event_a82f6e4bb9f023428e75d2683bd4892ee}\index{Event@{Event}!eventDateTime\_@{eventDateTime\_}}
+\index{eventDateTime\_@{eventDateTime\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{eventDateTime\_}{eventDateTime\_}}
+{\footnotesize\ttfamily \label{class_event_a82f6e4bb9f023428e75d2683bd4892ee} 
+\mbox{\hyperlink{class_date_time}{Date\+Time}} Event\+::event\+Date\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Date and time of the event \Hypertarget{class_event_aa84934b5a64b018a8f59d981b816bda0}\index{Event@{Event}!managers\_@{managers\_}}
+\index{managers\_@{managers\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{managers\_}{managers\_}}
+{\footnotesize\ttfamily \label{class_event_aa84934b5a64b018a8f59d981b816bda0} 
+std\+::list$<$\mbox{\hyperlink{class_manager}{Manager}}$>$ Event\+::managers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of managers for the event \Hypertarget{class_event_a0227ff67bcd78f55338c64dd2f70a500}\index{Event@{Event}!rooms\_@{rooms\_}}
+\index{rooms\_@{rooms\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{rooms\_}{rooms\_}}
+{\footnotesize\ttfamily \label{class_event_a0227ff67bcd78f55338c64dd2f70a500} 
+std\+::list$<$\mbox{\hyperlink{class_room}{Room}}$>$ Event\+::rooms\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of assigned rooms 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_event_8h}{Event.\+h}}\item 
+src/\mbox{\hyperlink{_event_8cpp}{Event.\+cpp}}\end{DoxyCompactItemize}

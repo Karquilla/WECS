@@ -1,0 +1,65 @@
+\doxysection{Manager Class Reference}
+\hypertarget{class_manager}{}\label{class_manager}\index{Manager@{Manager}}
+
+
+Represents a manager who can manage events.  
+
+
+
+
+{\ttfamily \#include $<$Manager.\+h$>$}
+
+Inheritance diagram for Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_manager_a8956989a79773e7d91a88b0cfd404bbb}{manage\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Manages the associated events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_staff_member}{Staff\+Member}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_staff_member_af80de5badfe0327058230ede47aca26d}{is\+Conflict}} ()
+\begin{DoxyCompactList}\small\item\em Checks if there are any scheduling conflicts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_event}{Event}} $>$ \mbox{\hyperlink{class_manager_acdd89198d2ee698e901dcc6595aeb465}{managed\+Events\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a manager who can manage events. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_manager_a8956989a79773e7d91a88b0cfd404bbb}\index{Manager@{Manager}!manageEvent@{manageEvent}}
+\index{manageEvent@{manageEvent}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{manageEvent()}{manageEvent()}}
+{\footnotesize\ttfamily \label{class_manager_a8956989a79773e7d91a88b0cfd404bbb} 
+void Manager\+::manage\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Manages the associated events. 
+
+Manages the events assigned to the manager.
+
+Currently no functionality has been implemented. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_manager_acdd89198d2ee698e901dcc6595aeb465}\index{Manager@{Manager}!managedEvents\_@{managedEvents\_}}
+\index{managedEvents\_@{managedEvents\_}!Manager@{Manager}}
+\doxysubsubsection{\texorpdfstring{managedEvents\_}{managedEvents\_}}
+{\footnotesize\ttfamily \label{class_manager_acdd89198d2ee698e901dcc6595aeb465} 
+std\+::list$<$\mbox{\hyperlink{class_event}{Event}}$>$ Manager\+::managed\+Events\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+List of events managed by the manager 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_manager_8h}{Manager.\+h}}\item 
+src/\mbox{\hyperlink{_manager_8cpp}{Manager.\+cpp}}\end{DoxyCompactItemize}

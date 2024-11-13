@@ -1,0 +1,118 @@
+\doxysection{Report Class Reference}
+\hypertarget{class_report}{}\label{class_report}\index{Report@{Report}}
+
+
+Base class for reports with a timestamp and status.  
+
+
+
+
+{\ttfamily \#include $<$Report.\+h$>$}
+
+Inheritance diagram for Report\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_report}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_report_a91c8950411f2166bfcaf5602458a807b}{generate\+Report}} ()
+\begin{DoxyCompactList}\small\item\em Generates the report with specified details. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_report_ad67e1e5f7f9926f82bda9d40c69f334e}{get\+Time\+Stamp}} ()
+\begin{DoxyCompactList}\small\item\em Gets the timestamp of the report. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_report_a2663394fa66e32a674907e3361a90013}{update\+Status}} (\mbox{\hyperlink{_report_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} status)
+\begin{DoxyCompactList}\small\item\em Updates the status of the report. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_report_a84749f9822094483524d047e6104c4ea}{report\+ID\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_report_a181f163b296018cc9279715b05d044d1}{time\+Stamp\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_report_af314fec6ee05caa8ff9cc88417ffb601}{details\+\_\+}}
+\item 
+\mbox{\hyperlink{_report_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} \mbox{\hyperlink{class_report_a8c368a26bc73a03300bdfc31b9df16ac}{status\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for reports with a timestamp and status. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_report_a91c8950411f2166bfcaf5602458a807b}\index{Report@{Report}!generateReport@{generateReport}}
+\index{generateReport@{generateReport}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{generateReport()}{generateReport()}}
+{\footnotesize\ttfamily \label{class_report_a91c8950411f2166bfcaf5602458a807b} 
+void Report\+::generate\+Report (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates the report with specified details. 
+
+\Hypertarget{class_report_ad67e1e5f7f9926f82bda9d40c69f334e}\index{Report@{Report}!getTimeStamp@{getTimeStamp}}
+\index{getTimeStamp@{getTimeStamp}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{getTimeStamp()}{getTimeStamp()}}
+{\footnotesize\ttfamily \label{class_report_ad67e1e5f7f9926f82bda9d40c69f334e} 
+std\+::string Report\+::get\+Time\+Stamp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the timestamp of the report. 
+
+Returns the timestamp of the report.
+
+\begin{DoxyReturn}{Returns}
+The timestamp as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_report_a2663394fa66e32a674907e3361a90013}\index{Report@{Report}!updateStatus@{updateStatus}}
+\index{updateStatus@{updateStatus}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{updateStatus()}{updateStatus()}}
+{\footnotesize\ttfamily \label{class_report_a2663394fa66e32a674907e3361a90013} 
+void Report\+::update\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_report_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}}}]{status}{}\end{DoxyParamCaption})}
+
+
+
+Updates the status of the report. 
+
+Updates the report status with the given status value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & The new status to set for the report. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_report_af314fec6ee05caa8ff9cc88417ffb601}\index{Report@{Report}!details\_@{details\_}}
+\index{details\_@{details\_}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{details\_}{details\_}}
+{\footnotesize\ttfamily \label{class_report_af314fec6ee05caa8ff9cc88417ffb601} 
+std\+::string Report\+::details\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Details of the report \Hypertarget{class_report_a84749f9822094483524d047e6104c4ea}\index{Report@{Report}!reportID\_@{reportID\_}}
+\index{reportID\_@{reportID\_}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{reportID\_}{reportID\_}}
+{\footnotesize\ttfamily \label{class_report_a84749f9822094483524d047e6104c4ea} 
+std\+::string Report\+::report\+ID\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+ID of the report \Hypertarget{class_report_a8c368a26bc73a03300bdfc31b9df16ac}\index{Report@{Report}!status\_@{status\_}}
+\index{status\_@{status\_}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{status\_}{status\_}}
+{\footnotesize\ttfamily \label{class_report_a8c368a26bc73a03300bdfc31b9df16ac} 
+\mbox{\hyperlink{_report_8h_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} Report\+::status\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Status of the report \Hypertarget{class_report_a181f163b296018cc9279715b05d044d1}\index{Report@{Report}!timeStamp\_@{timeStamp\_}}
+\index{timeStamp\_@{timeStamp\_}!Report@{Report}}
+\doxysubsubsection{\texorpdfstring{timeStamp\_}{timeStamp\_}}
+{\footnotesize\ttfamily \label{class_report_a181f163b296018cc9279715b05d044d1} 
+std\+::string Report\+::time\+Stamp\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Timestamp of the report 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_report_8h}{Report.\+h}}\item 
+src/\mbox{\hyperlink{_report_8cpp}{Report.\+cpp}}\end{DoxyCompactItemize}

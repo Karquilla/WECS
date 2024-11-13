@@ -1,0 +1,99 @@
+\doxysection{Cost\+Calc Class Reference}
+\hypertarget{class_cost_calc}{}\label{class_cost_calc}\index{CostCalc@{CostCalc}}
+
+
+Handles cost calculation for events based on guest count and other factors.  
+
+
+
+
+{\ttfamily \#include $<$Cost\+Calc.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_cost_calc_a48e73ba9a63c49dd8f9d8887ade1a959}{calculate\+Total\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total cost of the event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cost_calc_a8cbb74af1efd45e879a290cdbff71886}{update\+Guest\+Count}} (int guest\+Count)
+\begin{DoxyCompactList}\small\item\em Updates the guest count for cost calculation. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_cost_calc_a1a5310a3a443f90f570af210e8580939}{get\+Breakdown}} ()
+\begin{DoxyCompactList}\small\item\em Provides a breakdown of the costs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_event}{Event}} \mbox{\hyperlink{class_cost_calc_aee5d31cc0ee5a4b34e441dd645aaf4f2}{event\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_cost_calc_a83432adf76a092ed7ae9b93aef0c6e64}{guest\+Count\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles cost calculation for events based on guest count and other factors. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cost_calc_a48e73ba9a63c49dd8f9d8887ade1a959}\index{CostCalc@{CostCalc}!calculateTotalCost@{calculateTotalCost}}
+\index{calculateTotalCost@{calculateTotalCost}!CostCalc@{CostCalc}}
+\doxysubsubsection{\texorpdfstring{calculateTotalCost()}{calculateTotalCost()}}
+{\footnotesize\ttfamily \label{class_cost_calc_a48e73ba9a63c49dd8f9d8887ade1a959} 
+double Cost\+Calc\+::calculate\+Total\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the total cost of the event. 
+
+Calculates the total cost for the event based on the guest count.
+
+\begin{DoxyReturn}{Returns}
+The total cost as a double. 
+\end{DoxyReturn}
+\Hypertarget{class_cost_calc_a1a5310a3a443f90f570af210e8580939}\index{CostCalc@{CostCalc}!getBreakdown@{getBreakdown}}
+\index{getBreakdown@{getBreakdown}!CostCalc@{CostCalc}}
+\doxysubsubsection{\texorpdfstring{getBreakdown()}{getBreakdown()}}
+{\footnotesize\ttfamily \label{class_cost_calc_a1a5310a3a443f90f570af210e8580939} 
+std\+::string Cost\+Calc\+::get\+Breakdown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Provides a breakdown of the costs. 
+
+\begin{DoxyReturn}{Returns}
+The cost breakdown as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_cost_calc_a8cbb74af1efd45e879a290cdbff71886}\index{CostCalc@{CostCalc}!updateGuestCount@{updateGuestCount}}
+\index{updateGuestCount@{updateGuestCount}!CostCalc@{CostCalc}}
+\doxysubsubsection{\texorpdfstring{updateGuestCount()}{updateGuestCount()}}
+{\footnotesize\ttfamily \label{class_cost_calc_a8cbb74af1efd45e879a290cdbff71886} 
+void Cost\+Calc\+::update\+Guest\+Count (\begin{DoxyParamCaption}\item[{int}]{guest\+Count}{}\end{DoxyParamCaption})}
+
+
+
+Updates the guest count for cost calculation. 
+
+Updates the guest count used in cost calculations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em guest\+Count} & The updated number of guests. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_cost_calc_aee5d31cc0ee5a4b34e441dd645aaf4f2}\index{CostCalc@{CostCalc}!event\_@{event\_}}
+\index{event\_@{event\_}!CostCalc@{CostCalc}}
+\doxysubsubsection{\texorpdfstring{event\_}{event\_}}
+{\footnotesize\ttfamily \label{class_cost_calc_aee5d31cc0ee5a4b34e441dd645aaf4f2} 
+\mbox{\hyperlink{class_event}{Event}} Cost\+Calc\+::event\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Associated event for cost calculation \Hypertarget{class_cost_calc_a83432adf76a092ed7ae9b93aef0c6e64}\index{CostCalc@{CostCalc}!guestCount\_@{guestCount\_}}
+\index{guestCount\_@{guestCount\_}!CostCalc@{CostCalc}}
+\doxysubsubsection{\texorpdfstring{guestCount\_}{guestCount\_}}
+{\footnotesize\ttfamily \label{class_cost_calc_a83432adf76a092ed7ae9b93aef0c6e64} 
+int Cost\+Calc\+::guest\+Count\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Number of guests 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{_cost_calc_8h}{Cost\+Calc.\+h}}\item 
+src/\mbox{\hyperlink{_cost_calc_8cpp}{Cost\+Calc.\+cpp}}\end{DoxyCompactItemize}

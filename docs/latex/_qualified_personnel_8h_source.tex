@@ -1,0 +1,23 @@
+\doxysection{Qualified\+Personnel.\+h}
+\hypertarget{_qualified_personnel_8h_source}{}\label{_qualified_personnel_8h_source}\index{include/QualifiedPersonnel.h@{include/QualifiedPersonnel.h}}
+\mbox{\hyperlink{_qualified_personnel_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_staff_member_8h}{StaffMember.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_problem_report}{ProblemReport}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_qualified_personnel}{QualifiedPersonnel}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_staff_member}{StaffMember}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_qualified_personnel_a11224e2a6a323f6ad6c96951d051d68b}{reportIssue}}(\mbox{\hyperlink{class_problem_report}{ProblemReport}}\ report);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_qualified_personnel_a5fa1a43cbbe4e66ff6f8041fbd80a6bb}{assignActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00030\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_qualified_personnel_a8861b9b8bf36cb4ca2d7b9a77911afa1}{assignedActivity\_}};\ }
+\DoxyCodeLine{00031\ \};}
+
+\end{DoxyCode}
