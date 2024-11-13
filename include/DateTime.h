@@ -3,25 +3,21 @@
 #include <string>
 #include <ctime>
 
-// Meyer singlton for DateTime class
-// Used to get formatted string of current date or time
+// Singleton class for handling date and time functionalities
 class DateTime {
 public:
-    // Singleton instance
+    // Gets the singleton instance of DateTime
     static DateTime& getInstance();
 
-    // Method to get the current date and time as a string (example functionality)
+    // Returns the current time as a formatted string
     std::string getTimeCurr();
+
+    // Returns the current date as a formatted string
     std::string getDateCurr();
 
 private:
-    // Delete the copy constructor and copy assignment operator
-    DateTime(const DateTime&) = delete;
-    DateTime& operator=(const DateTime&) = delete;
-
-    // Private constructor to prevent direct instantiation
-    DateTime() = default;
-
-    // Private destructor
-    ~DateTime() = default;
+    DateTime(const DateTime&) = delete; // Deleted copy constructor
+    DateTime& operator=(const DateTime&) = delete; // Deleted assignment operator
+    DateTime() = default; // Private constructor
+    ~DateTime() = default; // Private destructor
 };

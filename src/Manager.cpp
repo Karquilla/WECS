@@ -1,2 +1,2 @@
-// hmm. nothing here
+// No functionality provided here yet
 

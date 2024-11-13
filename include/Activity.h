@@ -5,20 +5,22 @@
 #include "Schedule.h"
 #include <chrono>
 
+// Class to represent an activity with scheduling, personnel, and resource assignment
 class Activity {
 public:
-    void scheduleActivity(std::chrono::system_clock::time_point ,
-                         std::chrono::system_clock::time_point );
+    // Schedules the activity with a start and end time
+    void scheduleActivity(std::chrono::system_clock::time_point, std::chrono::system_clock::time_point);
 
-    void assignPersonnel(QualifiedPersonnel); 
+    // Assigns qualified personnel to the activity
+    void assignPersonnel(QualifiedPersonnel);
 
+    // Assigns a resource to the activity
     void assignResource(Resource);
 
 private:
-    std::string activityType_;
-    std::chrono::system_clock::time_point startTime_; 
-    std::chrono::system_clock::time_point endTime_; 
-    std::list<QualifiedPersonnel> qualifiedPersonnel; 
-    std::list<Resource> resources;
-    Schedule activitySchedule;
+    std::string activityType_; // Type of activity
+    std::chrono::system_clock::time_point startTime_; // Start time of the activity
+    std::chrono::system_clock::time_point endTime_; // End time of the activity
+    std::list<QualifiedPersonnel> qualifiedPersonnel; // List of assigned personnel
+    std::list<Resource> resources; // List of assigned resources
 };

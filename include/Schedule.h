@@ -7,6 +7,7 @@
 class Event;
 class Activity;
 
+// Class to represent a schedule for maintaing event cordination
 class Schedule {
 public:
     // Schedule a new event at the given date and time
