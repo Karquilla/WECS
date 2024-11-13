@@ -1,6 +1,11 @@
 #include "ProblemReport.h"
 
-// Creates a problem report for a specific activity and resource
+/**
+ * @brief Creates a problem report for a specific activity and resource.
+ * 
+ * @param activity The activity associated with the problem.
+ * @param resource The resource associated with the problem.
+ */
 void ProblemReport::createReport(Activity activity, Resource resource) {
-
+    // Logic to create the problem report
 }

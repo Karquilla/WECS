@@ -4,17 +4,28 @@
 #include "Room.h"
 #include <list>
 
-// Class to represent a resource that can be allocated to activities
+/**
+ * @class Resource
+ * @brief Represents a resource that can be allocated to activities.
+ */
 class Resource {
 public:
-    // Allocates the resource to an activity
-    void allocateToActivity(Activity);
+    /**
+     * @brief Allocates the resource to an activity.
+     * 
+     * @param activity The activity to allocate the resource to.
+     */
+    void allocateToActivity(Activity activity);
 
-    // Tracks the usage of the resource for an activity
-    void trackUsage(Activity);
+    /**
+     * @brief Tracks the usage of the resource for a specified activity.
+     * 
+     * @param activity The activity to track usage for.
+     */
+    void trackUsage(Activity activity);
 
 private:
-    bool availabilityStatus; // Availability status of the resource
-    std::list<Room> associatedRooms; // Rooms associated with the resource
-    std::list<Activity> associatedActivities; // Activities associated with the resource
+    bool availabilityStatus; /**< Availability status of the resource */
+    std::list<Room> associatedRooms; /**< Rooms associated with the resource */
+    std::list<Activity> associatedActivities; /**< Activities associated with the resource */
 };

@@ -7,21 +7,34 @@ enum class Status {
 
 };
 
-// Base class for reports with a timestamp and status
+/**
+ * @class Report
+ * @brief Base class for reports with a timestamp and status.
+ */
 class Report {
 public:
-    // Generates the report
+    /**
+     * @brief Generates the report with specified details.
+     */
     void generateReport();
 
-    // Gets the timestamp of the report
+    /**
+     * @brief Gets the timestamp of the report.
+     * 
+     * @return The timestamp as a string.
+     */
     std::string getTimeStamp();
 
-    // Updates the status of the report
-    void updateStatus(Status);
+    /**
+     * @brief Updates the status of the report.
+     * 
+     * @param status The new status to set for the report.
+     */
+    void updateStatus(Status status);
 
 private:
-    std::string reportID_; // ID of the report
-    std::string timeStamp_; // Timestamp of the report
-    std::string details_; // Details of the report
-    Status status_; // Status of the report
+    std::string reportID_; /**< ID of the report */
+    std::string timeStamp_; /**< Timestamp of the report */
+    std::string details_; /**< Details of the report */
+    Status status_; /**< Status of the report */
 };

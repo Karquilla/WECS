@@ -6,15 +6,26 @@
 class Activity;
 class ProblemReport;
 
-// Class to represent qualified personnel who can be assigned to activities and report issues
+/**
+ * @class QualifiedPersonnel
+ * @brief Represents qualified personnel who can be assigned to activities and report issues.
+ */
 class QualifiedPersonnel : public StaffMember {
 public:
-    // Reports an issue and creates a problem report
-    void reportIssue(ProblemReport);
+    /**
+     * @brief Reports an issue by creating a problem report.
+     * 
+     * @param report The problem report to create.
+     */
+    void reportIssue(ProblemReport report);
 
-    // Assigns the personnel to an activity
-    void assignActivity(Activity);
+    /**
+     * @brief Assigns the personnel to a specified activity.
+     * 
+     * @param activity The activity to assign the personnel to.
+     */
+    void assignActivity(Activity activity);
 
 private:
-    std::list<Activity> assignedActivity_; // List of activities assigned to the personnel
+    std::list<Activity> assignedActivity_; /**< List of activities assigned to the personnel */
 };

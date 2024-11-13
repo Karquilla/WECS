@@ -1,18 +1,28 @@
 #include "Report.h"
 #include <string>
 
-// Returns the timestamp of the report
+/**
+ * @brief Returns the timestamp of the report.
+ * 
+ * @return The timestamp as a string.
+ */
 std::string Report::getTimeStamp() {
     // Return a placeholder or actual timestamp as needed
     return "timestamp"; // Example placeholder
 }
 
-// Generates the report with specified details
+/**
+ * @brief Generates the report with specified details.
+ */
 void Report::generateReport() {
-    // Add logic for generating the report
+    // Logic for generating the report
 }
 
-// Updates the report status
+/**
+ * @brief Updates the report status with the given status value.
+ * 
+ * @param status The new status to set for the report.
+ */
 void Report::updateStatus(Status status) {
     status_ = status;
     // Additional logic for updating the status, if needed
