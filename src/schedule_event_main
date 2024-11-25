@@ -1,0 +1,71 @@
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include "Event.h"
+
+std::vector<Event> loadEvents() {
+    std::string directoryPath = "../data";
+    std::vector<Event> events;
+
+    //Iterate over all .txt files in the directory
+    for (const auto& entry : std::filesystem::directory_iterator(directoryPath)) {
+        if (entry.path().extension() == ".txt") {
+            Event event;
+            event.loadFromFile(entry.path().string());
+            events.push_back(event);
+        }
+    }
+    return events;
+}
+
+/**
+ * @brief Main function, entry point of the creating and scheduling event.
+ * 
+ * @return int Returns 0 if the program executes successfully.
+ */
+int main() {
+    // place holder menu
+    std::string opt;
+    std::cout << " make selection" << std::endl;
+    std::cout << " 0 - create event" << std::endl;
+    std::cout << " 1 - edit event" << std::endl;
+    std::cin >> opt;
+
+    std::string name;
+    std::fstream eventFile;
+    if (opt == "0") {
+        std::cout << " enter name of event" << std::endl;
+        std::cin >> name;
+
+        Event currEvent; // had to comment out Datetime in Event
+        currEvent.setName(name);
+
+        
+        eventFile.open(currEvent.getfName());
+        if (!eventFile.is_open()) {
+            std::cerr << "Failed to create save file.";
+            return 1;
+        }
+
+        // need to get id from available list
+        // create data template in save file
+        eventFile << "name: " + currEvent.getName() + "\n";
+        eventFile << "id: \n";
+        eventFile << "manager: \n";
+        eventFile << "qualifiedpersonnel: \n";
+        eventFile << "staff: \n";
+        eventFile << "activities: \n";
+        eventFile << "guests: \n";
+        eventFile << "date: \n";
+        eventFile << "start: \n";
+        eventFile << "end: \n";
+
+    }else if (opt == "1") {
+
+    }else {
+
+    }
+    
+
+    return 0;
+}
