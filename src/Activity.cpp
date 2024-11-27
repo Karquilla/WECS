@@ -6,8 +6,7 @@
  * @param startTime The start time of the activity.
  * @param endTime The end time of the activity.
  */
-void Activity::scheduleActivity(std::chrono::system_clock::time_point startTime,
-                                std::chrono::system_clock::time_point endTime) {
+void Activity::scheduleActivity() {
     // Logic to schedule the activity
 }
 

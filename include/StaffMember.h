@@ -1,12 +1,11 @@
 #pragma once
 
-#include "Activity.h"
-#include "DateTime.h"
-#include "Event.h"
 #include <map>
 #include <string>
 
-
+// Forward declaration for Activity and Event if they are not directly needed in the class members
+class Activity;
+class Event;
 
 /**
  * @class StaffMember
@@ -22,7 +21,6 @@ public:
     bool isConflict();
 
 private:
-    std::string authorizationLevel_; /**< Authorization level of the staff member */
-    std::map<Activity, std::pair<DateTime, int>> activity_schedule; /**< Schedule of activities */
-    std::map<Event, std::pair<DateTime, int>> event_schedule; /**< Schedule of events */
+    std::map<int, std::pair<std::string, int>> activity_schedule; /**< Schedule of activities, date and time as string */
+    std::map<int, std::pair<std::string, int>> event_schedule; /**< Schedule of events, date and time as string */
 };

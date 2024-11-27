@@ -6,6 +6,6 @@
  * @param activity The activity associated with the problem.
  * @param resource The resource associated with the problem.
  */
-void ProblemReport::createReport(Activity activity, Resource resource) {
+void ProblemReport::createReport(const Activity& activity, const Resource& resource) {
     // Logic to create the problem report
 }

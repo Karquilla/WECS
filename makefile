@@ -1,14 +1,15 @@
 # Compiler and flags
 CXX = g++
-CXXFLAGS = -Wall -Iinclude
+CXXFLAGS = -Wall -Iinclude -std=c++17
 
 # Directories
 INCDIR = include
 SRCDIR = src
 OBJDIR = obj
 
-# Target executable
+# Target executables
 TARGET = wecs
+RUN_TARGET = run_events
 
 # Source files and object files
 SRCS = $(wildcard $(SRCDIR)/*.cpp)
@@ -28,9 +29,13 @@ $(TARGET): $(OBJS)
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Rule to compile run_events target
+run_events: $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(RUN_TARGET) $(OBJS) -lstdc++fs
+
 # Clean target
 clean:
-	rm -f $(OBJDIR)/*.o $(TARGET)
+	rm -f $(OBJDIR)/*.o $(TARGET) $(RUN_TARGET)
 
 # Phony targets
-.PHONY: all clean
+.PHONY: all clean run_events

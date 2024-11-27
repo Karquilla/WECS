@@ -17,7 +17,7 @@ public:
      * @param startTime The start time of the activity.
      * @param endTime The end time of the activity.
      */
-    void scheduleActivity(std::chrono::system_clock::time_point startTime, std::chrono::system_clock::time_point endTime);
+    void scheduleActivity();
 
     /**
      * @brief Assigns qualified personnel to the activity.

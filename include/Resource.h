@@ -1,8 +1,9 @@
 #pragma once
 
-#include "Activity.h"
-#include "Room.h"
 #include <list>
+
+class Room;
+class Activity;
 
 /**
  * @class Resource

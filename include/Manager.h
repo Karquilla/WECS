@@ -1,6 +1,6 @@
 #pragma once
 
-#include "StaffMember.h"
+#include "StaffMember.h" // Include the full definition of StaffMember
 #include <list>
 
 class Event;
@@ -17,5 +17,5 @@ public:
     void manageEvent();
 
 private:
-    std::list<Event> managedEvents_; /**< List of events managed by the manager */
+    std::list<Event*> managedEvents_; /**< List of events managed by the manager */
 };

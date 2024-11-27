@@ -1,13 +1,10 @@
 #pragma once
 
-#include "DateTime.h"
-#include "Schedule.h"
+#include "Room.h"
+#include "Manager.h"
+#include "Activity.h"
 #include <list>
 #include <string>
-
-class Activity;
-class Manager;
-class Room;
 
 /**
  * @class Event
@@ -15,16 +12,24 @@ class Room;
  */
 class Event {
 public:
-
+    /**
+     * @brief Default constructor for Event.
+     */
     Event();
 
-    Event(std::string name);
+    /**
+     * @brief Constructor with name initialization.
+     * 
+     * @param name The name of the event.
+     */
+    Event(const std::string& name);
+
     /**
      * @brief Schedules the event at a specified date and time.
      * 
      * @param dateTime The date and time for the event.
      */
-    void scheduleEvent(DateTime dateTime);
+    //void scheduleEvent(std::string& dateTime);
 
     /**
      * @brief Assigns a room to the event.
@@ -48,16 +53,36 @@ public:
     void addActivity(Activity& activity);
 
     /**
-     * @brief sets an name to the event.
+     * @brief Sets a name to the event.
      * 
-     * @param name the name for the event
+     * @param name The name for the event.
      */
-    void setName(std::string name);
+    void setName(std::string& name);
 
-    std::string getfName() { return fname_; };
+    /**
+     * @brief Sets the ID for the event.
+     */
+    void setId();
 
-    std::string getName() { return name_; };
+    /**
+     * @brief Gets the file name of the event.
+     * 
+     * @return The file name as a string.
+     */
+    std::string getfName() const { return fname_; }
 
+    /**
+     * @brief Gets the name of the event.
+     * 
+     * @return The name of the event.
+     */
+    std::string getName() const { return name_; }
+
+    /**
+     * @brief Loads event data from a file.
+     * 
+     * @param filePath The path to the file from which to load data.
+     */
     void loadFromFile(const std::string& filePath);
 
 private:
@@ -65,6 +90,7 @@ private:
     std::list<Manager> managers_; /**< List of managers for the event */
     std::list<Activity> activities_; /**< List of activities in the event */
     std::string eventDate_; /**< Date and time of the event */
-    std::string name_;
-    std::string fname_;
+    std::string name_; /**< The name of the event */
+    std::string fname_; /**< File name associated with the event */
+    std::string id_; /**< Identifier for the event */
 };

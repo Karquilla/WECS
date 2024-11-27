@@ -58,6 +58,11 @@
         "span": "cpp",
         "variant": "cpp",
         "schedule_event_main": "cpp",
-        "codecvt": "cpp"
+        "codecvt": "cpp",
+        "any": "cpp",
+        "cstring": "cpp",
+        "forward_list": "cpp",
+        "ranges": "cpp",
+        "valarray": "cpp"
     }
 }

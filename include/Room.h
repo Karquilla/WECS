@@ -1,9 +1,8 @@
 #pragma once
 
-#include "DateTime.h"
 #include <list>
-
-class Activity;
+#include "Activity.h"    // Include Activity because it's used
+#include "Resource.h"    // Include Resource because it's used
 
 /**
  * @class Room
@@ -16,15 +15,15 @@ public:
      * 
      * @param activity The activity to reserve the room for.
      */
-    void reserveRoom(Activity activity);
+    void reserveRoom(const Activity& activity);  // Use const reference to avoid copying
 
     /**
      * @brief Checks if the room is available at the specified date and time.
      * 
-     * @param dateTime The date and time to check for availability.
+     * @param dateTime The date and time to check for availability as a string.
      * @return true if the room is available, false otherwise.
      */
-    bool checkAvailability(DateTime dateTime);
+    bool checkAvailability(const std::string& dateTime) const; // Use const reference and mark function as const
 
 private:
     int capacity_; /**< Capacity of the room */
