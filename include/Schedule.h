@@ -39,6 +39,6 @@ public:
     bool checkConflict(std::tm& dateTime);
 
 private:
-    std::vector<Event*> events; /**< Vector containing all scheduled events */
-    std::vector<Activity*> activities; /**< Vector containing all scheduled activities */
+    std::vector<Event> events; /**< Vector containing all scheduled events */
+    std::vector<Activity> activities; /**< Vector containing all scheduled activities */
 };

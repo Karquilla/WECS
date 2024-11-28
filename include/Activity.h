@@ -3,7 +3,7 @@
 #include "QualifiedPersonnel.h"
 #include "Resource.h"
 #include "Schedule.h"
-#include <chrono>
+#include <string>
 
 /**
  * @class Activity
@@ -35,8 +35,8 @@ public:
 
 private:
     std::string activityType_; /**< Type of activity */
-    std::chrono::system_clock::time_point startTime_; /**< Start time of the activity */
-    std::chrono::system_clock::time_point endTime_; /**< End time of the activity */
+    std::string startTime_; /**< Start time of the activity */
+    std::string endTime_; /**< End time of the activity */
     std::list<QualifiedPersonnel> qualifiedPersonnel; /**< List of assigned personnel */
     std::list<Resource> resources; /**< List of assigned resources */
 };

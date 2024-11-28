@@ -29,7 +29,7 @@ public:
      * 
      * @param dateTime The date and time for the event.
      */
-    //void scheduleEvent(std::string& dateTime);
+    void scheduleEvent(std::string& dateTime);
 
     /**
      * @brief Assigns a room to the event.

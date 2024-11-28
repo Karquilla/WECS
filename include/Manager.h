@@ -17,5 +17,5 @@ public:
     void manageEvent();
 
 private:
-    std::list<Event*> managedEvents_; /**< List of events managed by the manager */
+    std::list<Event> managedEvents_; /**< List of events managed by the manager */
 };

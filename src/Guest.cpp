@@ -1,9 +1,6 @@
 #include "Activity.h"
 #include "Guest.h"
 
-#include "Activity.h"
-#include "Guest.h"
-
 /**
  * @brief Registers the guest for a specific activity.
  * 

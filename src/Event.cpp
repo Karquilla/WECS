@@ -10,6 +10,16 @@
 Event::Event(){
 
 }
+
+/**
+ * @brief Schedules the event at a specified date and time.
+ * 
+ * @param dateTime The date and time for the event.
+ */
+void Event::scheduleEvent(std::string& dateTime) {
+
+}
+
 /**
  * @brief Assigns a room to the event.
  * 
