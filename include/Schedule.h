@@ -36,7 +36,7 @@ public:
      * @param dateTime The date and time to check for conflicts (in std::tm format).
      * @return true if there is a conflict with existing schedules, false otherwise.
      */
-    bool checkConflict(std::tm& dateTime);
+    bool checkConflict(std::tm& startTime, std::tm& endTime);
 
 private:
     std::vector<Event> events; /**< Vector containing all scheduled events */

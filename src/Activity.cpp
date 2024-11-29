@@ -1,16 +1,6 @@
 #include "Activity.h"
 
 /**
- * @brief Schedules the activity with specified start and end times.
- * 
- * @param startTime The start time of the activity.
- * @param endTime The end time of the activity.
- */
-void Activity::scheduleActivity() {
-    // Logic to schedule the activity
-}
-
-/**
  * @brief Assigns qualified personnel to the activity.
  * 
  * @param personnel The QualifiedPersonnel to assign.
@@ -26,4 +16,16 @@ void Activity::assignPersonnel(QualifiedPersonnel personnel) {
  */
 void Activity::assignResource(Resource resource) {
     // Logic to assign the resource
+}
+
+std::string Activity::getStartTime() const {
+    return startTime_;
+}
+
+std::string Activity::getEndTime() const {
+    return endTime_;
+}
+
+void Activity::setActivityType(const std::string& type) {
+    activityType_ = type;
 }

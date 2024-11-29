@@ -33,6 +33,12 @@ public:
      */
     void assignResource(Resource resource);
 
+    std::string getStartTime() const;
+
+    std::string getEndTime() const;
+
+    void setActivityType(const std::string& type);
+
 private:
     std::string activityType_; /**< Type of activity */
     std::string startTime_; /**< Start time of the activity */

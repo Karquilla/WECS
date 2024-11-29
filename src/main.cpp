@@ -113,6 +113,7 @@ int main() {
     std::cout << " make selection" << std::endl;
     std::cout << " 0 - create event" << std::endl;
     std::cout << " 1 - edit event" << std::endl;
+    std::cout << " 2 - schedule activity" << std::endl;
     std::cin >> opt;
 
     std::string name;
@@ -189,10 +190,40 @@ int main() {
         
     }else if (opt == "1") {
 
+    }else if (opt == "2") {
+        // Gather activity information
+        std::string activityName, activityType;
+        std::tm startTime{}, endTime{};
+
+        std::cout << "Enter name of activity: ";
+        std::cin.ignore();
+        std::getline(std::cin, activityName);
+
+        std::cout << "Enter activity type: ";
+        std::getline(std::cin, activityType);
+
+        int startHour, startMinute, endHour, endMinute;
+        std::cout << "Enter start time (HH MM): ";
+        std::cin >> startHour >> startMinute;
+        std::cout << "Enter end time (HH MM): ";
+        std::cin >> endHour >> endMinute;
+
+        // Fill start and end time objects
+        startTime.tm_hour = startHour;
+        startTime.tm_min = startMinute;
+        endTime.tm_hour = endHour;
+        endTime.tm_min = endMinute;
+
+        // Create Activity
+        Activity activity;
+        activity.setActivityType(activityType);
+
+        // Create schedule
+        Schedule schedule;
+        schedule.scheduleActivity(&activity, startTime, endTime);
     }else {
 
     }
-    
 
     return 0;
 }
