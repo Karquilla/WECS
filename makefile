@@ -9,7 +9,7 @@ OBJDIR = obj
 
 # Target executables
 TARGET = wecs
-RUN_TARGET = run_events
+RUN_TARGET = main
 
 # Source files and object files
 SRCS = $(wildcard $(SRCDIR)/*.cpp)
@@ -30,7 +30,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Rule to compile run_events target
-run_events: $(OBJS)
+main: $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(RUN_TARGET) $(OBJS) -lstdc++fs
 
 # Clean target
