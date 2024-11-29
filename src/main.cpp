@@ -1,9 +1,12 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
+#include <sstream>
 #include "Event.h"
-
+#include "Room.h"
+#include "utility.h"
 #include "json.hpp"
+
 
 int getNewId() {
     // Load the JSON data from the file
@@ -39,7 +42,8 @@ int getNewId() {
     return newId;
 }
 
-void addEvent(int id, const std::string& name, const std::string& start, const std::string& end) {
+
+void addEvent(int id, const std::string& name, const std::string& start, const std::string& end, std::vector<Room> rooms) {
     // Load the existing JSON data
     std::ifstream inFile("data/events.json");
     if (!inFile) {
@@ -55,10 +59,19 @@ void addEvent(int id, const std::string& name, const std::string& start, const s
     nlohmann::json newEvent = {
         {"id", id},
         {"name", name},
-        {"rooms",},
+        {"rooms",nlohmann::json::array()},
         {"start", start},
         {"end", end},
     };
+
+    for (auto& room : rooms) {
+        nlohmann::json roomInfo = {
+            {"type", room.getType()},
+            {"length", std::to_string(room.getLength())},
+            {"cost", std::to_string(room.getCost())}
+        };
+        newEvent["rooms"].push_back(roomInfo);
+    }
 
     // Add the new event to the "events" array
     eventsData["events"].push_back(newEvent);
@@ -115,8 +128,52 @@ int main() {
         std::cout << " enter name of event" << std::endl;
         std::cin >> name;
 
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        // gather room information.
+        // right now no conflict checking.
+        std::vector<Room> rooms;
+        while(true) {
+            Room newRoom;
+            std::cout << " What rooms would you like to reserve?\n";
+            std::cout << "---------------Options---------------\n";
+            std::cout << "    Room Type              Price     \n";
+            std::cout << "-------------------------------------\n";
+            std::cout << "      Rome --------------- $300\n";
+            std::cout << "      Paris -------------- $400\n";
+            std::cout << "    LasVegas ------------ $500\n";
+            std::cout << "-------------------------------------\n\n";
+            std::cout << " Enter name of a room you would like to reserve\n";
+            //std::cout << "";
+            //std::cout << "";
+            //std::cout << "";
+            //std::cout << "";
+            //std::cout << "";
 
+
+            std::string roomInput;
+            while ( roomInput != "rome" &&
+                    roomInput != "paris" &&
+                    roomInput != "lasvegas") {
+                std::cin >> roomInput;
+                roomInput = stringToLower(roomInput);  
+            }
+            newRoom.setType(roomInput);
+
+            std::string strTime;
+            std::cout << "How long would you like to reserve to room?\n";
+            std::cin >> strTime;
+            int intTime = stoi(strTime);
+            newRoom.setLength(intTime);
+
+            newRoom.setCost();
+
+            rooms.push_back(newRoom);
+
+            // ask for another room?
+            break;
+        }
+
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        
         std::cout << "enter start time and end time seperated by a spece\n";
         std::cout << "24 hr format - 1100 1300\n";
         getline(std::cin, timeInput);
@@ -127,9 +184,9 @@ int main() {
 
         int id = getNewId();
 
-        addEvent(id, name, startTime, endTime);
-        
+        addEvent(id, name, startTime, endTime, rooms);
 
+        
     }else if (opt == "1") {
 
     }else {

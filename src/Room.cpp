@@ -2,7 +2,6 @@
 #include "Activity.h" // Required for the full definition of Activity
 
 
-
 /**
  * @brief Reserves the room for the given activity.
  * 
@@ -21,4 +20,25 @@ void Room::reserveRoom(const Activity& activity) {
 bool Room::checkAvailability(const std::string& dateTime) const{
     // Implement your logic here
     return true; // Placeholder return value
+}
+
+void Room::setType(std::string type) {
+    roomType_ = type;
+}
+
+void Room::setLength(int count) {
+    resLength_ = count;
+}
+
+void Room::setCost() {
+    int result;
+    if (roomType_ == "rome") {
+        result = 300 * resLength_;
+    } else if (roomType_ == "paris") {
+        result = 400 * resLength_;
+    } else if (roomType_ == "lasvegas") {
+        result = 500 * resLength_;
+    }
+
+    cost_ = result;
 }
