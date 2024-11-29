@@ -36,3 +36,6 @@ Makefile
 *.user
 *.pro.user
 *.user.*
+
+# Ignore .vs dir
+*.vs
