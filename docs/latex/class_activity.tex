@@ -12,20 +12,42 @@ Represents an activity with scheduling, personnel, and resource assignment.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82}{schedule\+Activity}} (std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point start\+Time, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point end\+Time)
+\mbox{\hyperlink{class_activity_abb0e3ce8f97431b704d2685547cc4fac}{Activity}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_activity}{Activity}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_activity_acf274fae93a3f945e232dae5712e923a}{schedule\+Activity}} ()
 \begin{DoxyCompactList}\small\item\em Schedules the activity with a start and end time. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab}{assign\+Personnel}} (\mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}} personnel)
 \begin{DoxyCompactList}\small\item\em Assigns qualified personnel to the activity. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_activity_a9a73eb5b4b0ebdf53e40c9b1f50876ce}{assign\+Resource}} (\mbox{\hyperlink{class_resource}{Resource}} resource)
-\begin{DoxyCompactList}\small\item\em Assigns a resource to the activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Assigns a resource to the activity. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_activity_a34393b80c775e399c219a5acb0ac9741}{get\+Start\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets the start time of the activity. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_activity_a928634e854e71682da4b9c14e33e922b}{get\+End\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Gets the end time of the activity. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_activity_ab034d407a913355bd2357ec95aded1d5}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the activity. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_activity_aeb632bac86d5b475ed01fe8aa35adb33}{get\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the type of the activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_activity_a1a22e80d4acf28058af942e5c1926e23}{set\+Activity\+Type}} (const std\+::string \&type)
+\begin{DoxyCompactList}\small\item\em Sets the type of the activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_activity_acc8bf4a00af011133baa6bc2ef0a4bac}{set\+Activity\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_activity_a4267ae9c00a039ce1c8f34c5de241f21}{set\+Activity\+Start\+Time}} (const std\+::string \&start\+Time)
+\begin{DoxyCompactList}\small\item\em Sets the start time of the activity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_activity_a261e49b45e951443f8e11ff18474ef04}{set\+Activity\+End\+Time}} (const std\+::string \&end\+Time)
+\begin{DoxyCompactList}\small\item\em Sets the end time of the activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 std\+::string \mbox{\hyperlink{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}{activity\+Type\+\_\+}}
 \item 
-std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_activity_a3901f0309777656b0347565f64919757}{start\+Time\+\_\+}}
+std\+::string \mbox{\hyperlink{class_activity_a0f1fada942646276cc05600f4f526563}{start\+Time\+\_\+}}
 \item 
-std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_activity_ad3d5e07b20524b28739f8772b05b6674}{end\+Time\+\_\+}}
+std\+::string \mbox{\hyperlink{class_activity_a0e57d44fff87d371d1ef2be72d661a89}{end\+Time\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_activity_a8a60f861244e1c2faa4d331c1ea0b114}{activity\+Name\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{class_guest}{Guest}} $>$ \mbox{\hyperlink{class_activity_ab172999e813f343f208f0ffb74fe3f17}{guest}}
 \item 
 std\+::list$<$ \mbox{\hyperlink{class_qualified_personnel}{Qualified\+Personnel}} $>$ \mbox{\hyperlink{class_activity_a2569731cc41cc6715b71e5cbe0d25767}{qualified\+Personnel}}
 \item 
@@ -35,6 +57,19 @@ std\+::list$<$ \mbox{\hyperlink{class_resource}{Resource}} $>$ \mbox{\hyperlink{
 
 \doxysubsection{Detailed Description}
 Represents an activity with scheduling, personnel, and resource assignment. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_activity_abb0e3ce8f97431b704d2685547cc4fac}\index{Activity@{Activity}!Activity@{Activity}}
+\index{Activity@{Activity}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{Activity()}{Activity()}}
+{\footnotesize\ttfamily \label{class_activity_abb0e3ce8f97431b704d2685547cc4fac} 
+Activity\+::\+Activity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_activity}{Activity}. 
+
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab}\index{Activity@{Activity}!assignPersonnel@{assignPersonnel}}
@@ -49,6 +84,8 @@ Assigns qualified personnel to the activity.
 
 
 \begin{DoxyParams}{Parameters}
+{\em personnel} & The \doxylink{class_qualified_personnel}{Qualified\+Personnel} to assign to the activity.\\
+\hline
 {\em personnel} & The \doxylink{class_qualified_personnel}{Qualified\+Personnel} to assign. \\
 \hline
 \end{DoxyParams}
@@ -64,44 +101,161 @@ Assigns a resource to the activity.
 
 
 \begin{DoxyParams}{Parameters}
+{\em resource} & The \doxylink{class_resource}{Resource} to assign to the activity.\\
+\hline
 {\em resource} & The \doxylink{class_resource}{Resource} to assign. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82}\index{Activity@{Activity}!scheduleActivity@{scheduleActivity}}
+\Hypertarget{class_activity_a928634e854e71682da4b9c14e33e922b}\index{Activity@{Activity}!getEndTime@{getEndTime}}
+\index{getEndTime@{getEndTime}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{getEndTime()}{getEndTime()}}
+{\footnotesize\ttfamily \label{class_activity_a928634e854e71682da4b9c14e33e922b} 
+std\+::string Activity\+::get\+End\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the end time of the activity. 
+
+\begin{DoxyReturn}{Returns}
+The end time of the activity as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_activity_ab034d407a913355bd2357ec95aded1d5}\index{Activity@{Activity}!getName@{getName}}
+\index{getName@{getName}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_activity_ab034d407a913355bd2357ec95aded1d5} 
+std\+::string Activity\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the activity. 
+
+\begin{DoxyReturn}{Returns}
+The name of the activity as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_activity_a34393b80c775e399c219a5acb0ac9741}\index{Activity@{Activity}!getStartTime@{getStartTime}}
+\index{getStartTime@{getStartTime}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{getStartTime()}{getStartTime()}}
+{\footnotesize\ttfamily \label{class_activity_a34393b80c775e399c219a5acb0ac9741} 
+std\+::string Activity\+::get\+Start\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the start time of the activity. 
+
+\begin{DoxyReturn}{Returns}
+The start time of the activity as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_activity_aeb632bac86d5b475ed01fe8aa35adb33}\index{Activity@{Activity}!getType@{getType}}
+\index{getType@{getType}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_activity_aeb632bac86d5b475ed01fe8aa35adb33} 
+std\+::string Activity\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the type of the activity. 
+
+\begin{DoxyReturn}{Returns}
+The type of the activity as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_activity_acf274fae93a3f945e232dae5712e923a}\index{Activity@{Activity}!scheduleActivity@{scheduleActivity}}
 \index{scheduleActivity@{scheduleActivity}!Activity@{Activity}}
 \doxysubsubsection{\texorpdfstring{scheduleActivity()}{scheduleActivity()}}
-{\footnotesize\ttfamily \label{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82} 
-void Activity\+::schedule\+Activity (\begin{DoxyParamCaption}\item[{std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point}]{start\+Time}{, }\item[{std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point}]{end\+Time}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_activity_acf274fae93a3f945e232dae5712e923a} 
+void Activity\+::schedule\+Activity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
 Schedules the activity with a start and end time. 
 
-Schedules the activity with specified start and end times.
+This function sets the schedule for the activity by assigning the start and end time. \Hypertarget{class_activity_a261e49b45e951443f8e11ff18474ef04}\index{Activity@{Activity}!setActivityEndTime@{setActivityEndTime}}
+\index{setActivityEndTime@{setActivityEndTime}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{setActivityEndTime()}{setActivityEndTime()}}
+{\footnotesize\ttfamily \label{class_activity_a261e49b45e951443f8e11ff18474ef04} 
+void Activity\+::set\+Activity\+End\+Time (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{end\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Sets the end time of the activity. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em start\+Time} & The start time of the activity. \\
+{\em end\+Time} & The end time of the activity as a string. \\
 \hline
-{\em end\+Time} & The end time of the activity. \\
+\end{DoxyParams}
+\Hypertarget{class_activity_acc8bf4a00af011133baa6bc2ef0a4bac}\index{Activity@{Activity}!setActivityName@{setActivityName}}
+\index{setActivityName@{setActivityName}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{setActivityName()}{setActivityName()}}
+{\footnotesize\ttfamily \label{class_activity_acc8bf4a00af011133baa6bc2ef0a4bac} 
+void Activity\+::set\+Activity\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name of the activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the activity as a string. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_activity_a4267ae9c00a039ce1c8f34c5de241f21}\index{Activity@{Activity}!setActivityStartTime@{setActivityStartTime}}
+\index{setActivityStartTime@{setActivityStartTime}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{setActivityStartTime()}{setActivityStartTime()}}
+{\footnotesize\ttfamily \label{class_activity_a4267ae9c00a039ce1c8f34c5de241f21} 
+void Activity\+::set\+Activity\+Start\+Time (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{start\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Sets the start time of the activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start\+Time} & The start time of the activity as a string. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_activity_a1a22e80d4acf28058af942e5c1926e23}\index{Activity@{Activity}!setActivityType@{setActivityType}}
+\index{setActivityType@{setActivityType}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{setActivityType()}{setActivityType()}}
+{\footnotesize\ttfamily \label{class_activity_a1a22e80d4acf28058af942e5c1926e23} 
+void Activity\+::set\+Activity\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Sets the type of the activity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the activity as a string. \\
 \hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}\index{Activity@{Activity}!activityType\_@{activityType\_}}
+\Hypertarget{class_activity_a8a60f861244e1c2faa4d331c1ea0b114}\index{Activity@{Activity}!activityName\_@{activityName\_}}
+\index{activityName\_@{activityName\_}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{activityName\_}{activityName\_}}
+{\footnotesize\ttfamily \label{class_activity_a8a60f861244e1c2faa4d331c1ea0b114} 
+std\+::string Activity\+::activity\+Name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Name of activity \Hypertarget{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}\index{Activity@{Activity}!activityType\_@{activityType\_}}
 \index{activityType\_@{activityType\_}!Activity@{Activity}}
 \doxysubsubsection{\texorpdfstring{activityType\_}{activityType\_}}
 {\footnotesize\ttfamily \label{class_activity_a002d26258a68dc5d9bef4e7718e2d67d} 
 std\+::string Activity\+::activity\+Type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Type of activity \Hypertarget{class_activity_ad3d5e07b20524b28739f8772b05b6674}\index{Activity@{Activity}!endTime\_@{endTime\_}}
+Type of activity \Hypertarget{class_activity_a0e57d44fff87d371d1ef2be72d661a89}\index{Activity@{Activity}!endTime\_@{endTime\_}}
 \index{endTime\_@{endTime\_}!Activity@{Activity}}
 \doxysubsubsection{\texorpdfstring{endTime\_}{endTime\_}}
-{\footnotesize\ttfamily \label{class_activity_ad3d5e07b20524b28739f8772b05b6674} 
-std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point Activity\+::end\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{class_activity_a0e57d44fff87d371d1ef2be72d661a89} 
+std\+::string Activity\+::end\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-End time of the activity \Hypertarget{class_activity_a2569731cc41cc6715b71e5cbe0d25767}\index{Activity@{Activity}!qualifiedPersonnel@{qualifiedPersonnel}}
+End time of the activity \Hypertarget{class_activity_ab172999e813f343f208f0ffb74fe3f17}\index{Activity@{Activity}!guest@{guest}}
+\index{guest@{guest}!Activity@{Activity}}
+\doxysubsubsection{\texorpdfstring{guest}{guest}}
+{\footnotesize\ttfamily \label{class_activity_ab172999e813f343f208f0ffb74fe3f17} 
+std\+::list$<$\mbox{\hyperlink{class_guest}{Guest}}$>$ Activity\+::guest\hspace{0.3cm}{\ttfamily [private]}}
+
+List of registered guests \Hypertarget{class_activity_a2569731cc41cc6715b71e5cbe0d25767}\index{Activity@{Activity}!qualifiedPersonnel@{qualifiedPersonnel}}
 \index{qualifiedPersonnel@{qualifiedPersonnel}!Activity@{Activity}}
 \doxysubsubsection{\texorpdfstring{qualifiedPersonnel}{qualifiedPersonnel}}
 {\footnotesize\ttfamily \label{class_activity_a2569731cc41cc6715b71e5cbe0d25767} 
@@ -113,11 +267,11 @@ List of assigned personnel \Hypertarget{class_activity_a48a3aceef55eb2b4c2641fb5
 {\footnotesize\ttfamily \label{class_activity_a48a3aceef55eb2b4c2641fb5cf32c2ee} 
 std\+::list$<$\mbox{\hyperlink{class_resource}{Resource}}$>$ Activity\+::resources\hspace{0.3cm}{\ttfamily [private]}}
 
-List of assigned resources \Hypertarget{class_activity_a3901f0309777656b0347565f64919757}\index{Activity@{Activity}!startTime\_@{startTime\_}}
+List of assigned resources \Hypertarget{class_activity_a0f1fada942646276cc05600f4f526563}\index{Activity@{Activity}!startTime\_@{startTime\_}}
 \index{startTime\_@{startTime\_}!Activity@{Activity}}
 \doxysubsubsection{\texorpdfstring{startTime\_}{startTime\_}}
-{\footnotesize\ttfamily \label{class_activity_a3901f0309777656b0347565f64919757} 
-std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point Activity\+::start\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{class_activity_a0f1fada942646276cc05600f4f526563} 
+std\+::string Activity\+::start\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 Start time of the activity 
 

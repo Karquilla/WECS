@@ -12,25 +12,88 @@ Represents a guest participating in an event and its activities.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_guest_ae339711d2553f4c72ec0ee8889359125}{Guest}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_guest}{Guest}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_guest_ae98ecc91cfd9a76146b097ceb2d6221d}{Guest}} (int id, const std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_guest}{Guest} with ID and name. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f}{register\+For\+Activity}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
 \begin{DoxyCompactList}\small\item\em Registers the guest for a specific activity. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_guest_a7e3ca3ed38b6f2c3face9e53bc256532}{load\+Guest}} (int guest\+Id)
+\begin{DoxyCompactList}\small\item\em Loads guest information based on guest ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guest_a94ba2022a76329303c7dcbaf6ea70479}{add\+Guest}} (int id, std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Adds a new guest with the specified ID and name. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_guest_a5f23bf4666670d94624b077e763ade6f}{check\+Conflicts}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
-\begin{DoxyCompactList}\small\item\em Checks if there are scheduling conflicts with the specified activity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if there are scheduling conflicts with the specified activity. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_guest_a5831dff83415a7b7240278df63922078}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the guest. \end{DoxyCompactList}\item 
+nlohmann\+::json \mbox{\hyperlink{class_guest_a5c9fce7b16824f4cd7a0f91946099158}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Converts the guest information to JSON format. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guest_ac6c92cfe8209559b67b8ad8c46664540}{set\+Name}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the guest. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_guest_a8d66b46423015cce64e49b117ebdc23d}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the unique ID of the guest. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \mbox{\hyperlink{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64}{unique\+ID\+\_\+}}
+int \mbox{\hyperlink{class_guest_adb11a45f184b149bd35c03109279b65d}{unique\+ID\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_guest_ad939083b0a1bf065bb2fabf3458a72f4}{name\+\_\+}}
 \item 
 std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}{registered\+Activities\+\_\+}}
-\item 
-\mbox{\hyperlink{class_event}{Event}} \mbox{\hyperlink{class_guest_a9a09952405c7f0eb9a546a53146f1d88}{associated\+Event\+\_\+}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents a guest participating in an event and its activities. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_guest_ae339711d2553f4c72ec0ee8889359125}\index{Guest@{Guest}!Guest@{Guest}}
+\index{Guest@{Guest}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{Guest()}{Guest()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_guest_ae339711d2553f4c72ec0ee8889359125} 
+Guest\+::\+Guest (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_guest}{Guest}. 
+
+\Hypertarget{class_guest_ae98ecc91cfd9a76146b097ceb2d6221d}\index{Guest@{Guest}!Guest@{Guest}}
+\index{Guest@{Guest}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{Guest()}{Guest()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_guest_ae98ecc91cfd9a76146b097ceb2d6221d} 
+Guest\+::\+Guest (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{const std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_guest}{Guest} with ID and name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the guest. \\
+\hline
+{\em name} & The full name of the guest. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_guest_a94ba2022a76329303c7dcbaf6ea70479}\index{Guest@{Guest}!addGuest@{addGuest}}
+\index{addGuest@{addGuest}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{addGuest()}{addGuest()}}
+{\footnotesize\ttfamily \label{class_guest_a94ba2022a76329303c7dcbaf6ea70479} 
+void Guest\+::add\+Guest (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new guest with the specified ID and name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the guest. \\
+\hline
+{\em name} & The full name of the guest. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{class_guest_a5f23bf4666670d94624b077e763ade6f}\index{Guest@{Guest}!checkConflicts@{checkConflicts}}
 \index{checkConflicts@{checkConflicts}!Guest@{Guest}}
 \doxysubsubsection{\texorpdfstring{checkConflicts()}{checkConflicts()}}
@@ -51,6 +114,37 @@ Checks if the guest has a scheduling conflict with the specified activity.
 \begin{DoxyReturn}{Returns}
 true if there is a conflict, false otherwise. 
 \end{DoxyReturn}
+\Hypertarget{class_guest_a5831dff83415a7b7240278df63922078}\index{Guest@{Guest}!getName@{getName}}
+\index{getName@{getName}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_guest_a5831dff83415a7b7240278df63922078} 
+std\+::string Guest\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the guest. 
+
+\begin{DoxyReturn}{Returns}
+The full name of the guest as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_guest_a7e3ca3ed38b6f2c3face9e53bc256532}\index{Guest@{Guest}!loadGuest@{loadGuest}}
+\index{loadGuest@{loadGuest}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{loadGuest()}{loadGuest()}}
+{\footnotesize\ttfamily \label{class_guest_a7e3ca3ed38b6f2c3face9e53bc256532} 
+bool Guest\+::load\+Guest (\begin{DoxyParamCaption}\item[{int}]{guest\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Loads guest information based on guest ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em guest\+Id} & The unique ID of the guest to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the guest was successfully loaded, false otherwise. 
+\end{DoxyReturn}
 \Hypertarget{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f}\index{Guest@{Guest}!registerForActivity@{registerForActivity}}
 \index{registerForActivity@{registerForActivity}!Guest@{Guest}}
 \doxysubsubsection{\texorpdfstring{registerForActivity()}{registerForActivity()}}
@@ -66,26 +160,69 @@ Registers the guest for a specific activity.
 {\em activity} & The activity to register for. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_guest_a8d66b46423015cce64e49b117ebdc23d}\index{Guest@{Guest}!setId@{setId}}
+\index{setId@{setId}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily \label{class_guest_a8d66b46423015cce64e49b117ebdc23d} 
+void Guest\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Sets the unique ID of the guest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the guest. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_guest_ac6c92cfe8209559b67b8ad8c46664540}\index{Guest@{Guest}!setName@{setName}}
+\index{setName@{setName}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_guest_ac6c92cfe8209559b67b8ad8c46664540} 
+void Guest\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name of the guest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The full name of the guest. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_guest_a5c9fce7b16824f4cd7a0f91946099158}\index{Guest@{Guest}!toJson@{toJson}}
+\index{toJson@{toJson}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily \label{class_guest_a5c9fce7b16824f4cd7a0f91946099158} 
+nlohmann\+::json Guest\+::to\+Json (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Converts the guest information to JSON format. 
+
+\begin{DoxyReturn}{Returns}
+The guest data in JSON form. 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_guest_a9a09952405c7f0eb9a546a53146f1d88}\index{Guest@{Guest}!associatedEvent\_@{associatedEvent\_}}
-\index{associatedEvent\_@{associatedEvent\_}!Guest@{Guest}}
-\doxysubsubsection{\texorpdfstring{associatedEvent\_}{associatedEvent\_}}
-{\footnotesize\ttfamily \label{class_guest_a9a09952405c7f0eb9a546a53146f1d88} 
-\mbox{\hyperlink{class_event}{Event}} Guest\+::associated\+Event\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{class_guest_ad939083b0a1bf065bb2fabf3458a72f4}\index{Guest@{Guest}!name\_@{name\_}}
+\index{name\_@{name\_}!Guest@{Guest}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily \label{class_guest_ad939083b0a1bf065bb2fabf3458a72f4} 
+std\+::string Guest\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-\doxylink{class_event}{Event} the guest is associated with \Hypertarget{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}\index{Guest@{Guest}!registeredActivities\_@{registeredActivities\_}}
+\doxylink{class_guest}{Guest}\textquotesingle{}s full name \Hypertarget{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}\index{Guest@{Guest}!registeredActivities\_@{registeredActivities\_}}
 \index{registeredActivities\_@{registeredActivities\_}!Guest@{Guest}}
 \doxysubsubsection{\texorpdfstring{registeredActivities\_}{registeredActivities\_}}
 {\footnotesize\ttfamily \label{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23} 
 std\+::list$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Guest\+::registered\+Activities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Activities the guest has registered for \Hypertarget{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64}\index{Guest@{Guest}!uniqueID\_@{uniqueID\_}}
+Activities the guest has registered for \Hypertarget{class_guest_adb11a45f184b149bd35c03109279b65d}\index{Guest@{Guest}!uniqueID\_@{uniqueID\_}}
 \index{uniqueID\_@{uniqueID\_}!Guest@{Guest}}
 \doxysubsubsection{\texorpdfstring{uniqueID\_}{uniqueID\_}}
-{\footnotesize\ttfamily \label{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64} 
-std\+::string Guest\+::unique\+ID\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{class_guest_adb11a45f184b149bd35c03109279b65d} 
+int Guest\+::unique\+ID\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
 Unique ID for the guest 
 

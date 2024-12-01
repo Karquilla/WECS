@@ -4,21 +4,36 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_date_time_8h}{DateTime.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <list>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}}\ \{}
-\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a457a871fc18bc719b0339696085ff041}{reserveRoom}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_room_aa8658b2658fd93f33f18a8cb68cd4c98}{checkAvailability}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dateTime);}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_ae40b2b07c54a60c238199ef24aa38877}{capacity\_}};\ }
-\DoxyCodeLine{00031\ \ \ \ \ std::list<Resource>\ \mbox{\hyperlink{class_room_a11ae81cdb99dab3301c22dd6dd4c6727}{availableResources\_}};\ }
-\DoxyCodeLine{00032\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_room_a178f18521c5c1bb774f49f777df0b75e}{activities\_}};\ }
-\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}\ \ \ \ \textcolor{comment}{//\ Include\ Activity\ because\ it's\ used}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_8h}{Resource.h}}"{}}\ \ \ \ \textcolor{comment}{//\ Include\ Resource\ because\ it's\ used}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{class_room_a8186447363027b2b27832346c9fe6b4f}{Room}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a110d87d8ca33f913c6c13cd9bf3ba867}{reserveRoom}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_activity}{Activity}}\&\ activity);\ \ \textcolor{comment}{//\ Use\ const\ reference\ to\ avoid\ copying}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_room_ab3ff2ff75839af232334436daa81f636}{checkAvailability}}(\textcolor{keyword}{const}\ std::string\&\ dateTime)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Use\ const\ reference\ and\ mark\ function\ as\ const}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ std::string\ \mbox{\hyperlink{class_room_aff3b26f1d5a7519ff6abd5b1f24cc1af}{getType}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_room_a21ca7df0b538a638b208b93b4447c84c}{roomType\_}};\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_aea2beb4faa3b7f6b2dfb69a0b75b244a}{getCost}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_room_aa3a0766d49b120e5d462e227f361876d}{cost\_}};\ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_abcf7970c3aa3bade3d68b6242c8b3d7f}{getLength}}()\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_room_abe42c392187fcd8368b17d47936ed607}{resLength\_}};\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_ad2752087d4e5cd0fe9a4cfc999e3afe6}{setType}}(std::string\ type);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_a2472d8c7da51b2f4f921c9b7e3f2bcb3}{setCost}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_room_ab194fe08d67c8a6bfb9c86c11cb6ebe4}{setLength}}(\textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00074\ \ \ \ \ std::string\ \mbox{\hyperlink{class_room_a21ca7df0b538a638b208b93b4447c84c}{roomType\_}};\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_aa3a0766d49b120e5d462e227f361876d}{cost\_}};\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_room_abe42c392187fcd8368b17d47936ed607}{resLength\_}};\ }
+\DoxyCodeLine{00077\ \ \ \ \ std::list<Resource>\ \mbox{\hyperlink{class_room_a11ae81cdb99dab3301c22dd6dd4c6727}{availableResources\_}};\ }
+\DoxyCodeLine{00078\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_room_a178f18521c5c1bb774f49f777df0b75e}{activities\_}};\ }
+\DoxyCodeLine{00079\ \};}
 
 \end{DoxyCode}

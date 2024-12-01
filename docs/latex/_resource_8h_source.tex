@@ -4,20 +4,21 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_room_8h}{Room.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <list>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resource}{Resource}}\ \{}
-\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resource_a1618e2d5319c3b346533439e5b0e6a77}{allocateToActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resource_aef05a1cb0f22d57e8f8d5649a20f8cfd}{trackUsage}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_resource_aa6fc4ab005d6a27f6fcd10cec25ec555}{availabilityStatus}};\ }
-\DoxyCodeLine{00029\ \ \ \ \ std::list<Room>\ \mbox{\hyperlink{class_resource_aa15fc3eb6e40489ec286155a48637bb3}{associatedRooms}};\ }
-\DoxyCodeLine{00030\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_resource_af91211e55a2c6e51037674f365fe1fdc}{associatedActivities}};\ }
-\DoxyCodeLine{00031\ \};}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}};}
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resource}{Resource}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resource_a1618e2d5319c3b346533439e5b0e6a77}{allocateToActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_resource_aef05a1cb0f22d57e8f8d5649a20f8cfd}{trackUsage}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_resource_aa6fc4ab005d6a27f6fcd10cec25ec555}{availabilityStatus}};\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::list<Room>\ \mbox{\hyperlink{class_resource_aa15fc3eb6e40489ec286155a48637bb3}{associatedRooms}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_resource_af91211e55a2c6e51037674f365fe1fdc}{associatedActivities}};\ }
+\DoxyCodeLine{00032\ \};}
 
 \end{DoxyCode}

@@ -4,21 +4,42 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_event_8h}{Event.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <list>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_guest}{Guest}}\ \{}
-\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f}{registerForActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_guest_a5f23bf4666670d94624b077e763ade6f}{checkConflicts}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00030\ \ \ \ \ std::string\ \mbox{\hyperlink{class_guest_af8ead1beb9dd6145e5fb01ddf4514c64}{uniqueID\_}};\ }
-\DoxyCodeLine{00031\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}{registeredActivities\_}};\ }
-\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_event}{Event}}\ \mbox{\hyperlink{class_guest_a9a09952405c7f0eb9a546a53146f1d88}{associatedEvent\_}};\ }
-\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_event_8h}{Event.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{json_8hpp}{json.hpp}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_guest}{Guest}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{class_guest_ae339711d2553f4c72ec0ee8889359125}{Guest}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_guest_ae339711d2553f4c72ec0ee8889359125}{Guest}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\ name);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guest_a3ba00da1cf9131f7d25d3ed48981dd1f}{registerForActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_guest_a7e3ca3ed38b6f2c3face9e53bc256532}{loadGuest}}(\textcolor{keywordtype}{int}\ guestId);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guest_a94ba2022a76329303c7dcbaf6ea70479}{addGuest}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\&\ name);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_guest_a5f23bf4666670d94624b077e763ade6f}{checkConflicts}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ std::string\ \mbox{\hyperlink{class_guest_a5831dff83415a7b7240278df63922078}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ nlohmann::json\ \mbox{\hyperlink{class_guest_a5c9fce7b16824f4cd7a0f91946099158}{toJson}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guest_ac6c92cfe8209559b67b8ad8c46664540}{setName}}(std::string\ name);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_guest_a8d66b46423015cce64e49b117ebdc23d}{setId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_guest_adb11a45f184b149bd35c03109279b65d}{uniqueID\_}};\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::string\ \mbox{\hyperlink{class_guest_ad939083b0a1bf065bb2fabf3458a72f4}{name\_}};\ }
+\DoxyCodeLine{00094\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_guest_a71b1ed5e1e07fa7455d2d29a79cfae23}{registeredActivities\_}};\ }
+\DoxyCodeLine{00095\ \};}
 
 \end{DoxyCode}

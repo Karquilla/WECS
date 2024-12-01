@@ -7,22 +7,44 @@
 \DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_qualified_personnel_8h}{QualifiedPersonnel.h}}"{}}}
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_8h}{Resource.h}}"{}}}
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_schedule_8h}{Schedule.h}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <chrono>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}}\ \{}
-\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a77ddd3238fee79b20f5e9c5fc7778e82}{scheduleActivity}}(std::chrono::system\_clock::time\_point\ startTime,\ std::chrono::system\_clock::time\_point\ endTime);}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab}{assignPersonnel}}(\mbox{\hyperlink{class_qualified_personnel}{QualifiedPersonnel}}\ personnel);}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a9a73eb5b4b0ebdf53e40c9b1f50876ce}{assignResource}}(\mbox{\hyperlink{class_resource}{Resource}}\ resource);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00037\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}{activityType\_}};\ }
-\DoxyCodeLine{00038\ \ \ \ \ std::chrono::system\_clock::time\_point\ \mbox{\hyperlink{class_activity_a3901f0309777656b0347565f64919757}{startTime\_}};\ }
-\DoxyCodeLine{00039\ \ \ \ \ std::chrono::system\_clock::time\_point\ \mbox{\hyperlink{class_activity_ad3d5e07b20524b28739f8772b05b6674}{endTime\_}};\ }
-\DoxyCodeLine{00040\ \ \ \ \ std::list<QualifiedPersonnel>\ \mbox{\hyperlink{class_activity_a2569731cc41cc6715b71e5cbe0d25767}{qualifiedPersonnel}};\ }
-\DoxyCodeLine{00041\ \ \ \ \ std::list<Resource>\ \mbox{\hyperlink{class_activity_a48a3aceef55eb2b4c2641fb5cf32c2ee}{resources}};\ }
-\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_guest_8h}{Guest.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_activity_abb0e3ce8f97431b704d2685547cc4fac}{Activity}}();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_acf274fae93a3f945e232dae5712e923a}{scheduleActivity}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a325c6aed23559b6be6e5c58dfba2f9ab}{assignPersonnel}}(\mbox{\hyperlink{class_qualified_personnel}{QualifiedPersonnel}}\ personnel);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a9a73eb5b4b0ebdf53e40c9b1f50876ce}{assignResource}}(\mbox{\hyperlink{class_resource}{Resource}}\ resource);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a34393b80c775e399c219a5acb0ac9741}{getStartTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a928634e854e71682da4b9c14e33e922b}{getEndTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_ab034d407a913355bd2357ec95aded1d5}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_aeb632bac86d5b475ed01fe8aa35adb33}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a1a22e80d4acf28058af942e5c1926e23}{setActivityType}}(\textcolor{keyword}{const}\ std::string\&\ type);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_acc8bf4a00af011133baa6bc2ef0a4bac}{setActivityName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a4267ae9c00a039ce1c8f34c5de241f21}{setActivityStartTime}}(\textcolor{keyword}{const}\ std::string\&\ startTime);}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_activity_a261e49b45e951443f8e11ff18474ef04}{setActivityEndTime}}(\textcolor{keyword}{const}\ std::string\&\ endTime);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00099\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a002d26258a68dc5d9bef4e7718e2d67d}{activityType\_}};\ }
+\DoxyCodeLine{00100\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a0f1fada942646276cc05600f4f526563}{startTime\_}};\ }
+\DoxyCodeLine{00101\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a0e57d44fff87d371d1ef2be72d661a89}{endTime\_}};\ }
+\DoxyCodeLine{00102\ \ \ \ \ std::string\ \mbox{\hyperlink{class_activity_a8a60f861244e1c2faa4d331c1ea0b114}{activityName\_}};\ }
+\DoxyCodeLine{00103\ \ \ \ \ std::list<Guest>\ \mbox{\hyperlink{class_activity_ab172999e813f343f208f0ffb74fe3f17}{guest}};\ }
+\DoxyCodeLine{00104\ \ \ \ \ std::list<QualifiedPersonnel>\ \mbox{\hyperlink{class_activity_a2569731cc41cc6715b71e5cbe0d25767}{qualifiedPersonnel}};\ }
+\DoxyCodeLine{00105\ \ \ \ \ std::list<Resource>\ \mbox{\hyperlink{class_activity_a48a3aceef55eb2b4c2641fb5cf32c2ee}{resources}};\ }
+\DoxyCodeLine{00106\ \};}
 
 \end{DoxyCode}

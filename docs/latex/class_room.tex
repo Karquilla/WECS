@@ -12,14 +12,32 @@ Represents a room that can be reserved for activities and checks availability.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_room_a457a871fc18bc719b0339696085ff041}{reserve\+Room}} (\mbox{\hyperlink{class_activity}{Activity}} activity)
+\mbox{\hyperlink{class_room_a8186447363027b2b27832346c9fe6b4f}{Room}} ()=default
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_room}{Room}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_a110d87d8ca33f913c6c13cd9bf3ba867}{reserve\+Room}} (const \mbox{\hyperlink{class_activity}{Activity}} \&activity)
 \begin{DoxyCompactList}\small\item\em Reserves the room for a specified activity. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_room_aa8658b2658fd93f33f18a8cb68cd4c98}{check\+Availability}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} date\+Time)
-\begin{DoxyCompactList}\small\item\em Checks if the room is available at the specified date and time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{class_room_ab3ff2ff75839af232334436daa81f636}{check\+Availability}} (const std\+::string \&date\+Time) const
+\begin{DoxyCompactList}\small\item\em Checks if the room is available at the specified date and time. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_room_aff3b26f1d5a7519ff6abd5b1f24cc1af}{get\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Gets the type of the room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_room_aea2beb4faa3b7f6b2dfb69a0b75b244a}{get\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Gets the cost of reserving the room. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_room_abcf7970c3aa3bade3d68b6242c8b3d7f}{get\+Length}} ()
+\begin{DoxyCompactList}\small\item\em Gets the length of the reservation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_ad2752087d4e5cd0fe9a4cfc999e3afe6}{set\+Type}} (std\+::string type)
+\begin{DoxyCompactList}\small\item\em Sets the type of the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_a2472d8c7da51b2f4f921c9b7e3f2bcb3}{set\+Cost}} ()
+\begin{DoxyCompactList}\small\item\em Sets the cost of reserving the room. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_ab194fe08d67c8a6bfb9c86c11cb6ebe4}{set\+Length}} (int length)
+\begin{DoxyCompactList}\small\item\em Sets the length of the reservation. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{class_room_ae40b2b07c54a60c238199ef24aa38877}{capacity\+\_\+}}
+std\+::string \mbox{\hyperlink{class_room_a21ca7df0b538a638b208b93b4447c84c}{room\+Type\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_room_aa3a0766d49b120e5d462e227f361876d}{cost\+\_\+}}
+\item 
+int \mbox{\hyperlink{class_room_abe42c392187fcd8368b17d47936ed607}{res\+Length\+\_\+}}
 \item 
 std\+::list$<$ \mbox{\hyperlink{class_resource}{Resource}} $>$ \mbox{\hyperlink{class_room_a11ae81cdb99dab3301c22dd6dd4c6727}{available\+Resources\+\_\+}}
 \item 
@@ -30,12 +48,25 @@ std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{
 \doxysubsection{Detailed Description}
 Represents a room that can be reserved for activities and checks availability. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_room_a8186447363027b2b27832346c9fe6b4f}\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}}
+{\footnotesize\ttfamily \label{class_room_a8186447363027b2b27832346c9fe6b4f} 
+Room\+::\+Room (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default constructor for \doxylink{class_room}{Room}. 
+
+
+
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_room_aa8658b2658fd93f33f18a8cb68cd4c98}\index{Room@{Room}!checkAvailability@{checkAvailability}}
+\Hypertarget{class_room_ab3ff2ff75839af232334436daa81f636}\index{Room@{Room}!checkAvailability@{checkAvailability}}
 \index{checkAvailability@{checkAvailability}!Room@{Room}}
 \doxysubsubsection{\texorpdfstring{checkAvailability()}{checkAvailability()}}
-{\footnotesize\ttfamily \label{class_room_aa8658b2658fd93f33f18a8cb68cd4c98} 
-bool Room\+::check\+Availability (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date_time}{Date\+Time}}}]{date\+Time}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_room_ab3ff2ff75839af232334436daa81f636} 
+bool Room\+::check\+Availability (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{date\+Time}{}\end{DoxyParamCaption}) const}
 
 
 
@@ -43,17 +74,66 @@ Checks if the room is available at the specified date and time.
 
 
 \begin{DoxyParams}{Parameters}
-{\em date\+Time} & The date and time to check for availability. \\
+{\em date\+Time} & The date and time to check for availability as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the room is available, false otherwise.
+\end{DoxyReturn}
+This method determines whether the room is free at the provided date and time. It can be used to prevent double-\/booking of the room.
+
+
+\begin{DoxyParams}{Parameters}
+{\em date\+Time} & The date and time to check in string format. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true if the room is available, false otherwise. 
 \end{DoxyReturn}
-\Hypertarget{class_room_a457a871fc18bc719b0339696085ff041}\index{Room@{Room}!reserveRoom@{reserveRoom}}
+\Hypertarget{class_room_aea2beb4faa3b7f6b2dfb69a0b75b244a}\index{Room@{Room}!getCost@{getCost}}
+\index{getCost@{getCost}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily \label{class_room_aea2beb4faa3b7f6b2dfb69a0b75b244a} 
+int Room\+::get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the cost of reserving the room. 
+
+\begin{DoxyReturn}{Returns}
+The cost of the room as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_room_abcf7970c3aa3bade3d68b6242c8b3d7f}\index{Room@{Room}!getLength@{getLength}}
+\index{getLength@{getLength}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily \label{class_room_abcf7970c3aa3bade3d68b6242c8b3d7f} 
+int Room\+::get\+Length (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the length of the reservation. 
+
+\begin{DoxyReturn}{Returns}
+The length of the reservation as an integer. 
+\end{DoxyReturn}
+\Hypertarget{class_room_aff3b26f1d5a7519ff6abd5b1f24cc1af}\index{Room@{Room}!getType@{getType}}
+\index{getType@{getType}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \label{class_room_aff3b26f1d5a7519ff6abd5b1f24cc1af} 
+std\+::string Room\+::get\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the type of the room. 
+
+\begin{DoxyReturn}{Returns}
+The type of the room as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_room_a110d87d8ca33f913c6c13cd9bf3ba867}\index{Room@{Room}!reserveRoom@{reserveRoom}}
 \index{reserveRoom@{reserveRoom}!Room@{Room}}
 \doxysubsubsection{\texorpdfstring{reserveRoom()}{reserveRoom()}}
-{\footnotesize\ttfamily \label{class_room_a457a871fc18bc719b0339696085ff041} 
-void Room\+::reserve\+Room (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_room_a110d87d8ca33f913c6c13cd9bf3ba867} 
+void Room\+::reserve\+Room (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_activity}{Activity}} \&}]{activity}{}\end{DoxyParamCaption})}
 
 
 
@@ -63,7 +143,79 @@ Reserves the room for the given activity.
 
 
 \begin{DoxyParams}{Parameters}
-{\em activity} & The activity to reserve the room for. \\
+{\em activity} & The activity to reserve the room for.\\
+\hline
+\end{DoxyParams}
+This method is used to reserve the room for a specific activity. It modifies the room\textquotesingle{}s state to reflect the reservation details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em activity} & The activity for which the room needs to be reserved. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_room_a2472d8c7da51b2f4f921c9b7e3f2bcb3}\index{Room@{Room}!setCost@{setCost}}
+\index{setCost@{setCost}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}}
+{\footnotesize\ttfamily \label{class_room_a2472d8c7da51b2f4f921c9b7e3f2bcb3} 
+void Room\+::set\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets the cost of reserving the room. 
+
+Calculates and sets the cost of the room reservation.
+
+This method computes the cost of the reservation based on the room type and reservation length. \doxylink{class_room}{Room} types have predefined rates\+:
+\begin{DoxyItemize}
+\item "{}rome"{}\+: \$300 per unit length.
+\item "{}paris"{}\+: \$400 per unit length.
+\item "{}lasvegas"{}\+: \$500 per unit length.
+\end{DoxyItemize}
+
+The calculated cost is stored in the {\ttfamily cost\+\_\+} member variable. \Hypertarget{class_room_ab194fe08d67c8a6bfb9c86c11cb6ebe4}\index{Room@{Room}!setLength@{setLength}}
+\index{setLength@{setLength}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{setLength()}{setLength()}}
+{\footnotesize\ttfamily \label{class_room_ab194fe08d67c8a6bfb9c86c11cb6ebe4} 
+void Room\+::set\+Length (\begin{DoxyParamCaption}\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+
+
+Sets the length of the reservation. 
+
+Sets the reservation length for the room.
+
+
+\begin{DoxyParams}{Parameters}
+{\em length} & The length of the reservation as an integer.\\
+\hline
+\end{DoxyParams}
+This method updates the duration (in some unit of time, e.\+g., days) for which the room is reserved.
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & The length of the reservation. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_room_ad2752087d4e5cd0fe9a4cfc999e3afe6}\index{Room@{Room}!setType@{setType}}
+\index{setType@{setType}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily \label{class_room_ad2752087d4e5cd0fe9a4cfc999e3afe6} 
+void Room\+::set\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Sets the type of the room. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the room as a string.\\
+\hline
+\end{DoxyParams}
+This method assigns a type to the room, such as "{}rome"{}, "{}paris"{}, or "{}lasvegas"{}. The room type influences other properties like cost.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the room as a string. \\
 \hline
 \end{DoxyParams}
 
@@ -81,13 +233,25 @@ Activities scheduled in the room \Hypertarget{class_room_a11ae81cdb99dab3301c22d
 {\footnotesize\ttfamily \label{class_room_a11ae81cdb99dab3301c22dd6dd4c6727} 
 std\+::list$<$\mbox{\hyperlink{class_resource}{Resource}}$>$ Room\+::available\+Resources\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Resources available in the room \Hypertarget{class_room_ae40b2b07c54a60c238199ef24aa38877}\index{Room@{Room}!capacity\_@{capacity\_}}
-\index{capacity\_@{capacity\_}!Room@{Room}}
-\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
-{\footnotesize\ttfamily \label{class_room_ae40b2b07c54a60c238199ef24aa38877} 
-int Room\+::capacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+Resources available in the room \Hypertarget{class_room_aa3a0766d49b120e5d462e227f361876d}\index{Room@{Room}!cost\_@{cost\_}}
+\index{cost\_@{cost\_}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{cost\_}{cost\_}}
+{\footnotesize\ttfamily \label{class_room_aa3a0766d49b120e5d462e227f361876d} 
+int Room\+::cost\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Capacity of the room 
+Cost of reserving the room \Hypertarget{class_room_abe42c392187fcd8368b17d47936ed607}\index{Room@{Room}!resLength\_@{resLength\_}}
+\index{resLength\_@{resLength\_}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{resLength\_}{resLength\_}}
+{\footnotesize\ttfamily \label{class_room_abe42c392187fcd8368b17d47936ed607} 
+int Room\+::res\+Length\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Length of the reservation \Hypertarget{class_room_a21ca7df0b538a638b208b93b4447c84c}\index{Room@{Room}!roomType\_@{roomType\_}}
+\index{roomType\_@{roomType\_}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{roomType\_}{roomType\_}}
+{\footnotesize\ttfamily \label{class_room_a21ca7df0b538a638b208b93b4447c84c} 
+std\+::string Room\+::room\+Type\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Type of the room 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -92,9 +92,18 @@ $(function(){ initResizable(false); });
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_room.html#a178f18521c5c1bb774f49f777df0b75e">activities_</a></td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_room.html#a11ae81cdb99dab3301c22dd6dd4c6727">availableResources_</a></td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_room.html#ae40b2b07c54a60c238199ef24aa38877">capacity_</a></td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_room.html#aa8658b2658fd93f33f18a8cb68cd4c98">checkAvailability</a>(DateTime dateTime)</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_room.html#a457a871fc18bc719b0339696085ff041">reserveRoom</a>(Activity activity)</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_room.html#ab3ff2ff75839af232334436daa81f636">checkAvailability</a>(const std::string &amp;dateTime) const</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_room.html#aa3a0766d49b120e5d462e227f361876d">cost_</a></td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_room.html#aea2beb4faa3b7f6b2dfb69a0b75b244a">getCost</a>()</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_room.html#abcf7970c3aa3bade3d68b6242c8b3d7f">getLength</a>()</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_room.html#aff3b26f1d5a7519ff6abd5b1f24cc1af">getType</a>()</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_room.html#a110d87d8ca33f913c6c13cd9bf3ba867">reserveRoom</a>(const Activity &amp;activity)</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_room.html#abe42c392187fcd8368b17d47936ed607">resLength_</a></td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_room.html#a8186447363027b2b27832346c9fe6b4f">Room</a>()=default</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_room.html#a21ca7df0b538a638b208b93b4447c84c">roomType_</a></td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_room.html#a2472d8c7da51b2f4f921c9b7e3f2bcb3">setCost</a>()</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_room.html#ab194fe08d67c8a6bfb9c86c11cb6ebe4">setLength</a>(int length)</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_room.html#ad2752087d4e5cd0fe9a4cfc999e3afe6">setType</a>(std::string type)</td><td class="entry"><a class="el" href="class_room.html">Room</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

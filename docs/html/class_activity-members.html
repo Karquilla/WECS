@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -90,14 +90,25 @@ $(function(){ initResizable(false); });
 
 <p>This is the complete list of members for <a class="el" href="class_activity.html">Activity</a>, including all inherited members.</p>
 <table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#abb0e3ce8f97431b704d2685547cc4fac">Activity</a>()</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#a8a60f861244e1c2faa4d331c1ea0b114">activityName_</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a002d26258a68dc5d9bef4e7718e2d67d">activityType_</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#a325c6aed23559b6be6e5c58dfba2f9ab">assignPersonnel</a>(QualifiedPersonnel personnel)</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a9a73eb5b4b0ebdf53e40c9b1f50876ce">assignResource</a>(Resource resource)</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#ad3d5e07b20524b28739f8772b05b6674">endTime_</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a2569731cc41cc6715b71e5cbe0d25767">qualifiedPersonnel</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#a48a3aceef55eb2b4c2641fb5cf32c2ee">resources</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a77ddd3238fee79b20f5e9c5fc7778e82">scheduleActivity</a>(std::chrono::system_clock::time_point startTime, std::chrono::system_clock::time_point endTime)</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#a3901f0309777656b0347565f64919757">startTime_</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#a0e57d44fff87d371d1ef2be72d661a89">endTime_</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a928634e854e71682da4b9c14e33e922b">getEndTime</a>() const</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#ab034d407a913355bd2357ec95aded1d5">getName</a>() const</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a34393b80c775e399c219a5acb0ac9741">getStartTime</a>() const</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#aeb632bac86d5b475ed01fe8aa35adb33">getType</a>() const</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#ab172999e813f343f208f0ffb74fe3f17">guest</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#a2569731cc41cc6715b71e5cbe0d25767">qualifiedPersonnel</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a48a3aceef55eb2b4c2641fb5cf32c2ee">resources</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#acf274fae93a3f945e232dae5712e923a">scheduleActivity</a>()</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a261e49b45e951443f8e11ff18474ef04">setActivityEndTime</a>(const std::string &amp;endTime)</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#acc8bf4a00af011133baa6bc2ef0a4bac">setActivityName</a>(const std::string &amp;name)</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a4267ae9c00a039ce1c8f34c5de241f21">setActivityStartTime</a>(const std::string &amp;startTime)</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_activity.html#a1a22e80d4acf28058af942e5c1926e23">setActivityType</a>(const std::string &amp;type)</td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_activity.html#a0f1fada942646276cc05600f4f526563">startTime_</a></td><td class="entry"><a class="el" href="class_activity.html">Activity</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

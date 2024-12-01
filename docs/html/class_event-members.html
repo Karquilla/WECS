@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -94,10 +94,20 @@ $(function(){ initResizable(false); });
   <tr class="odd"><td class="entry"><a class="el" href="class_event.html#adf58833ce0f9079f331664c55c0ae2ca">addActivity</a>(Activity &amp;activity)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_event.html#a62cecb065c283cae8d5bdc85eff5e70d">assignQualifiedPersonnel</a>(Manager &amp;manager)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
   <tr class="odd"><td class="entry"><a class="el" href="class_event.html#ab2a7493a2665580e02e2739b34965fb2">assignRoom</a>(Room &amp;room)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_event.html#a82f6e4bb9f023428e75d2683bd4892ee">eventDateTime_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#aa84934b5a64b018a8f59d981b816bda0">managers_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_event.html#a5a40dd4708297f7031e29b39e039ae10">Event</a>()</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#a3452d3a70e3e9d9f18b46ff9c8bc4f7a">Event</a>(const std::string &amp;name)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_event.html#abe3b1a310d8ddac7c0f36f2d0b0a0cfe">eventDate_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#a6f02b4b5a82269635bd3ada053da0fc3">fname_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_event.html#a820d3605746f1716588850e1e3fe7814">getfName</a>() const</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#a36453ab5a21b660a61f2a0369e2689e8">getName</a>() const</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_event.html#a957a6b67284d49d0ee15e1965db504bd">id_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#a4443c81fdcf4a1d36871479853ed532a">loadFromFile</a>(const std::string &amp;filePath)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_event.html#aa84934b5a64b018a8f59d981b816bda0">managers_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#a87c8349aeef9afb0f26a2155f7680fc6">name_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_event.html#a0227ff67bcd78f55338c64dd2f70a500">rooms_</a></td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#a71a7f5754870c83d663caf072979133e">scheduleEvent</a>(DateTime dateTime)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#a712d80d30331f7e3856e533c6ec123b5">scheduleEvent</a>(std::string &amp;dateTime)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_event.html#a6c735278e3fd91e0ca72ea2f8aa03207">setId</a>()</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
+  <tr class="odd"><td class="entry"><a class="el" href="class_event.html#af726e738e6bfab0c93a3c0c6c26f3016">setName</a>(std::string &amp;name)</td><td class="entry"><a class="el" href="class_event.html">Event</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

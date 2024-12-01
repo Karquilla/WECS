@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -93,41 +93,39 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <a href="_report_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_date_time_8h.html">DateTime.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00006" data-start="{" data-end="};">
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">    6</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>};</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00005" data-start="{" data-end="};">
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">    5</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> {</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>};</div>
 </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_report.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_report.html">Report</a> {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_report.html#a91c8950411f2166bfcaf5602458a807b">generateReport</a>();</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    std::string <a class="code hl_function" href="class_report.html#ad67e1e5f7f9926f82bda9d40c69f334e">getTimeStamp</a>();</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_report.html#a2663394fa66e32a674907e3361a90013">updateStatus</a>(<a class="code hl_enumeration" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> status);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_report.html#a84749f9822094483524d047e6104c4ea">   36</a></span>    std::string <a class="code hl_variable" href="class_report.html#a84749f9822094483524d047e6104c4ea">reportID_</a>; </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_report.html#a181f163b296018cc9279715b05d044d1">   37</a></span>    std::string <a class="code hl_variable" href="class_report.html#a181f163b296018cc9279715b05d044d1">timeStamp_</a>; </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_report.html#af314fec6ee05caa8ff9cc88417ffb601">   38</a></span>    std::string <a class="code hl_variable" href="class_report.html#af314fec6ee05caa8ff9cc88417ffb601">details_</a>; </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_report.html#a8c368a26bc73a03300bdfc31b9df16ac">   39</a></span>    <a class="code hl_enumeration" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> <a class="code hl_variable" href="class_report.html#a8c368a26bc73a03300bdfc31b9df16ac">status_</a>; </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>};</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_report.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="class_report.html">Report</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_report.html#a91c8950411f2166bfcaf5602458a807b">generateReport</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    std::string <a class="code hl_function" href="class_report.html#ad67e1e5f7f9926f82bda9d40c69f334e">getTimeStamp</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_report.html#a2663394fa66e32a674907e3361a90013">updateStatus</a>(<a class="code hl_enumeration" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> status);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_report.html#a84749f9822094483524d047e6104c4ea">   35</a></span>    std::string <a class="code hl_variable" href="class_report.html#a84749f9822094483524d047e6104c4ea">reportID_</a>; </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_report.html#a181f163b296018cc9279715b05d044d1">   36</a></span>    std::string <a class="code hl_variable" href="class_report.html#a181f163b296018cc9279715b05d044d1">timeStamp_</a>; </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_report.html#af314fec6ee05caa8ff9cc88417ffb601">   37</a></span>    std::string <a class="code hl_variable" href="class_report.html#af314fec6ee05caa8ff9cc88417ffb601">details_</a>; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_report.html#a8c368a26bc73a03300bdfc31b9df16ac">   38</a></span>    <a class="code hl_enumeration" href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a> <a class="code hl_variable" href="class_report.html#a8c368a26bc73a03300bdfc31b9df16ac">status_</a>; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
 </div>
-<div class="ttc" id="a_date_time_8h_html"><div class="ttname"><a href="_date_time_8h.html">DateTime.h</a></div></div>
-<div class="ttc" id="a_report_8h_html_a67a0db04d321a74b7e7fcfd3f1a3f70b"><div class="ttname"><a href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition</b> Report.h:6</div></div>
-<div class="ttc" id="aclass_report_html"><div class="ttname"><a href="class_report.html">Report</a></div><div class="ttdoc">Base class for reports with a timestamp and status.</div><div class="ttdef"><b>Definition</b> Report.h:14</div></div>
-<div class="ttc" id="aclass_report_html_a181f163b296018cc9279715b05d044d1"><div class="ttname"><a href="class_report.html#a181f163b296018cc9279715b05d044d1">Report::timeStamp_</a></div><div class="ttdeci">std::string timeStamp_</div><div class="ttdef"><b>Definition</b> Report.h:37</div></div>
+<div class="ttc" id="a_report_8h_html_a67a0db04d321a74b7e7fcfd3f1a3f70b"><div class="ttname"><a href="_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b">Status</a></div><div class="ttdeci">Status</div><div class="ttdef"><b>Definition</b> Report.h:5</div></div>
+<div class="ttc" id="aclass_report_html"><div class="ttname"><a href="class_report.html">Report</a></div><div class="ttdoc">Base class for reports with a timestamp and status.</div><div class="ttdef"><b>Definition</b> Report.h:13</div></div>
+<div class="ttc" id="aclass_report_html_a181f163b296018cc9279715b05d044d1"><div class="ttname"><a href="class_report.html#a181f163b296018cc9279715b05d044d1">Report::timeStamp_</a></div><div class="ttdeci">std::string timeStamp_</div><div class="ttdef"><b>Definition</b> Report.h:36</div></div>
 <div class="ttc" id="aclass_report_html_a2663394fa66e32a674907e3361a90013"><div class="ttname"><a href="class_report.html#a2663394fa66e32a674907e3361a90013">Report::updateStatus</a></div><div class="ttdeci">void updateStatus(Status status)</div><div class="ttdoc">Updates the status of the report.</div><div class="ttdef"><b>Definition</b> Report.cpp:26</div></div>
-<div class="ttc" id="aclass_report_html_a84749f9822094483524d047e6104c4ea"><div class="ttname"><a href="class_report.html#a84749f9822094483524d047e6104c4ea">Report::reportID_</a></div><div class="ttdeci">std::string reportID_</div><div class="ttdef"><b>Definition</b> Report.h:36</div></div>
-<div class="ttc" id="aclass_report_html_a8c368a26bc73a03300bdfc31b9df16ac"><div class="ttname"><a href="class_report.html#a8c368a26bc73a03300bdfc31b9df16ac">Report::status_</a></div><div class="ttdeci">Status status_</div><div class="ttdef"><b>Definition</b> Report.h:39</div></div>
+<div class="ttc" id="aclass_report_html_a84749f9822094483524d047e6104c4ea"><div class="ttname"><a href="class_report.html#a84749f9822094483524d047e6104c4ea">Report::reportID_</a></div><div class="ttdeci">std::string reportID_</div><div class="ttdef"><b>Definition</b> Report.h:35</div></div>
+<div class="ttc" id="aclass_report_html_a8c368a26bc73a03300bdfc31b9df16ac"><div class="ttname"><a href="class_report.html#a8c368a26bc73a03300bdfc31b9df16ac">Report::status_</a></div><div class="ttdeci">Status status_</div><div class="ttdef"><b>Definition</b> Report.h:38</div></div>
 <div class="ttc" id="aclass_report_html_a91c8950411f2166bfcaf5602458a807b"><div class="ttname"><a href="class_report.html#a91c8950411f2166bfcaf5602458a807b">Report::generateReport</a></div><div class="ttdeci">void generateReport()</div><div class="ttdoc">Generates the report with specified details.</div><div class="ttdef"><b>Definition</b> Report.cpp:17</div></div>
 <div class="ttc" id="aclass_report_html_ad67e1e5f7f9926f82bda9d40c69f334e"><div class="ttname"><a href="class_report.html#ad67e1e5f7f9926f82bda9d40c69f334e">Report::getTimeStamp</a></div><div class="ttdeci">std::string getTimeStamp()</div><div class="ttdoc">Gets the timestamp of the report.</div><div class="ttdef"><b>Definition</b> Report.cpp:9</div></div>
-<div class="ttc" id="aclass_report_html_af314fec6ee05caa8ff9cc88417ffb601"><div class="ttname"><a href="class_report.html#af314fec6ee05caa8ff9cc88417ffb601">Report::details_</a></div><div class="ttdeci">std::string details_</div><div class="ttdef"><b>Definition</b> Report.h:38</div></div>
+<div class="ttc" id="aclass_report_html_af314fec6ee05caa8ff9cc88417ffb601"><div class="ttname"><a href="class_report.html#af314fec6ee05caa8ff9cc88417ffb601">Report::details_</a></div><div class="ttdeci">std::string details_</div><div class="ttdef"><b>Definition</b> Report.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

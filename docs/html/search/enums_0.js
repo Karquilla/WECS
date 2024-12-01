@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['status_0',['Status',['../_report_8h.html#a67a0db04d321a74b7e7fcfd3f1a3f70b',1,'Report.h']]]
+  ['cbor_5ftag_5fhandler_5ft_0',['cbor_tag_handler_t',['../namespacedetail.html#a7c070b2bf3d61e3d8b8013f6fb18d592',1,'detail']]]
 ];

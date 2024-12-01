@@ -12,14 +12,28 @@ Represents an event with activities, rooms, and managers.
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_event_a71a7f5754870c83d663caf072979133e}{schedule\+Event}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} date\+Time)
+\mbox{\hyperlink{class_event_a5a40dd4708297f7031e29b39e039ae10}{Event}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \doxylink{class_event}{Event}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_event_a3452d3a70e3e9d9f18b46ff9c8bc4f7a}{Event}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Constructor with name initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a712d80d30331f7e3856e533c6ec123b5}{schedule\+Event}} (std\+::string \&date\+Time)
 \begin{DoxyCompactList}\small\item\em Schedules the event at a specified date and time. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_event_ab2a7493a2665580e02e2739b34965fb2}{assign\+Room}} (\mbox{\hyperlink{class_room}{Room}} \&room)
 \begin{DoxyCompactList}\small\item\em Assigns a room to the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_event_a62cecb065c283cae8d5bdc85eff5e70d}{assign\+Qualified\+Personnel}} (\mbox{\hyperlink{class_manager}{Manager}} \&manager)
 \begin{DoxyCompactList}\small\item\em Assigns a manager as qualified personnel to the event. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_event_adf58833ce0f9079f331664c55c0ae2ca}{add\+Activity}} (\mbox{\hyperlink{class_activity}{Activity}} \&activity)
-\begin{DoxyCompactList}\small\item\em Adds an activity to the event\textquotesingle{}s list of activities. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Adds an activity to the event\textquotesingle{}s list of activities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_af726e738e6bfab0c93a3c0c6c26f3016}{set\+Name}} (std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets a name to the event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a6c735278e3fd91e0ca72ea2f8aa03207}{set\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Sets the ID for the event. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_a820d3605746f1716588850e1e3fe7814}{getf\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the file name of the event. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_event_a36453ab5a21b660a61f2a0369e2689e8}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_event_a4443c81fdcf4a1d36871479853ed532a}{load\+From\+File}} (const std\+::string \&file\+Path)
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,12 +43,46 @@ std\+::list$<$ \mbox{\hyperlink{class_manager}{Manager}} $>$ \mbox{\hyperlink{cl
 \item 
 std\+::list$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9}{activities\+\_\+}}
 \item 
-\mbox{\hyperlink{class_date_time}{Date\+Time}} \mbox{\hyperlink{class_event_a82f6e4bb9f023428e75d2683bd4892ee}{event\+Date\+Time\+\_\+}}
+std\+::string \mbox{\hyperlink{class_event_abe3b1a310d8ddac7c0f36f2d0b0a0cfe}{event\+Date\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_a87c8349aeef9afb0f26a2155f7680fc6}{name\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_a6f02b4b5a82269635bd3ada053da0fc3}{fname\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_event_a957a6b67284d49d0ee15e1965db504bd}{id\+\_\+}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Represents an event with activities, rooms, and managers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_a5a40dd4708297f7031e29b39e039ae10}\index{Event@{Event}!Event@{Event}}
+\index{Event@{Event}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_event_a5a40dd4708297f7031e29b39e039ae10} 
+Event\+::\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Default constructor for \doxylink{class_event}{Event}. 
+
+\Hypertarget{class_event_a3452d3a70e3e9d9f18b46ff9c8bc4f7a}\index{Event@{Event}!Event@{Event}}
+\index{Event@{Event}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_event_a3452d3a70e3e9d9f18b46ff9c8bc4f7a} 
+Event\+::\+Event (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor with name initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the event. \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_event_adf58833ce0f9079f331664c55c0ae2ca}\index{Event@{Event}!addActivity@{addActivity}}
@@ -82,11 +130,43 @@ Assigns a room to the event.
 {\em room} & Reference to the room to assign. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_event_a71a7f5754870c83d663caf072979133e}\index{Event@{Event}!scheduleEvent@{scheduleEvent}}
+\Hypertarget{class_event_a820d3605746f1716588850e1e3fe7814}\index{Event@{Event}!getfName@{getfName}}
+\index{getfName@{getfName}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{getfName()}{getfName()}}
+{\footnotesize\ttfamily \label{class_event_a820d3605746f1716588850e1e3fe7814} 
+std\+::string Event\+::getf\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the file name of the event. 
+
+\begin{DoxyReturn}{Returns}
+The file name as a string. 
+\end{DoxyReturn}
+\Hypertarget{class_event_a36453ab5a21b660a61f2a0369e2689e8}\index{Event@{Event}!getName@{getName}}
+\index{getName@{getName}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_event_a36453ab5a21b660a61f2a0369e2689e8} 
+std\+::string Event\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the name of the event. 
+
+\begin{DoxyReturn}{Returns}
+The name of the event. 
+\end{DoxyReturn}
+\Hypertarget{class_event_a4443c81fdcf4a1d36871479853ed532a}\index{Event@{Event}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily \label{class_event_a4443c81fdcf4a1d36871479853ed532a} 
+void Event\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_event_a712d80d30331f7e3856e533c6ec123b5}\index{Event@{Event}!scheduleEvent@{scheduleEvent}}
 \index{scheduleEvent@{scheduleEvent}!Event@{Event}}
 \doxysubsubsection{\texorpdfstring{scheduleEvent()}{scheduleEvent()}}
-{\footnotesize\ttfamily \label{class_event_a71a7f5754870c83d663caf072979133e} 
-void Event\+::schedule\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date_time}{Date\+Time}}}]{date\+Time}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_event_a712d80d30331f7e3856e533c6ec123b5} 
+void Event\+::schedule\+Event (\begin{DoxyParamCaption}\item[{std\+::string \&}]{date\+Time}{}\end{DoxyParamCaption})}
 
 
 
@@ -95,6 +175,31 @@ Schedules the event at a specified date and time.
 
 \begin{DoxyParams}{Parameters}
 {\em date\+Time} & The date and time for the event. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_a6c735278e3fd91e0ca72ea2f8aa03207}\index{Event@{Event}!setId@{setId}}
+\index{setId@{setId}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily \label{class_event_a6c735278e3fd91e0ca72ea2f8aa03207} 
+void Event\+::set\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Sets the ID for the event. 
+
+\Hypertarget{class_event_af726e738e6bfab0c93a3c0c6c26f3016}\index{Event@{Event}!setName@{setName}}
+\index{setName@{setName}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_event_af726e738e6bfab0c93a3c0c6c26f3016} 
+void Event\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string \&}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets a name to the event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name for the event. \\
 \hline
 \end{DoxyParams}
 
@@ -106,19 +211,37 @@ Schedules the event at a specified date and time.
 {\footnotesize\ttfamily \label{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9} 
 std\+::list$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Event\+::activities\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-List of activities in the event \Hypertarget{class_event_a82f6e4bb9f023428e75d2683bd4892ee}\index{Event@{Event}!eventDateTime\_@{eventDateTime\_}}
-\index{eventDateTime\_@{eventDateTime\_}!Event@{Event}}
-\doxysubsubsection{\texorpdfstring{eventDateTime\_}{eventDateTime\_}}
-{\footnotesize\ttfamily \label{class_event_a82f6e4bb9f023428e75d2683bd4892ee} 
-\mbox{\hyperlink{class_date_time}{Date\+Time}} Event\+::event\+Date\+Time\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+List of activities in the event \Hypertarget{class_event_abe3b1a310d8ddac7c0f36f2d0b0a0cfe}\index{Event@{Event}!eventDate\_@{eventDate\_}}
+\index{eventDate\_@{eventDate\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{eventDate\_}{eventDate\_}}
+{\footnotesize\ttfamily \label{class_event_abe3b1a310d8ddac7c0f36f2d0b0a0cfe} 
+std\+::string Event\+::event\+Date\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-Date and time of the event \Hypertarget{class_event_aa84934b5a64b018a8f59d981b816bda0}\index{Event@{Event}!managers\_@{managers\_}}
+Date and time of the event \Hypertarget{class_event_a6f02b4b5a82269635bd3ada053da0fc3}\index{Event@{Event}!fname\_@{fname\_}}
+\index{fname\_@{fname\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{fname\_}{fname\_}}
+{\footnotesize\ttfamily \label{class_event_a6f02b4b5a82269635bd3ada053da0fc3} 
+std\+::string Event\+::fname\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+File name associated with the event \Hypertarget{class_event_a957a6b67284d49d0ee15e1965db504bd}\index{Event@{Event}!id\_@{id\_}}
+\index{id\_@{id\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{id\_}{id\_}}
+{\footnotesize\ttfamily \label{class_event_a957a6b67284d49d0ee15e1965db504bd} 
+std\+::string Event\+::id\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Identifier for the event \Hypertarget{class_event_aa84934b5a64b018a8f59d981b816bda0}\index{Event@{Event}!managers\_@{managers\_}}
 \index{managers\_@{managers\_}!Event@{Event}}
 \doxysubsubsection{\texorpdfstring{managers\_}{managers\_}}
 {\footnotesize\ttfamily \label{class_event_aa84934b5a64b018a8f59d981b816bda0} 
 std\+::list$<$\mbox{\hyperlink{class_manager}{Manager}}$>$ Event\+::managers\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
 
-List of managers for the event \Hypertarget{class_event_a0227ff67bcd78f55338c64dd2f70a500}\index{Event@{Event}!rooms\_@{rooms\_}}
+List of managers for the event \Hypertarget{class_event_a87c8349aeef9afb0f26a2155f7680fc6}\index{Event@{Event}!name\_@{name\_}}
+\index{name\_@{name\_}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{name\_}{name\_}}
+{\footnotesize\ttfamily \label{class_event_a87c8349aeef9afb0f26a2155f7680fc6} 
+std\+::string Event\+::name\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The name of the event \Hypertarget{class_event_a0227ff67bcd78f55338c64dd2f70a500}\index{Event@{Event}!rooms\_@{rooms\_}}
 \index{rooms\_@{rooms\_}!Event@{Event}}
 \doxysubsubsection{\texorpdfstring{rooms\_}{rooms\_}}
 {\footnotesize\ttfamily \label{class_event_a0227ff67bcd78f55338c64dd2f70a500} 

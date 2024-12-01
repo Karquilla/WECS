@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -94,14 +94,123 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;fstream&gt;</code><br />
+<code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;<a class="el" href="_event_8h_source.html">Event.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_room_8h_source.html">Room.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_activity_8h_source.html">Activity.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="utility_8h_source.html">utility.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="json_8hpp_source.html">json.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:abee7de3388d76c9b3ce4dddf3b854607" id="r_abee7de3388d76c9b3ce4dddf3b854607"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abee7de3388d76c9b3ce4dddf3b854607">getNewId</a> ()</td></tr>
+<tr class="separator:abee7de3388d76c9b3ce4dddf3b854607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63fa2c0fc507d371a1c6aa6780fcd990" id="r_a63fa2c0fc507d371a1c6aa6780fcd990"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63fa2c0fc507d371a1c6aa6780fcd990">addEvent</a> (int id, const std::string &amp;name, const std::string &amp;start, const std::string &amp;end, std::vector&lt; <a class="el" href="class_room.html">Room</a> &gt; rooms)</td></tr>
+<tr class="separator:a63fa2c0fc507d371a1c6aa6780fcd990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d7773cbba5b010682c0f15f3dc6e56" id="r_af2d7773cbba5b010682c0f15f3dc6e56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2d7773cbba5b010682c0f15f3dc6e56">addEventActivities</a> (int id, <a class="el" href="class_activity.html">Activity</a> activity)</td></tr>
+<tr class="separator:af2d7773cbba5b010682c0f15f3dc6e56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a718262605b8c9b206d2a52066eea3fe3" id="r_a718262605b8c9b206d2a52066eea3fe3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="json_8hpp.html#ae6eede511f01c9f33342044d36a388fa">nlohmann::json</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a718262605b8c9b206d2a52066eea3fe3">getEvent</a> ()</td></tr>
+<tr class="separator:a718262605b8c9b206d2a52066eea3fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a392cd8ef7c1f09ad452e0859b439c699" id="r_a392cd8ef7c1f09ad452e0859b439c699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a392cd8ef7c1f09ad452e0859b439c699">registerGuest</a> (int guestId, int activityId, <a class="el" href="json_8hpp.html#ae6eede511f01c9f33342044d36a388fa">nlohmann::json</a> &amp;event)</td></tr>
+<tr class="separator:a392cd8ef7c1f09ad452e0859b439c699"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function, entry point of the program.  <br /></td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main function, entry point of the creating and scheduling event.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a63fa2c0fc507d371a1c6aa6780fcd990" name="a63fa2c0fc507d371a1c6aa6780fcd990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63fa2c0fc507d371a1c6aa6780fcd990">&#9670;&#160;</a></span>addEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addEvent </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>start</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>end</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_room.html">Room</a> &gt;</td>          <td class="paramname"><span class="paramname"><em>rooms</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af2d7773cbba5b010682c0f15f3dc6e56" name="af2d7773cbba5b010682c0f15f3dc6e56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2d7773cbba5b010682c0f15f3dc6e56">&#9670;&#160;</a></span>addEventActivities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addEventActivities </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_activity.html">Activity</a></td>          <td class="paramname"><span class="paramname"><em>activity</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a718262605b8c9b206d2a52066eea3fe3" name="a718262605b8c9b206d2a52066eea3fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718262605b8c9b206d2a52066eea3fe3">&#9670;&#160;</a></span>getEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="json_8hpp.html#ae6eede511f01c9f33342044d36a388fa">nlohmann::json</a> getEvent </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abee7de3388d76c9b3ce4dddf3b854607" name="abee7de3388d76c9b3ce4dddf3b854607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee7de3388d76c9b3ce4dddf3b854607">&#9670;&#160;</a></span>getNewId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getNewId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
 
@@ -117,8 +226,34 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Main function, entry point of the program. </p>
+<p>Main function, entry point of the creating and scheduling event. </p>
 <dl class="section return"><dt>Returns</dt><dd>int Returns 0 if the program executes successfully. </dd></dl>
+
+</div>
+</div>
+<a id="a392cd8ef7c1f09ad452e0859b439c699" name="a392cd8ef7c1f09ad452e0859b439c699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a392cd8ef7c1f09ad452e0859b439c699">&#9670;&#160;</a></span>registerGuest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void registerGuest </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>guestId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>activityId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="json_8hpp.html#ae6eede511f01c9f33342044d36a388fa">nlohmann::json</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

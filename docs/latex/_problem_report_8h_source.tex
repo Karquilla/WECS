@@ -4,25 +4,26 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_date_time_8h}{DateTime.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_manager_8h}{Manager.h}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_report_8h}{Report.h}}"{}}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_resource_8h}{Resource.h}}"{}}}
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_qualified_personnel_8h}{QualifiedPersonnel.h}}"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_problem_report}{ProblemReport}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_report}{Report}}\ \{}
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_problem_report_a00f146f12f46bbc400c9f0d8972023d4}{createReport}}(\mbox{\hyperlink{class_activity}{Activity}}\ activity,\ \mbox{\hyperlink{class_resource}{Resource}}\ resource);}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_activity}{Activity}}\ \mbox{\hyperlink{class_problem_report_ad885eb6bba7a619cbf4e62f30cdfa8f8}{activity\_}};\ }
-\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_resource}{Resource}}\ \mbox{\hyperlink{class_problem_report_abffbb63f9516a99c8c3da942c3b3a81e}{resource\_}};\ }
-\DoxyCodeLine{00028\ \ \ \ \ std::string\ \mbox{\hyperlink{class_problem_report_adca78e761255953d5f9bd6cdb8701e6e}{timeStamp\_}};\ }
-\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{class_problem_report_a13f362fde362c856cd766f7728976423}{severity\_}};\ }
-\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_manager}{Manager}}\ \mbox{\hyperlink{class_problem_report_abd1c5c495df8704e6c22b1df6c6bd5a2}{assignedManager\_}};\ }
-\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_qualified_personnel}{QualifiedPersonnel}}\ \mbox{\hyperlink{class_problem_report_aeff64e6b9905a3e838d07f60b7c9b93f}{reportedBy\_}};\ }
-\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_report_8h}{Report.h}}"{}}\ \textcolor{comment}{//\ Include\ Report\ as\ ProblemReport\ inherits\ from\ it}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Forward\ declarations\ for\ classes\ to\ avoid\ circular\ dependencies}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_resource}{Resource}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_manager}{Manager}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_qualified_personnel}{QualifiedPersonnel}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_problem_report}{ProblemReport}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_report}{Report}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_problem_report_a5513e2e2642bf16aad3c892daeba4c4e}{createReport}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_activity}{Activity}}\&\ activity,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_resource}{Resource}}\&\ resource);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_activity}{Activity}}*\ \mbox{\hyperlink{class_problem_report_af472902035a5f9e78812b6a53e964e35}{activity\_}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_resource}{Resource}}*\ \mbox{\hyperlink{class_problem_report_afb45d386633a7f4f58a70807c02515ae}{resource\_}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::string\ \mbox{\hyperlink{class_problem_report_adca78e761255953d5f9bd6cdb8701e6e}{timeStamp\_}};\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::string\ \mbox{\hyperlink{class_problem_report_a13f362fde362c856cd766f7728976423}{severity\_}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_manager}{Manager}}*\ \mbox{\hyperlink{class_problem_report_a20274ab082d108ffc0034d6df29358b1}{assignedManager\_}};\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_qualified_personnel}{QualifiedPersonnel}}*\ \mbox{\hyperlink{class_problem_report_a39992f7d81f0bd2d02f1d40c180c80e5}{reportedBy\_}};\ }
+\DoxyCodeLine{00033\ \};}
 
 \end{DoxyCode}

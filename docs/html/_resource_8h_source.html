@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -93,32 +93,32 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <a href="_resource_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_activity_8h.html">Activity.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_room_8h.html">Room.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;list&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="class_resource.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="class_resource.html">Resource</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_resource.html#a1618e2d5319c3b346533439e5b0e6a77">   18</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_resource.html#a1618e2d5319c3b346533439e5b0e6a77">allocateToActivity</a>(<a class="code hl_class" href="class_activity.html">Activity</a> activity);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_resource.html#aef05a1cb0f22d57e8f8d5649a20f8cfd">   25</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_resource.html#aef05a1cb0f22d57e8f8d5649a20f8cfd">trackUsage</a>(<a class="code hl_class" href="class_activity.html">Activity</a> activity);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="class_resource.html#aa6fc4ab005d6a27f6fcd10cec25ec555">   28</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_resource.html#aa6fc4ab005d6a27f6fcd10cec25ec555">availabilityStatus</a>; </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_resource.html#aa15fc3eb6e40489ec286155a48637bb3">   29</a></span>    std::list&lt;Room&gt; <a class="code hl_variable" href="class_resource.html#aa15fc3eb6e40489ec286155a48637bb3">associatedRooms</a>; </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_resource.html#af91211e55a2c6e51037674f365fe1fdc">   30</a></span>    std::list&lt;Activity&gt; <a class="code hl_variable" href="class_resource.html#af91211e55a2c6e51037674f365fe1fdc">associatedActivities</a>; </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">class </span><a class="code hl_class" href="class_room.html">Room</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">class </span><a class="code hl_class" href="class_activity.html">Activity</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_resource.html">   12</a></span><span class="keyword">class </span><a class="code hl_class" href="class_resource.html">Resource</a> {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_resource.html#a1618e2d5319c3b346533439e5b0e6a77">allocateToActivity</a>(<a class="code hl_class" href="class_activity.html">Activity</a> activity);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_resource.html#aef05a1cb0f22d57e8f8d5649a20f8cfd">trackUsage</a>(<a class="code hl_class" href="class_activity.html">Activity</a> activity);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_resource.html#aa6fc4ab005d6a27f6fcd10cec25ec555">   29</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_resource.html#aa6fc4ab005d6a27f6fcd10cec25ec555">availabilityStatus</a>; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_resource.html#aa15fc3eb6e40489ec286155a48637bb3">   30</a></span>    std::list&lt;Room&gt; <a class="code hl_variable" href="class_resource.html#aa15fc3eb6e40489ec286155a48637bb3">associatedRooms</a>; </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_resource.html#af91211e55a2c6e51037674f365fe1fdc">   31</a></span>    std::list&lt;Activity&gt; <a class="code hl_variable" href="class_resource.html#af91211e55a2c6e51037674f365fe1fdc">associatedActivities</a>; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
 </div>
-<div class="ttc" id="a_activity_8h_html"><div class="ttname"><a href="_activity_8h.html">Activity.h</a></div></div>
-<div class="ttc" id="a_room_8h_html"><div class="ttname"><a href="_room_8h.html">Room.h</a></div></div>
-<div class="ttc" id="aclass_activity_html"><div class="ttname"><a href="class_activity.html">Activity</a></div><div class="ttdoc">Represents an activity with scheduling, personnel, and resource assignment.</div><div class="ttdef"><b>Definition</b> Activity.h:12</div></div>
-<div class="ttc" id="aclass_resource_html"><div class="ttname"><a href="class_resource.html">Resource</a></div><div class="ttdoc">Represents a resource that can be allocated to activities.</div><div class="ttdef"><b>Definition</b> Resource.h:11</div></div>
-<div class="ttc" id="aclass_resource_html_a1618e2d5319c3b346533439e5b0e6a77"><div class="ttname"><a href="class_resource.html#a1618e2d5319c3b346533439e5b0e6a77">Resource::allocateToActivity</a></div><div class="ttdeci">void allocateToActivity(Activity activity)</div><div class="ttdoc">Allocates the resource to an activity.</div></div>
-<div class="ttc" id="aclass_resource_html_aa15fc3eb6e40489ec286155a48637bb3"><div class="ttname"><a href="class_resource.html#aa15fc3eb6e40489ec286155a48637bb3">Resource::associatedRooms</a></div><div class="ttdeci">std::list&lt; Room &gt; associatedRooms</div><div class="ttdef"><b>Definition</b> Resource.h:29</div></div>
-<div class="ttc" id="aclass_resource_html_aa6fc4ab005d6a27f6fcd10cec25ec555"><div class="ttname"><a href="class_resource.html#aa6fc4ab005d6a27f6fcd10cec25ec555">Resource::availabilityStatus</a></div><div class="ttdeci">bool availabilityStatus</div><div class="ttdef"><b>Definition</b> Resource.h:28</div></div>
-<div class="ttc" id="aclass_resource_html_aef05a1cb0f22d57e8f8d5649a20f8cfd"><div class="ttname"><a href="class_resource.html#aef05a1cb0f22d57e8f8d5649a20f8cfd">Resource::trackUsage</a></div><div class="ttdeci">void trackUsage(Activity activity)</div><div class="ttdoc">Tracks the usage of the resource for a specified activity.</div></div>
-<div class="ttc" id="aclass_resource_html_af91211e55a2c6e51037674f365fe1fdc"><div class="ttname"><a href="class_resource.html#af91211e55a2c6e51037674f365fe1fdc">Resource::associatedActivities</a></div><div class="ttdeci">std::list&lt; Activity &gt; associatedActivities</div><div class="ttdef"><b>Definition</b> Resource.h:30</div></div>
+<div class="ttc" id="aclass_activity_html"><div class="ttname"><a href="class_activity.html">Activity</a></div><div class="ttdoc">Represents an activity with scheduling, personnel, and resource assignment.</div><div class="ttdef"><b>Definition</b> Activity.h:14</div></div>
+<div class="ttc" id="aclass_resource_html"><div class="ttname"><a href="class_resource.html">Resource</a></div><div class="ttdoc">Represents a resource that can be allocated to activities.</div><div class="ttdef"><b>Definition</b> Resource.h:12</div></div>
+<div class="ttc" id="aclass_resource_html_a1618e2d5319c3b346533439e5b0e6a77"><div class="ttname"><a href="class_resource.html#a1618e2d5319c3b346533439e5b0e6a77">Resource::allocateToActivity</a></div><div class="ttdeci">void allocateToActivity(Activity activity)</div><div class="ttdoc">Allocates the resource to an activity.</div><div class="ttdef"><b>Definition</b> Resource.cpp:5</div></div>
+<div class="ttc" id="aclass_resource_html_aa15fc3eb6e40489ec286155a48637bb3"><div class="ttname"><a href="class_resource.html#aa15fc3eb6e40489ec286155a48637bb3">Resource::associatedRooms</a></div><div class="ttdeci">std::list&lt; Room &gt; associatedRooms</div><div class="ttdef"><b>Definition</b> Resource.h:30</div></div>
+<div class="ttc" id="aclass_resource_html_aa6fc4ab005d6a27f6fcd10cec25ec555"><div class="ttname"><a href="class_resource.html#aa6fc4ab005d6a27f6fcd10cec25ec555">Resource::availabilityStatus</a></div><div class="ttdeci">bool availabilityStatus</div><div class="ttdef"><b>Definition</b> Resource.h:29</div></div>
+<div class="ttc" id="aclass_resource_html_aef05a1cb0f22d57e8f8d5649a20f8cfd"><div class="ttname"><a href="class_resource.html#aef05a1cb0f22d57e8f8d5649a20f8cfd">Resource::trackUsage</a></div><div class="ttdeci">void trackUsage(Activity activity)</div><div class="ttdoc">Tracks the usage of the resource for a specified activity.</div><div class="ttdef"><b>Definition</b> Resource.cpp:9</div></div>
+<div class="ttc" id="aclass_resource_html_af91211e55a2c6e51037674f365fe1fdc"><div class="ttname"><a href="class_resource.html#af91211e55a2c6e51037674f365fe1fdc">Resource::associatedActivities</a></div><div class="ttdeci">std::list&lt; Activity &gt; associatedActivities</div><div class="ttdef"><b>Definition</b> Resource.h:31</div></div>
+<div class="ttc" id="aclass_room_html"><div class="ttname"><a href="class_room.html">Room</a></div><div class="ttdoc">Represents a room that can be reserved for activities and checks availability.</div><div class="ttdef"><b>Definition</b> Room.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

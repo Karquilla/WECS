@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -93,32 +93,28 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <a href="_staff_member_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_activity_8h.html">Activity.h</a>&quot;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_date_time_8h.html">DateTime.h</a>&quot;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="_event_8h.html">Event.h</a>&quot;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// Forward declaration for Activity and Event if they are not directly needed in the class members</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">class </span><a class="code hl_class" href="class_activity.html">Activity</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">class </span><a class="code hl_class" href="class_event.html">Event</a>;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_staff_member.html">   15</a></span><span class="keyword">class </span><a class="code hl_class" href="class_staff_member.html">StaffMember</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_staff_member.html#af80de5badfe0327058230ede47aca26d">   22</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_staff_member.html#af80de5badfe0327058230ede47aca26d">isConflict</a>();</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_staff_member.html#a7c95307dae88312415ae10b75da64931">   25</a></span>    std::string <a class="code hl_variable" href="class_staff_member.html#a7c95307dae88312415ae10b75da64931">authorizationLevel_</a>; </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_staff_member.html#a701f1d62ce93b43e35190cd166a3c081">   26</a></span>    std::map&lt;Activity, std::pair&lt;DateTime, int&gt;&gt; <a class="code hl_variable" href="class_staff_member.html#a701f1d62ce93b43e35190cd166a3c081">activity_schedule</a>; </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_staff_member.html#adf3a03040a15fa34f19a89b7d5eca4ed">   27</a></span>    std::map&lt;Event, std::pair&lt;DateTime, int&gt;&gt; <a class="code hl_variable" href="class_staff_member.html#adf3a03040a15fa34f19a89b7d5eca4ed">event_schedule</a>; </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_staff_member.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_staff_member.html">StaffMember</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_staff_member.html#af80de5badfe0327058230ede47aca26d">   21</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_staff_member.html#af80de5badfe0327058230ede47aca26d">isConflict</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_staff_member.html#af45d90c019be614a64520c837487529e">   24</a></span>    std::map&lt;int, std::pair&lt;std::string, int&gt;&gt; <a class="code hl_variable" href="class_staff_member.html#af45d90c019be614a64520c837487529e">activity_schedule</a>; </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_staff_member.html#a646a2d52ca39344e0154cd197ad5b070">   25</a></span>    std::map&lt;int, std::pair&lt;std::string, int&gt;&gt; <a class="code hl_variable" href="class_staff_member.html#a646a2d52ca39344e0154cd197ad5b070">event_schedule</a>; </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
 </div>
-<div class="ttc" id="a_activity_8h_html"><div class="ttname"><a href="_activity_8h.html">Activity.h</a></div></div>
-<div class="ttc" id="a_date_time_8h_html"><div class="ttname"><a href="_date_time_8h.html">DateTime.h</a></div></div>
-<div class="ttc" id="a_event_8h_html"><div class="ttname"><a href="_event_8h.html">Event.h</a></div></div>
-<div class="ttc" id="aclass_staff_member_html"><div class="ttname"><a href="class_staff_member.html">StaffMember</a></div><div class="ttdoc">Represents a staff member with scheduling and authorization level.</div><div class="ttdef"><b>Definition</b> StaffMember.h:15</div></div>
-<div class="ttc" id="aclass_staff_member_html_a701f1d62ce93b43e35190cd166a3c081"><div class="ttname"><a href="class_staff_member.html#a701f1d62ce93b43e35190cd166a3c081">StaffMember::activity_schedule</a></div><div class="ttdeci">std::map&lt; Activity, std::pair&lt; DateTime, int &gt; &gt; activity_schedule</div><div class="ttdef"><b>Definition</b> StaffMember.h:26</div></div>
-<div class="ttc" id="aclass_staff_member_html_a7c95307dae88312415ae10b75da64931"><div class="ttname"><a href="class_staff_member.html#a7c95307dae88312415ae10b75da64931">StaffMember::authorizationLevel_</a></div><div class="ttdeci">std::string authorizationLevel_</div><div class="ttdef"><b>Definition</b> StaffMember.h:25</div></div>
-<div class="ttc" id="aclass_staff_member_html_adf3a03040a15fa34f19a89b7d5eca4ed"><div class="ttname"><a href="class_staff_member.html#adf3a03040a15fa34f19a89b7d5eca4ed">StaffMember::event_schedule</a></div><div class="ttdeci">std::map&lt; Event, std::pair&lt; DateTime, int &gt; &gt; event_schedule</div><div class="ttdef"><b>Definition</b> StaffMember.h:27</div></div>
+<div class="ttc" id="aclass_activity_html"><div class="ttname"><a href="class_activity.html">Activity</a></div><div class="ttdoc">Represents an activity with scheduling, personnel, and resource assignment.</div><div class="ttdef"><b>Definition</b> Activity.h:14</div></div>
+<div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdoc">Represents an event with activities, rooms, and managers.</div><div class="ttdef"><b>Definition</b> Event.h:13</div></div>
+<div class="ttc" id="aclass_staff_member_html"><div class="ttname"><a href="class_staff_member.html">StaffMember</a></div><div class="ttdoc">Represents a staff member with scheduling and authorization level.</div><div class="ttdef"><b>Definition</b> StaffMember.h:14</div></div>
+<div class="ttc" id="aclass_staff_member_html_a646a2d52ca39344e0154cd197ad5b070"><div class="ttname"><a href="class_staff_member.html#a646a2d52ca39344e0154cd197ad5b070">StaffMember::event_schedule</a></div><div class="ttdeci">std::map&lt; int, std::pair&lt; std::string, int &gt; &gt; event_schedule</div><div class="ttdef"><b>Definition</b> StaffMember.h:25</div></div>
+<div class="ttc" id="aclass_staff_member_html_af45d90c019be614a64520c837487529e"><div class="ttname"><a href="class_staff_member.html#af45d90c019be614a64520c837487529e">StaffMember::activity_schedule</a></div><div class="ttdeci">std::map&lt; int, std::pair&lt; std::string, int &gt; &gt; activity_schedule</div><div class="ttdef"><b>Definition</b> StaffMember.h:24</div></div>
 <div class="ttc" id="aclass_staff_member_html_af80de5badfe0327058230ede47aca26d"><div class="ttname"><a href="class_staff_member.html#af80de5badfe0327058230ede47aca26d">StaffMember::isConflict</a></div><div class="ttdeci">bool isConflict()</div><div class="ttdoc">Checks if there are any scheduling conflicts.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -16,14 +16,14 @@ void \mbox{\hyperlink{class_schedule_aca8e75c63e5afa89dfd3b3f794cb4eb0}{schedule
 \begin{DoxyCompactList}\small\item\em Schedules a new event at the specified date and time. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_schedule_a52f9a96189a243e7de6cb23bc470923e}{schedule\+Activity}} (\mbox{\hyperlink{class_activity}{Activity}} \texorpdfstring{$\ast$}{*}activity, std\+::tm \&start\+Time, std\+::tm \&end\+Time)
 \begin{DoxyCompactList}\small\item\em Schedules a new activity within a specific time range. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_schedule_aa3370bb7e5b3f44e8de6a56a2187cbb1}{check\+Conflict}} (std\+::tm \&date\+Time)
+bool \mbox{\hyperlink{class_schedule_a6dda7cb7cfdf8906ba5f078ac820b7ef}{check\+Conflict}} (std\+::tm \&start\+Time, std\+::tm \&end\+Time)
 \begin{DoxyCompactList}\small\item\em Checks if a specified date and time conflicts with existing scheduled items. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{class_event}{Event}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_schedule_a29bd1707577a3653196940d8e6bb7507}{events}}
+std\+::vector$<$ \mbox{\hyperlink{class_event}{Event}} $>$ \mbox{\hyperlink{class_schedule_af25120b7bc4e61d7f5820c427a909686}{events}}
 \item 
-std\+::vector$<$ \mbox{\hyperlink{class_activity}{Activity}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_schedule_ae50c63b05cda95ae2ec332db0f56d659}{activities}}
+std\+::vector$<$ \mbox{\hyperlink{class_activity}{Activity}} $>$ \mbox{\hyperlink{class_schedule_a4131f89cc5748637d787237506c12010}{activities}}
 \end{DoxyCompactItemize}
 
 
@@ -31,11 +31,11 @@ std\+::vector$<$ \mbox{\hyperlink{class_activity}{Activity}} \texorpdfstring{$\a
 Manages a schedule for maintaining event coordination, including events and activities. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_schedule_aa3370bb7e5b3f44e8de6a56a2187cbb1}\index{Schedule@{Schedule}!checkConflict@{checkConflict}}
+\Hypertarget{class_schedule_a6dda7cb7cfdf8906ba5f078ac820b7ef}\index{Schedule@{Schedule}!checkConflict@{checkConflict}}
 \index{checkConflict@{checkConflict}!Schedule@{Schedule}}
 \doxysubsubsection{\texorpdfstring{checkConflict()}{checkConflict()}}
-{\footnotesize\ttfamily \label{class_schedule_aa3370bb7e5b3f44e8de6a56a2187cbb1} 
-bool Schedule\+::check\+Conflict (\begin{DoxyParamCaption}\item[{std\+::tm \&}]{date\+Time}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_schedule_a6dda7cb7cfdf8906ba5f078ac820b7ef} 
+bool Schedule\+::check\+Conflict (\begin{DoxyParamCaption}\item[{std\+::tm \&}]{start\+Time}{, }\item[{std\+::tm \&}]{end\+Time}{}\end{DoxyParamCaption})}
 
 
 
@@ -94,17 +94,17 @@ Schedules an event at the specified date and time.
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_schedule_ae50c63b05cda95ae2ec332db0f56d659}\index{Schedule@{Schedule}!activities@{activities}}
+\Hypertarget{class_schedule_a4131f89cc5748637d787237506c12010}\index{Schedule@{Schedule}!activities@{activities}}
 \index{activities@{activities}!Schedule@{Schedule}}
 \doxysubsubsection{\texorpdfstring{activities}{activities}}
-{\footnotesize\ttfamily \label{class_schedule_ae50c63b05cda95ae2ec332db0f56d659} 
-std\+::vector$<$\mbox{\hyperlink{class_activity}{Activity}}\texorpdfstring{$\ast$}{*}$>$ Schedule\+::activities\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{class_schedule_a4131f89cc5748637d787237506c12010} 
+std\+::vector$<$\mbox{\hyperlink{class_activity}{Activity}}$>$ Schedule\+::activities\hspace{0.3cm}{\ttfamily [private]}}
 
-Vector containing all scheduled activities \Hypertarget{class_schedule_a29bd1707577a3653196940d8e6bb7507}\index{Schedule@{Schedule}!events@{events}}
+Vector containing all scheduled activities \Hypertarget{class_schedule_af25120b7bc4e61d7f5820c427a909686}\index{Schedule@{Schedule}!events@{events}}
 \index{events@{events}!Schedule@{Schedule}}
 \doxysubsubsection{\texorpdfstring{events}{events}}
-{\footnotesize\ttfamily \label{class_schedule_a29bd1707577a3653196940d8e6bb7507} 
-std\+::vector$<$\mbox{\hyperlink{class_event}{Event}}\texorpdfstring{$\ast$}{*}$>$ Schedule\+::events\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily \label{class_schedule_af25120b7bc4e61d7f5820c427a909686} 
+std\+::vector$<$\mbox{\hyperlink{class_event}{Event}}$>$ Schedule\+::events\hspace{0.3cm}{\ttfamily [private]}}
 
 Vector containing all scheduled events 
 

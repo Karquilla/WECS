@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">WECS
+   <div id="projectname">WECS<span id="projectnumber">&#160;v0.2</span>
    </div>
   </td>
  </tr>
@@ -99,9 +99,15 @@ $(function(){ initResizable(false); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a71a7f5754870c83d663caf072979133e" id="r_a71a7f5754870c83d663caf072979133e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71a7f5754870c83d663caf072979133e">scheduleEvent</a> (<a class="el" href="class_date_time.html">DateTime</a> dateTime)</td></tr>
-<tr class="memdesc:a71a7f5754870c83d663caf072979133e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedules the event at a specified date and time.  <br /></td></tr>
-<tr class="separator:a71a7f5754870c83d663caf072979133e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a40dd4708297f7031e29b39e039ae10" id="r_a5a40dd4708297f7031e29b39e039ae10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a40dd4708297f7031e29b39e039ae10">Event</a> ()</td></tr>
+<tr class="memdesc:a5a40dd4708297f7031e29b39e039ae10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_event.html" title="Represents an event with activities, rooms, and managers.">Event</a>.  <br /></td></tr>
+<tr class="separator:a5a40dd4708297f7031e29b39e039ae10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3452d3a70e3e9d9f18b46ff9c8bc4f7a" id="r_a3452d3a70e3e9d9f18b46ff9c8bc4f7a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3452d3a70e3e9d9f18b46ff9c8bc4f7a">Event</a> (const std::string &amp;name)</td></tr>
+<tr class="memdesc:a3452d3a70e3e9d9f18b46ff9c8bc4f7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with name initialization.  <br /></td></tr>
+<tr class="separator:a3452d3a70e3e9d9f18b46ff9c8bc4f7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712d80d30331f7e3856e533c6ec123b5" id="r_a712d80d30331f7e3856e533c6ec123b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a712d80d30331f7e3856e533c6ec123b5">scheduleEvent</a> (std::string &amp;dateTime)</td></tr>
+<tr class="memdesc:a712d80d30331f7e3856e533c6ec123b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schedules the event at a specified date and time.  <br /></td></tr>
+<tr class="separator:a712d80d30331f7e3856e533c6ec123b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2a7493a2665580e02e2739b34965fb2" id="r_ab2a7493a2665580e02e2739b34965fb2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab2a7493a2665580e02e2739b34965fb2">assignRoom</a> (<a class="el" href="class_room.html">Room</a> &amp;room)</td></tr>
 <tr class="memdesc:ab2a7493a2665580e02e2739b34965fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns a room to the event.  <br /></td></tr>
 <tr class="separator:ab2a7493a2665580e02e2739b34965fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -111,6 +117,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf58833ce0f9079f331664c55c0ae2ca" id="r_adf58833ce0f9079f331664c55c0ae2ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adf58833ce0f9079f331664c55c0ae2ca">addActivity</a> (<a class="el" href="class_activity.html">Activity</a> &amp;activity)</td></tr>
 <tr class="memdesc:adf58833ce0f9079f331664c55c0ae2ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds an activity to the event's list of activities.  <br /></td></tr>
 <tr class="separator:adf58833ce0f9079f331664c55c0ae2ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af726e738e6bfab0c93a3c0c6c26f3016" id="r_af726e738e6bfab0c93a3c0c6c26f3016"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af726e738e6bfab0c93a3c0c6c26f3016">setName</a> (std::string &amp;name)</td></tr>
+<tr class="memdesc:af726e738e6bfab0c93a3c0c6c26f3016"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a name to the event.  <br /></td></tr>
+<tr class="separator:af726e738e6bfab0c93a3c0c6c26f3016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c735278e3fd91e0ca72ea2f8aa03207" id="r_a6c735278e3fd91e0ca72ea2f8aa03207"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c735278e3fd91e0ca72ea2f8aa03207">setId</a> ()</td></tr>
+<tr class="memdesc:a6c735278e3fd91e0ca72ea2f8aa03207"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the ID for the event.  <br /></td></tr>
+<tr class="separator:a6c735278e3fd91e0ca72ea2f8aa03207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a820d3605746f1716588850e1e3fe7814" id="r_a820d3605746f1716588850e1e3fe7814"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a820d3605746f1716588850e1e3fe7814">getfName</a> () const</td></tr>
+<tr class="memdesc:a820d3605746f1716588850e1e3fe7814"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the file name of the event.  <br /></td></tr>
+<tr class="separator:a820d3605746f1716588850e1e3fe7814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36453ab5a21b660a61f2a0369e2689e8" id="r_a36453ab5a21b660a61f2a0369e2689e8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36453ab5a21b660a61f2a0369e2689e8">getName</a> () const</td></tr>
+<tr class="memdesc:a36453ab5a21b660a61f2a0369e2689e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the event.  <br /></td></tr>
+<tr class="separator:a36453ab5a21b660a61f2a0369e2689e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4443c81fdcf4a1d36871479853ed532a" id="r_a4443c81fdcf4a1d36871479853ed532a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4443c81fdcf4a1d36871479853ed532a">loadFromFile</a> (const std::string &amp;filePath)</td></tr>
+<tr class="separator:a4443c81fdcf4a1d36871479853ed532a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -120,12 +140,63 @@ Private Attributes</h2></td></tr>
 <tr class="separator:aa84934b5a64b018a8f59d981b816bda0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b22c0f2c411a9ab8215b87ac8435fd9" id="r_a0b22c0f2c411a9ab8215b87ac8435fd9"><td class="memItemLeft" align="right" valign="top">std::list&lt; <a class="el" href="class_activity.html">Activity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b22c0f2c411a9ab8215b87ac8435fd9">activities_</a></td></tr>
 <tr class="separator:a0b22c0f2c411a9ab8215b87ac8435fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f6e4bb9f023428e75d2683bd4892ee" id="r_a82f6e4bb9f023428e75d2683bd4892ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_date_time.html">DateTime</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82f6e4bb9f023428e75d2683bd4892ee">eventDateTime_</a></td></tr>
-<tr class="separator:a82f6e4bb9f023428e75d2683bd4892ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe3b1a310d8ddac7c0f36f2d0b0a0cfe" id="r_abe3b1a310d8ddac7c0f36f2d0b0a0cfe"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe3b1a310d8ddac7c0f36f2d0b0a0cfe">eventDate_</a></td></tr>
+<tr class="separator:abe3b1a310d8ddac7c0f36f2d0b0a0cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c8349aeef9afb0f26a2155f7680fc6" id="r_a87c8349aeef9afb0f26a2155f7680fc6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87c8349aeef9afb0f26a2155f7680fc6">name_</a></td></tr>
+<tr class="separator:a87c8349aeef9afb0f26a2155f7680fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f02b4b5a82269635bd3ada053da0fc3" id="r_a6f02b4b5a82269635bd3ada053da0fc3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f02b4b5a82269635bd3ada053da0fc3">fname_</a></td></tr>
+<tr class="separator:a6f02b4b5a82269635bd3ada053da0fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a957a6b67284d49d0ee15e1965db504bd" id="r_a957a6b67284d49d0ee15e1965db504bd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a957a6b67284d49d0ee15e1965db504bd">id_</a></td></tr>
+<tr class="separator:a957a6b67284d49d0ee15e1965db504bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents an event with activities, rooms, and managers. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5a40dd4708297f7031e29b39e039ae10" name="a5a40dd4708297f7031e29b39e039ae10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a40dd4708297f7031e29b39e039ae10">&#9670;&#160;</a></span>Event() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Event::Event </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Default constructor for <a class="el" href="class_event.html" title="Represents an event with activities, rooms, and managers.">Event</a>. </p>
+
+</div>
+</div>
+<a id="a3452d3a70e3e9d9f18b46ff9c8bc4f7a" name="a3452d3a70e3e9d9f18b46ff9c8bc4f7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3452d3a70e3e9d9f18b46ff9c8bc4f7a">&#9670;&#160;</a></span>Event() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Event::Event </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor with name initialization. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name of the event. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="adf58833ce0f9079f331664c55c0ae2ca" name="adf58833ce0f9079f331664c55c0ae2ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf58833ce0f9079f331664c55c0ae2ca">&#9670;&#160;</a></span>addActivity()</h2>
 
@@ -201,8 +272,81 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a71a7f5754870c83d663caf072979133e" name="a71a7f5754870c83d663caf072979133e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71a7f5754870c83d663caf072979133e">&#9670;&#160;</a></span>scheduleEvent()</h2>
+<a id="a820d3605746f1716588850e1e3fe7814" name="a820d3605746f1716588850e1e3fe7814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a820d3605746f1716588850e1e3fe7814">&#9670;&#160;</a></span>getfName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Event::getfName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the file name of the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>The file name as a string. </dd></dl>
+
+</div>
+</div>
+<a id="a36453ab5a21b660a61f2a0369e2689e8" name="a36453ab5a21b660a61f2a0369e2689e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36453ab5a21b660a61f2a0369e2689e8">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Event::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the name of the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name of the event. </dd></dl>
+
+</div>
+</div>
+<a id="a4443c81fdcf4a1d36871479853ed532a" name="a4443c81fdcf4a1d36871479853ed532a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4443c81fdcf4a1d36871479853ed532a">&#9670;&#160;</a></span>loadFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Event::loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>filePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a712d80d30331f7e3856e533c6ec123b5" name="a712d80d30331f7e3856e533c6ec123b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712d80d30331f7e3856e533c6ec123b5">&#9670;&#160;</a></span>scheduleEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,7 +354,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">void Event::scheduleEvent </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_date_time.html">DateTime</a></td>          <td class="paramname"><span class="paramname"><em>dateTime</em></span></td><td>)</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>dateTime</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -220,6 +364,50 @@ Private Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dateTime</td><td>The date and time for the event. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6c735278e3fd91e0ca72ea2f8aa03207" name="a6c735278e3fd91e0ca72ea2f8aa03207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c735278e3fd91e0ca72ea2f8aa03207">&#9670;&#160;</a></span>setId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Event::setId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the ID for the event. </p>
+
+</div>
+</div>
+<a id="af726e738e6bfab0c93a3c0c6c26f3016" name="af726e738e6bfab0c93a3c0c6c26f3016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af726e738e6bfab0c93a3c0c6c26f3016">&#9670;&#160;</a></span>setName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Event::setName </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a name to the event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The name for the event. </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,8 +438,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a82f6e4bb9f023428e75d2683bd4892ee" name="a82f6e4bb9f023428e75d2683bd4892ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82f6e4bb9f023428e75d2683bd4892ee">&#9670;&#160;</a></span>eventDateTime_</h2>
+<a id="abe3b1a310d8ddac7c0f36f2d0b0a0cfe" name="abe3b1a310d8ddac7c0f36f2d0b0a0cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe3b1a310d8ddac7c0f36f2d0b0a0cfe">&#9670;&#160;</a></span>eventDate_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +448,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_date_time.html">DateTime</a> Event::eventDateTime_</td>
+          <td class="memname">std::string Event::eventDate_</td>
         </tr>
       </table>
   </td>
@@ -270,6 +458,52 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Date and time of the event </p>
+
+</div>
+</div>
+<a id="a6f02b4b5a82269635bd3ada053da0fc3" name="a6f02b4b5a82269635bd3ada053da0fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f02b4b5a82269635bd3ada053da0fc3">&#9670;&#160;</a></span>fname_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Event::fname_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>File name associated with the event </p>
+
+</div>
+</div>
+<a id="a957a6b67284d49d0ee15e1965db504bd" name="a957a6b67284d49d0ee15e1965db504bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a957a6b67284d49d0ee15e1965db504bd">&#9670;&#160;</a></span>id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Event::id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Identifier for the event </p>
 
 </div>
 </div>
@@ -293,6 +527,29 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>List of managers for the event </p>
+
+</div>
+</div>
+<a id="a87c8349aeef9afb0f26a2155f7680fc6" name="a87c8349aeef9afb0f26a2155f7680fc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c8349aeef9afb0f26a2155f7680fc6">&#9670;&#160;</a></span>name_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Event::name_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The name of the event </p>
 
 </div>
 </div>

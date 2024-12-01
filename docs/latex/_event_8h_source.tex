@@ -4,29 +4,45 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_date_time_8h}{DateTime.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_schedule_8h}{Schedule.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <list>}}
-\DoxyCodeLine{00006\ }
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
-\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_manager}{Manager}};}
-\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_room}{Room}};}
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}}\ \{}
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a71a7f5754870c83d663caf072979133e}{scheduleEvent}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dateTime);}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_ab2a7493a2665580e02e2739b34965fb2}{assignRoom}}(\mbox{\hyperlink{class_room}{Room}}\&\ room);}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a62cecb065c283cae8d5bdc85eff5e70d}{assignQualifiedPersonnel}}(\mbox{\hyperlink{class_manager}{Manager}}\&\ manager);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_adf58833ce0f9079f331664c55c0ae2ca}{addActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\&\ activity);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00046\ \ \ \ \ std::list<Room>\ \mbox{\hyperlink{class_event_a0227ff67bcd78f55338c64dd2f70a500}{rooms\_}};\ }
-\DoxyCodeLine{00047\ \ \ \ \ std::list<Manager>\ \mbox{\hyperlink{class_event_aa84934b5a64b018a8f59d981b816bda0}{managers\_}};\ }
-\DoxyCodeLine{00048\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9}{activities\_}};\ }
-\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_date_time}{DateTime}}\ \mbox{\hyperlink{class_event_a82f6e4bb9f023428e75d2683bd4892ee}{eventDateTime\_}};\ }
-\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_room_8h}{Room.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_manager_8h}{Manager.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <list>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_event_a5a40dd4708297f7031e29b39e039ae10}{Event}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_event_a3452d3a70e3e9d9f18b46ff9c8bc4f7a}{Event}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a712d80d30331f7e3856e533c6ec123b5}{scheduleEvent}}(std::string\&\ dateTime);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_ab2a7493a2665580e02e2739b34965fb2}{assignRoom}}(\mbox{\hyperlink{class_room}{Room}}\&\ room);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a62cecb065c283cae8d5bdc85eff5e70d}{assignQualifiedPersonnel}}(\mbox{\hyperlink{class_manager}{Manager}}\&\ manager);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_adf58833ce0f9079f331664c55c0ae2ca}{addActivity}}(\mbox{\hyperlink{class_activity}{Activity}}\&\ activity);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_af726e738e6bfab0c93a3c0c6c26f3016}{setName}}(std::string\&\ name);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a6c735278e3fd91e0ca72ea2f8aa03207}{setId}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ std::string\ \mbox{\hyperlink{class_event_a820d3605746f1716588850e1e3fe7814}{getfName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_event_a6f02b4b5a82269635bd3ada053da0fc3}{fname\_}};\ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ std::string\ \mbox{\hyperlink{class_event_a36453ab5a21b660a61f2a0369e2689e8}{getName}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_event_a87c8349aeef9afb0f26a2155f7680fc6}{name\_}};\ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_a4443c81fdcf4a1d36871479853ed532a}{loadFromFile}}(\textcolor{keyword}{const}\ std::string\&\ filePath);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00085\ \ \ \ \ std::list<Room>\ \mbox{\hyperlink{class_event_a0227ff67bcd78f55338c64dd2f70a500}{rooms\_}};\ }
+\DoxyCodeLine{00086\ \ \ \ \ std::list<Manager>\ \mbox{\hyperlink{class_event_aa84934b5a64b018a8f59d981b816bda0}{managers\_}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ std::list<Activity>\ \mbox{\hyperlink{class_event_a0b22c0f2c411a9ab8215b87ac8435fd9}{activities\_}};\ }
+\DoxyCodeLine{00088\ \ \ \ \ std::string\ \mbox{\hyperlink{class_event_abe3b1a310d8ddac7c0f36f2d0b0a0cfe}{eventDate\_}};\ }
+\DoxyCodeLine{00089\ \ \ \ \ std::string\ \mbox{\hyperlink{class_event_a87c8349aeef9afb0f26a2155f7680fc6}{name\_}};\ }
+\DoxyCodeLine{00090\ \ \ \ \ std::string\ \mbox{\hyperlink{class_event_a6f02b4b5a82269635bd3ada053da0fc3}{fname\_}};\ }
+\DoxyCodeLine{00091\ \ \ \ \ std::string\ \mbox{\hyperlink{class_event_a957a6b67284d49d0ee15e1965db504bd}{id\_}};\ }
+\DoxyCodeLine{00092\ \};}
 
 \end{DoxyCode}

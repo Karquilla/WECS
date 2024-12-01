@@ -1,14 +1,56 @@
 \doxysection{src/main.cpp File Reference}
 \hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
 {\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}Event.\+h"{}}\newline
+{\ttfamily \#include "{}Room.\+h"{}}\newline
+{\ttfamily \#include "{}Activity.\+h"{}}\newline
+{\ttfamily \#include "{}utility.\+h"{}}\newline
+{\ttfamily \#include "{}json.\+hpp"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+int \mbox{\hyperlink{main_8cpp_abee7de3388d76c9b3ce4dddf3b854607}{get\+New\+Id}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_a63fa2c0fc507d371a1c6aa6780fcd990}{add\+Event}} (int id, const std\+::string \&name, const std\+::string \&start, const std\+::string \&end, std\+::vector$<$ \mbox{\hyperlink{class_room}{Room}} $>$ rooms)
+\item 
+void \mbox{\hyperlink{main_8cpp_af2d7773cbba5b010682c0f15f3dc6e56}{add\+Event\+Activities}} (int id, \mbox{\hyperlink{class_activity}{Activity}} activity)
+\item 
+\mbox{\hyperlink{json_8hpp_ae6eede511f01c9f33342044d36a388fa}{nlohmann\+::json}} \mbox{\hyperlink{main_8cpp_a718262605b8c9b206d2a52066eea3fe3}{get\+Event}} ()
+\item 
+void \mbox{\hyperlink{main_8cpp_a392cd8ef7c1f09ad452e0859b439c699}{register\+Guest}} (int guest\+Id, int activity\+Id, \mbox{\hyperlink{json_8hpp_ae6eede511f01c9f33342044d36a388fa}{nlohmann\+::json}} \&event)
+\item 
 int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
-\begin{DoxyCompactList}\small\item\em Main function, entry point of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Main function, entry point of the creating and scheduling event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a63fa2c0fc507d371a1c6aa6780fcd990}\index{main.cpp@{main.cpp}!addEvent@{addEvent}}
+\index{addEvent@{addEvent}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{addEvent()}{addEvent()}}
+{\footnotesize\ttfamily \label{main_8cpp_a63fa2c0fc507d371a1c6aa6780fcd990} 
+void add\+Event (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{const std\+::string \&}]{name}{, }\item[{const std\+::string \&}]{start}{, }\item[{const std\+::string \&}]{end}{, }\item[{std\+::vector$<$ \mbox{\hyperlink{class_room}{Room}} $>$}]{rooms}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_af2d7773cbba5b010682c0f15f3dc6e56}\index{main.cpp@{main.cpp}!addEventActivities@{addEventActivities}}
+\index{addEventActivities@{addEventActivities}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{addEventActivities()}{addEventActivities()}}
+{\footnotesize\ttfamily \label{main_8cpp_af2d7773cbba5b010682c0f15f3dc6e56} 
+void add\+Event\+Activities (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{class_activity}{Activity}}}]{activity}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a718262605b8c9b206d2a52066eea3fe3}\index{main.cpp@{main.cpp}!getEvent@{getEvent}}
+\index{getEvent@{getEvent}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{getEvent()}{getEvent()}}
+{\footnotesize\ttfamily \label{main_8cpp_a718262605b8c9b206d2a52066eea3fe3} 
+\mbox{\hyperlink{json_8hpp_ae6eede511f01c9f33342044d36a388fa}{nlohmann\+::json}} get\+Event (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_abee7de3388d76c9b3ce4dddf3b854607}\index{main.cpp@{main.cpp}!getNewId@{getNewId}}
+\index{getNewId@{getNewId}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{getNewId()}{getNewId()}}
+{\footnotesize\ttfamily \label{main_8cpp_abee7de3388d76c9b3ce4dddf3b854607} 
+int get\+New\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
 \Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
@@ -17,8 +59,14 @@ int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 
-Main function, entry point of the program. 
+Main function, entry point of the creating and scheduling event. 
 
 \begin{DoxyReturn}{Returns}
 int Returns 0 if the program executes successfully. 
 \end{DoxyReturn}
+\Hypertarget{main_8cpp_a392cd8ef7c1f09ad452e0859b439c699}\index{main.cpp@{main.cpp}!registerGuest@{registerGuest}}
+\index{registerGuest@{registerGuest}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{registerGuest()}{registerGuest()}}
+{\footnotesize\ttfamily \label{main_8cpp_a392cd8ef7c1f09ad452e0859b439c699} 
+void register\+Guest (\begin{DoxyParamCaption}\item[{int}]{guest\+Id}{, }\item[{int}]{activity\+Id}{, }\item[{\mbox{\hyperlink{json_8hpp_ae6eede511f01c9f33342044d36a388fa}{nlohmann\+::json}} \&}]{event}{}\end{DoxyParamCaption})}
+

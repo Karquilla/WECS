@@ -4,22 +4,20 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
 \DoxyCodeLine{00002\ }
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_activity_8h}{Activity.h}}"{}}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_date_time_8h}{DateTime.h}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_event_8h}{Event.h}}"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ Forward\ declaration\ for\ Activity\ and\ Event\ if\ they\ are\ not\ directly\ needed\ in\ the\ class\ members}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_activity}{Activity}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}};}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_staff_member}{StaffMember}}\ \{}
-\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_staff_member_af80de5badfe0327058230ede47aca26d}{isConflict}}();}
-\DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00025\ \ \ \ \ std::string\ \mbox{\hyperlink{class_staff_member_a7c95307dae88312415ae10b75da64931}{authorizationLevel\_}};\ }
-\DoxyCodeLine{00026\ \ \ \ \ std::map<Activity,\ std::pair<DateTime,\ int>>\ \mbox{\hyperlink{class_staff_member_a701f1d62ce93b43e35190cd166a3c081}{activity\_schedule}};\ }
-\DoxyCodeLine{00027\ \ \ \ \ std::map<Event,\ std::pair<DateTime,\ int>>\ \mbox{\hyperlink{class_staff_member_adf3a03040a15fa34f19a89b7d5eca4ed}{event\_schedule}};\ }
-\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_staff_member}{StaffMember}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_staff_member_af80de5badfe0327058230ede47aca26d}{isConflict}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ std::map<int,\ std::pair<std::string,\ int>>\ \mbox{\hyperlink{class_staff_member_af45d90c019be614a64520c837487529e}{activity\_schedule}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::map<int,\ std::pair<std::string,\ int>>\ \mbox{\hyperlink{class_staff_member_a646a2d52ca39344e0154cd197ad5b070}{event\_schedule}};\ }
+\DoxyCodeLine{00026\ \};}
 
 \end{DoxyCode}
