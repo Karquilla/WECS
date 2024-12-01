@@ -1,9 +1,14 @@
 #pragma once
 
+#include <iostream>
+#include <fstream>
+#include <filesystem>
+#include <sstream>
 #include "Activity.h"
 #include "Event.h"
 #include <string>
 #include <list>
+#include "json.hpp"
 
 /**
  * @class Guest
@@ -11,6 +16,8 @@
  */
 class Guest {
 public:
+    Guest();
+    Guest(int id, const std::string name);
     /**
      * @brief Registers the guest for a specific activity.
      * 
@@ -18,6 +25,9 @@ public:
      */
     void registerForActivity(Activity activity);
 
+    bool loadGuest(int guestId);
+
+    void addGuest(int id, std::string& name);
     /**
      * @brief Checks if there are scheduling conflicts with the specified activity.
      * 
@@ -26,8 +36,19 @@ public:
      */
     bool checkConflicts(Activity activity);
 
+    std::string getName() const;
+    /**
+     * @brief Converts guest to json
+     * 
+     * @return guest data in json form
+     */
+    nlohmann::json toJson() const;
+
+    void setName(std::string name);
+    void setId(int id);
+
 private:
-    std::string uniqueID_; /**< Unique ID for the guest */
+    int uniqueID_; /**< Unique ID for the guest */
+    std::string name_; /** Guests full name */
     std::list<Activity> registeredActivities_; /**< Activities the guest has registered for */
-    Event associatedEvent_; /**< Event the guest is associated with */
 };

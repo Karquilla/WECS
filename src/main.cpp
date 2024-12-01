@@ -4,6 +4,7 @@
 #include <sstream>
 #include "Event.h"
 #include "Room.h"
+#include "Activity.h"
 #include "utility.h"
 #include "json.hpp"
 
@@ -62,6 +63,7 @@ void addEvent(int id, const std::string& name, const std::string& start, const s
         {"rooms",nlohmann::json::array()},
         {"start", start},
         {"end", end},
+        {"activities", nlohmann::json::array()}
     };
 
     for (auto& room : rooms) {
@@ -72,7 +74,6 @@ void addEvent(int id, const std::string& name, const std::string& start, const s
         };
         newEvent["rooms"].push_back(roomInfo);
     }
-
     // Add the new event to the "events" array
     eventsData["events"].push_back(newEvent);
 
@@ -80,6 +81,59 @@ void addEvent(int id, const std::string& name, const std::string& start, const s
     std::ofstream outFile("data/events.json");
     if (!outFile) {
         std::cerr << "Unable to open file for writing" << std::endl;
+        return;
+    }
+    outFile << eventsData.dump(4); // Save with 4 spaces indentation for readability
+    outFile.close();
+}
+
+void addEventActivities(int id, Activity activity) {
+    // Load the existing JSON data
+    std::ifstream inFile("data/events.json");
+    if (!inFile) {
+        std::cerr << "Unable to open file" << std::endl;
+        return;
+    }
+    nlohmann::json eventsData;
+    try{
+            inFile >> eventsData;
+    }
+    catch(nlohmann::json::parse_error& e) {
+        std::cout << "Error parsing JSON: " << e.what() <<std::endl;
+        return;
+    }
+    inFile.close();
+
+    //get event by ID
+    if (!eventsData.contains("events") || !eventsData["events"].is_array()) {
+        std::cout << "'events' key is missing or not an array." << std::endl;
+        return;
+    }
+
+
+    for(auto& event: eventsData["events"]) {
+        if(event["id"] == id) {
+            nlohmann::json activityInfo = {
+                {"id", getNewId()},
+                {"type", activity.getType()},
+                {"start", activity.getStartTime()},
+                {"end", activity.getEndTime()},
+                {"activityName", activity.getName()},
+                {"guestCount", 0}
+            };
+
+            if(!event.contains("activities") || !event["activities"].is_array()){
+                event["activities"] = nlohmann::json::array();
+            }
+
+            event["activities"].push_back(activityInfo);
+        }
+    }
+
+    //Save the updated JSON data back to the file
+    std::ofstream outFile("data/events.json");
+    if (!outFile) {
+        std::cout << "Unable to open file for writing" << std::endl;
         return;
     }
     outFile << eventsData.dump(4); // Save with 4 spaces indentation for readability
@@ -101,6 +155,114 @@ std::vector<Event> loadEvents() {
     return events;
 }
 
+nlohmann::json getEvent(){
+    std::ifstream inFile("data/events.json");
+        if (!inFile) {
+            std::cerr << "Unable to open file" << std::endl;
+            std::exit(EXIT_FAILURE);
+        }
+        
+        nlohmann::json eventsData;
+        inFile >> eventsData;
+        inFile.close();
+
+        int eventId;
+        while(true)
+        {
+            //Get event information
+            std::cout << "Enter event ID or enter '0' to quit: ";
+            std::cin >> eventId;
+
+            if(eventId == 0) {
+                std::cout << "Exiting..." << std::endl;
+                std::exit(EXIT_SUCCESS);
+            }
+
+            for(auto& event: eventsData["events"]) {
+                if(event["id"] == eventId) {
+                    return event;
+                }
+            }
+        }
+        //event not found
+        std::cout << "Event ID not found. Exiting..." << std::endl;
+        std::exit(EXIT_FAILURE);
+}
+
+void registerGuest(int guestId, int activityId, nlohmann::json& event)
+{
+    // Load existing JSON data
+    std::ifstream inFile("data/events.json");
+    if (!inFile) {
+        std::cerr << "Unable to open file" << std::endl;
+        return;
+    }
+
+    nlohmann::json eventsData;
+    inFile >> eventsData;
+    inFile.close();
+
+    // Ensure guests array exists
+    if (!eventsData.contains("guests") || !eventsData["guests"].is_array()) {
+        eventsData["guests"] = nlohmann::json::array();  // Initialize guests array if missing
+    }
+
+    // Check if guest exists
+    nlohmann::json* guestPtr = nullptr;
+    for (auto& guest : eventsData["guests"]) {
+        if (guest["id"] == guestId) {
+            guestPtr = &guest;
+            break;
+        }
+    }
+
+    if (!guestPtr) {
+        std::cerr << "No guest found with matching ID" << std::endl;
+        return;
+    }
+
+    // Find activity in event
+    nlohmann::json* activityPtr = nullptr;
+    for (auto& activity : event["activities"]) {
+        if (activity["id"] == activityId) {
+            activityPtr = &activity;
+            break;
+        }
+    }
+
+    if (!activityPtr) {
+        std::cerr << "No activity found with matching ID" << std::endl;
+        return;
+    }
+
+    // Register the activity to the guest
+    if (!guestPtr->contains("registeredActivities") || !(*guestPtr)["registeredActivities"].is_array()) {
+        (*guestPtr)["registeredActivities"] = nlohmann::json::array(); // Initialize if missing
+    }
+
+    nlohmann::json activityInfo = {
+        {"activityId", activityId},
+        {"activityName", (*activityPtr)["activityName"]}
+    };
+
+    (*guestPtr)["registeredActivities"].push_back(activityInfo);
+    
+    //increment guestCount in activities
+    for(auto& activity: eventsData["events"][0]["activities"]) {
+        if(activity["id"] == activityId){
+            activity["guestCount"] = activity["guestCount"].get<int>() + 1;
+            break;
+        }
+    }
+    // Save updated JSON data back to file
+    std::ofstream outFile("data/events.json");
+    if (!outFile) {
+        std::cerr << "Unable to open file" << std::endl;
+        return;
+    }
+    outFile << eventsData.dump(4); // Pretty print with indentation
+    outFile.close();
+}
 /**
  * @brief Main function, entry point of the creating and scheduling event.
  * 
@@ -114,6 +276,7 @@ int main() {
     std::cout << " 0 - create event" << std::endl;
     std::cout << " 1 - edit event" << std::endl;
     std::cout << " 2 - schedule activity" << std::endl;
+    std::cout << " 3 - register guest" << std::endl;
     std::cin >> opt;
 
     std::string name;
@@ -175,7 +338,7 @@ int main() {
 
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         
-        std::cout << "enter start time and end time seperated by a spece\n";
+        std::cout << "enter start time and end time separated by a space\n";
         std::cout << "24 hr format - 1100 1300\n";
         getline(std::cin, timeInput);
 
@@ -191,9 +354,13 @@ int main() {
     }else if (opt == "1") {
 
     }else if (opt == "2") {
+
+        nlohmann::json event = getEvent();
         // Gather activity information
         std::string activityName, activityType;
-        std::tm startTime{}, endTime{};
+        std::string timeInput; // string to hold time input
+        std::string startTime; // string to hold start time
+        std::string endTime;   // string to hold end time
 
         std::cout << "Enter name of activity: ";
         std::cin.ignore();
@@ -202,28 +369,91 @@ int main() {
         std::cout << "Enter activity type: ";
         std::getline(std::cin, activityType);
 
-        int startHour, startMinute, endHour, endMinute;
-        std::cout << "Enter start time (HH MM): ";
-        std::cin >> startHour >> startMinute;
-        std::cout << "Enter end time (HH MM): ";
-        std::cin >> endHour >> endMinute;
+        
+        std::cout << "Enter start time and end time separated by a space\n";
+        std::cout << "24 hr format - 1100 1300\n";
+        getline(std::cin, timeInput);
 
-        // Fill start and end time objects
-        startTime.tm_hour = startHour;
-        startTime.tm_min = startMinute;
-        endTime.tm_hour = endHour;
-        endTime.tm_min = endMinute;
+        bool validTime = false;
+        while(!validTime){
+                if (timeInput.length() < 9 || timeInput[4] != ' ') {
+                    std::cerr << "Invalid input format. Please enter times in the format 'HHMM HHMM'." << std::endl;
+                }
+                else {
+                    validTime = true;
+                }
+        }
+        // add check for correct input
+        startTime = timeInput.substr(0,4);
+        endTime = timeInput.substr(5);
 
         // Create Activity
+        //Activity activity(activityType, activityName, startTime, endTime);
         Activity activity;
         activity.setActivityType(activityType);
+        activity.setActivityName(activityName);
+        activity.setActivityStartTime(startTime);
+        activity.setActivityEndTime(endTime);
 
-        // Create schedule
-        Schedule schedule;
-        schedule.scheduleActivity(&activity, startTime, endTime);
-    }else {
+        //Add activity to Event
+        addEventActivities(event["id"], activity);
 
+    } else if(opt == "3") {
+        std::string guestOpt, name;
+        int guestId, activityId;
+
+        std::cout << " make selection" << std::endl;
+        std::cout << " 0 - register new guest" << std::endl;
+        std::cout << " 1 - register existing guest" << std::endl;
+        std::cin >> guestOpt;
+
+        Guest guest;
+
+        // New guest
+        if (guestOpt == "0") {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Enter full name:" << std::endl;
+            getline(std::cin, name);
+            int guestId = getNewId();
+            guest.setName(name);
+            guest.setId(guestId);
+            guest.addGuest(guestId, name);
+
+        // Existing guest
+        } else if (guestOpt == "1"){
+            std::cout << "Enter Existing Guest ID: " << std::endl;
+            std::cin >> guestId;
+
+            if(!guest.loadGuest(guestId)){
+                std::cerr << "Guest ID not found" << std::endl;
+                return -1;
+            }
+        } else {
+            std::cout << "Invalid entry." << std::endl;
+            return -1;
+        }
+
+        std::cout<<"Welcome " << guest.getName() << std::endl;
+        //Get Activities for given event
+        nlohmann::json event = getEvent();     
+        std::cout << "Activities for " << event["name"] <<std::endl;
+        std::cout << "ID ------- Name\n";
+        for(auto activity : event["activities"])
+        {
+            std::cout << activity["id"] << " ------ " << activity["activityName"] << std::endl;
+            
+        }
+        std::cout << "Enter Activity ID to register" << std::endl;
+        std::cin >> activityId;
+
+        //add registration stuff
+
+        registerGuest(guestId, activityId, event);
+
+
+        
+    } else {
+    
     }
-
     return 0;
 }
