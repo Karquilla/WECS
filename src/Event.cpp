@@ -47,10 +47,14 @@ void Event::addActivity(Activity& activity) {
     // Logic to add the activity to the event
 }
 
+/**
+ * @brief Sets a name to the event.
+ * 
+ * @param name The name for the event.
+ */
 void Event::setName(std::string& name) {
     name_ = name;
 }
-
 
 void Event::loadFromFile(const std::string& filePath) {
         //std::ifstream file(filePath);

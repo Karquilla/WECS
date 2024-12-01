@@ -140,20 +140,6 @@ void addEventActivities(int id, Activity activity) {
     outFile.close();
 }
 
-std::vector<Event> loadEvents() {
-    std::string directoryPath = "data/";
-    std::vector<Event> events;
-
-    //Iterate over all .txt files in the directory
-    for (const auto& entry : std::filesystem::directory_iterator(directoryPath)) {
-        if (entry.path().extension() == ".txt") {
-            Event event;
-            event.loadFromFile(entry.path().string());
-            events.push_back(event);
-        }
-    }
-    return events;
-}
 
 nlohmann::json getEvent(){
     std::ifstream inFile("data/events.json");

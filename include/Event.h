@@ -78,12 +78,8 @@ public:
      */
     std::string getName() const { return name_; }
 
-    /**
-     * @brief Loads event data from a file.
-     * 
-     * @param filePath The path to the file from which to load data.
-     */
     void loadFromFile(const std::string& filePath);
+
 
 private:
     std::list<Room> rooms_; /**< List of assigned rooms */
