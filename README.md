@@ -12,3 +12,5 @@ on dateTime and checking different schedule availability.
 11-12-24 Chris - Add Schedule class to better handle scheduling of events and activities.
 
 11-12-24 Kyle - Added comments and generated document files.
+
+12-1-24 Kyle - Generated document files
